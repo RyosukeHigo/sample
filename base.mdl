@@ -1,0 +1,2681 @@
+Model {
+  Name			  "base"
+  Version		  8.7
+  MdlSubVersion		  1
+  SavedCharacterEncoding  "Shift_JIS"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.294"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+  }
+  PostLoadFcn		  ", if any(exist('dsrtsu_mdlpostloadfcn', 'file') == [2, 3, 6]), try dsrtsu_mdlpostloadfcn('Execute', "
+  "bdroot); catch fprintf('Error in PostLoadFcn (dsrtsu_mdlpostloadfcn) for model \"%s\":\\n %s\\n', bdroot, lasterr); "
+  "end, end, \n"
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "\n"
+  UserBdParams		  "DSRTSU_INTERNAL_RTI_VER;DSRTSU_INTERNAL_RTI_TYPE;DSRTSU_INTERNAL_RTIFPGA;DSRTSU_INTERNAL_DSETHERNET"
+  ";DSRTSU_INTERNAL_DSETHERNETUDP"
+  LastSavedArchitecture	  "win64"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [106.0, 65.0, 960.0, 934.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Array {
+	Type			"Simulink.EditorInfo"
+	Dimension		4
+	Object {
+	  $ObjectID		  5
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "669"
+	  Extents		  [910.0, 751.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [0.0, 93.387498706579208]
+	}
+	Object {
+	  $ObjectID		  6
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "689"
+	  Extents		  [910.0, 751.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [1.0, -49.350000000000136]
+	}
+	Object {
+	  $ObjectID		  7
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [910.0, 751.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [0.0, 0.0]
+	}
+	Object {
+	  $ObjectID		  8
+	  IsActive		  [1]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "678"
+	  Extents		  [910.0, 751.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [0.0, 0.0]
+	}
+	PropName		"EditorsInfo"
+      }
+    }
+  }
+  DSRTSU_INTERNAL_RTI_VER "480"
+  DSRTSU_INTERNAL_RTI_TYPE "rti1007"
+  DSRTSU_INTERNAL_RTIFPGA "70"
+  DSRTSU_INTERNAL_DSETHERNET "10"
+  DSRTSU_INTERNAL_DSETHERNETUDP	"10"
+  Created		  "Wed Feb 15 14:14:16 2006"
+  Creator		  "murakami"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "higo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jul 23 20:42:30 2018"
+  RTWModifiedTimeStamp	  454263781
+  ModelVersionFormat	  "1.%<AutoIncrement:294>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  on
+  VariantCondition	  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  FunctionConnectors	  off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    9
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "base"
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "base"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      ""
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      10
+      Version		      "1.16.2"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  11
+	  Version		  "1.16.2"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.001"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "ode1"
+	  SolverName		  "ode1"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  on
+	  IsAutoAppliedInSIP	  off
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  12
+	  Version		  "1.16.2"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  13
+	  Version		  "1.16.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
+	  ExpressionDepthLimit	  2147483647
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  14
+	  Version		  "1.16.2"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "none"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "none"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "UseLocalSettings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "none"
+	  UnconnectedOutputMsg	  "none"
+	  UnconnectedLineMsg	  "none"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  AllowSymbolicDim	  on
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  15
+	  Version		  "1.16.2"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Integer"
+	  ProdLargestAtomicFloat  "Float"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "Custom Processor->Custom"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "BigEndian"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Custom Processor->Custom"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  16
+	  Version		  "1.16.2"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  17
+	  Version		  "1.16.2"
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  18
+	  Version		  "1.16.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    14
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateMissedCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "PackageGeneratedCodeAndArtifacts"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "rti1007.tlc"
+	  HardwareBoard		  "None"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rti"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  TemplateMakefile	  "rti1007.tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  "dSPACE DS1007 Hardware Platform"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      19
+	      Version		      "1.16.2"
+	      Array {
+		Type			"Cell"
+		Dimension		23
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"CustomSymbolStrUtil"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.STFCustomTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      20
+	      Version		      "1.16.2"
+	      Array {
+		Type			"Cell"
+		Dimension		23
+		Cell			"TimeScaleFactor"
+		Cell			"EnableRealTimeTesting"
+		Cell			"EnableRealTimeTestingNonUI"
+		Cell			"CCompilerOptimizationOpts"
+		Cell			"RTICfgSetVer"
+		Cell			"NetworkClient"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"GenerateAllocFcn"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"ParMdlRefBuildCompliant"
+		Cell			"GRTInterface"
+		Cell			"MultiInstanceERTCode"
+		Cell			"CodeInterfacePackaging"
+		Cell			"CombineOutputUpdateFcns"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   off
+	      ConcurrentExecutionCompliant off
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	off
+	      GenerateSharedConstants on
+	      SystemTargetFile	      "rti1007.tlc"
+	      DialogCategory	      0
+	      Array {
+		Type			"Handle"
+		Dimension		1
+		Simulink.GRTTargetCC {
+		  $BackupClass		  "Simulink.TargetCC"
+		  $ObjectID		  21
+		  Version		  "1.16.2"
+		  Array {
+		    Type		    "Cell"
+		    Dimension		    17
+		    Cell		    "IncludeMdlTerminateFcn"
+		    Cell		    "SuppressErrorStatus"
+		    Cell		    "ERTCustomFileBanners"
+		    Cell		    "GenerateSampleERTMain"
+		    Cell		    "GenerateTestInterfaces"
+		    Cell		    "ModelStepFunctionPrototypeControlCompliant"
+		    Cell		    "GenerateAllocFcn"
+		    Cell		    "PurelyIntegerCode"
+		    Cell		    "SupportComplex"
+		    Cell		    "SupportAbsoluteTime"
+		    Cell		    "SupportContinuousTime"
+		    Cell		    "SupportNonInlinedSFcns"
+		    Cell		    "ParMdlRefBuildCompliant"
+		    Cell		    "GRTInterface"
+		    Cell		    "MultiInstanceERTCode"
+		    Cell		    "CodeInterfacePackaging"
+		    Cell		    "CombineOutputUpdateFcns"
+		    PropName		    "DisabledProps"
+		  }
+		  TargetFcnLib		  "ansi_tfl_table_tmw.mat"
+		  TargetLibSuffix	  ""
+		  GenFloatMathFcnCalls	  "NOT IN USE"
+		  TargetLangStandard	  "C89/C90 (ANSI)"
+		  CodeReplacementLibrary  "None"
+		  UtilityFuncGeneration	  "Auto"
+		  ERTMultiwordTypeDef	  "System defined"
+		  ERTMultiwordLength	  256
+		  MultiwordLength	  2048
+		  GenerateFullHeader	  on
+		  InferredTypesCompatibility off
+		  GenerateSampleERTMain	  off
+		  GenerateTestInterfaces  off
+		  ModelReferenceCompliant on
+		  ParMdlRefBuildCompliant on
+		  CompOptLevelCompliant	  off
+		  ConcurrentExecutionCompliant off
+		  IncludeMdlTerminateFcn  on
+		  GeneratePreprocessorConditionals "Use local settings"
+		  CombineOutputUpdateFcns off
+		  CombineSignalStateStructs off
+		  SuppressErrorStatus	  off
+		  ERTFirstTimeCompliant	  off
+		  IncludeFileDelimiter	  "Auto"
+		  ERTCustomFileBanners	  off
+		  SupportAbsoluteTime	  on
+		  LogVarNameModifier	  "rt_"
+		  MatFileLogging	  off
+		  MultiInstanceERTCode	  off
+		  CodeInterfacePackaging  "Nonreusable function"
+		  SupportNonFinite	  on
+		  SupportComplex	  on
+		  PurelyIntegerCode	  off
+		  SupportContinuousTime	  on
+		  SupportNonInlinedSFcns  on
+		  SupportVariableSizeSignals off
+		  ParenthesesLevel	  "Nominal"
+		  CastingMode		  "Nominal"
+		  MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+		  ModelStepFunctionPrototypeControlCompliant off
+		  CPPClassGenCompliant	  off
+		  AutosarCompliant	  off
+		  GRTInterface		  on
+		  GenerateAllocFcn	  off
+		  UseToolchainInfoCompliant off
+		  GenerateSharedConstants on
+		  UseMalloc		  off
+		  ExtMode		  off
+		  ExtModeStaticAlloc	  off
+		  ExtModeTesting	  off
+		  ExtModeStaticAllocSize  1000000
+		  ExtModeTransport	  0
+		  ExtModeMexFile	  "noextcomm"
+		  ExtModeIntrfLevel	  "Level1"
+		  RTWCAPISignals	  off
+		  RTWCAPIParams		  off
+		  RTWCAPIStates		  off
+		  RTWCAPIRootIO		  off
+		  GenerateASAP2		  off
+		  MultiInstanceErrorCode  "Error"
+		}
+		PropName		"Components"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__Program Files_dSPACE RCPHIL 2016-A_MATLAB_RTI_RTI1007_TLC_rti1007_1InitialSimState"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "RUN"
+		  Value			  1
+		  String		  "STOP"
+		}
+		Name			"InitialSimState"
+		Value			"RUN"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__Program Files_dSPACE RCPHIL 2016-A_MATLAB_RTI_RTI1007_TLC_rti1007_1ExecutionMode"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "real-time"
+		  Value			  1
+		  String		  "time-scaled"
+		}
+		Name			"ExecutionMode"
+		Value			"real-time"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"ExecutionModeNonUI"
+		Value			"RTSIM"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TimeScaleFactor"
+		Value			"1.0"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TimeScaleFactorNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__Program Files_dSPACE RCPHIL 2016-A_MATLAB_RTI_RTI1007_TLC_rti1007_1AssertionMode"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "OFF"
+		  Value			  1
+		  String		  "WARN"
+		  Value			  2
+		  String		  "STOP"
+		}
+		Name			"AssertionMode"
+		Value			"OFF"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"EnableRealTimeTesting"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"EnableRealTimeTestingNonUI"
+		Value			"ON"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__Program Files_dSPACE RCPHIL 2016-A_MATLAB_RTI_RTI1007_TLC_rti1007_1CCompilerOptimi"
+		"zationOptsPopup_"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "Default"
+		  Value			  1
+		  String		  "None"
+		  Value			  2
+		  String		  "User-defined"
+		}
+		Name			"CCompilerOptimizationOptsPopup_"
+		Value			"Default"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"CCompilerOptimizationOptsNonUI"
+		Value			"USE_DEFAULT"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"AllowReservedHostServiceNums"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"int32"
+		Name			"RTICfgSetVer"
+		Value			480
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"LoadAfterBuild"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"LoadToFlash"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"LoadApplNonUI"
+		Value			"ON"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__Program Files_dSPACE RCPHIL 2016-A_MATLAB_RTI_RTI1007_TLC_rti1007_1PlatformSelecti"
+		"onPopup"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "Platform Name"
+		  Value			  1
+		  String		  "Network Client"
+		}
+		Name			"PlatformSelectionPopup"
+		Value			"Platform Name"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"BoardName"
+		Value			"ds1007"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"BoardNameNonUI"
+		Value			"ds1007"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"NetworkClientNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCOnlyGlobals"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateLabels"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateVirtualBlocks"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateStates"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateDerivatives"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateParamValues"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCIsOmitVdOn"
+		Value			off
+	      }
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  22
+	  Version		  "1.16.2"
+	  Description		  "Simulink Coverage Configuration Component"
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovMetricSettings	  "dw"
+	  CovNameIncrementing	  off
+	  CovHtmlReporting	  on
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar on
+	  CovSaveSingleToWorkspaceVar on
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "Off"
+	  CovExternalEMLEnable	  off
+	  CovSFcnEnable		  on
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 523, 222, 1603, 862 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    10
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    23
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "MS UI Gothic"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "opaque"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+      DisallowConstTsAndPrmTs off
+      PortDimensions	      "1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "double"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "base"
+    Location		    [106, 65, 1066, 999]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "125"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1037"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Application"
+      SID		      "669"
+      Ports		      [0, 0, 1]
+      Position		      [225, 173, 325, 237]
+      ZOrder		      15
+      TreatAsAtomicUnit	      on
+      RequestExecContextInheritance off
+      Variant		      off
+      System {
+	Name			"Application"
+	Location		[106, 65, 1066, 999]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  SID			  "670"
+	  Ports			  []
+	  Position		  [255, 125, 275, 145]
+	  ZOrder		  -1
+	  StatesWhenEnabling	  "reset"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Hand Control"
+	  SID			  "671"
+	  Ports			  [2]
+	  Position		  [450, 197, 550, 268]
+	  ZOrder		  -10
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "Hand Control"
+	    Location		    [505, 0, 1465, 946]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "125"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Ref Jnt Ang"
+	      SID		      "672"
+	      Position		      [80, 88, 110, 102]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Jnt Ang"
+	      SID		      "673"
+	      Position		      [80, 153, 110, 167]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "674"
+	      Position		      [490, 120, 510, 140]
+	      ZOrder		      -3
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "handCtrl"
+	      SID		      "675"
+	      Ports		      [2, 1]
+	      Position		      [155, 60, 225, 195]
+	      ZOrder		      -4
+	      FunctionName	      "handCtrl"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "handDALimit"
+	      SID		      "676"
+	      Ports		      [1, 1]
+	      Position		      [370, 109, 445, 151]
+	      ZOrder		      -5
+	      FunctionName	      "handDALimit"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "handJntTrq2DA"
+	      SID		      "677"
+	      Ports		      [1, 1]
+	      Position		      [255, 109, 340, 151]
+	      ZOrder		      -6
+	      FunctionName	      "handJntTrq2DA"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Jnt Ang"
+	      SrcPort		      1
+	      DstBlock		      "handCtrl"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Ref Jnt Ang"
+	      SrcPort		      1
+	      DstBlock		      "handCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "handCtrl"
+	      SrcPort		      1
+	      DstBlock		      "handJntTrq2DA"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "handJntTrq2DA"
+	      SrcPort		      1
+	      DstBlock		      "handDALimit"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "handDALimit"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Hand Trajectory"
+	  SID			  "678"
+	  Ports			  [2, 2]
+	  Position		  [290, 195, 390, 270]
+	  ZOrder		  -11
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "Hand Trajectory"
+	    Location		    [106, 65, 1066, 999]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "150"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Time"
+	      SID		      "679"
+	      Position		      [70, 48, 100, 62]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "camera"
+	      SID		      "680"
+	      Position		      [70, 153, 100, 167]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "681"
+	      Position		      [365, 130, 385, 150]
+	      ZOrder		      1
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "dummy"
+	      SID		      "682"
+	      Position		      [70, 95, 100, 125]
+	      ZOrder		      17
+	      Value		      "[0 0 0 0 0 0 0 0 0 0 ]"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "handEnc2JntAng"
+	      SID		      "683"
+	      Ports		      [0, 1]
+	      Position		      [55, 200, 160, 240]
+	      ZOrder		      -3
+	      FunctionName	      "handEnc2JntAng"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "handJntAngLimit"
+	      SID		      "684"
+	      Ports		      [1, 1]
+	      Position		      [310, 50, 400, 100]
+	      ZOrder		      -4
+	      FunctionName	      "handJntAngLimit"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "handTraj"
+	      SID		      "685"
+	      Ports		      [4, 2]
+	      Position		      [195, 41, 275, 174]
+	      ZOrder		      -5
+	      FunctionName	      "handTraj"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ref Jnt Ang"
+	      SID		      "686"
+	      Position		      [435, 68, 465, 82]
+	      ZOrder		      -6
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Jnt Ang"
+	      SID		      "687"
+	      Position		      [435, 213, 465, 227]
+	      ZOrder		      -7
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Time"
+	      SrcPort		      1
+	      DstBlock		      "handTraj"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "handEnc2JntAng"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		ZOrder			3
+		Points			[0, -130]
+		DstBlock		"handTraj"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			4
+		DstBlock		"Jnt Ang"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "handTraj"
+	      SrcPort		      1
+	      DstBlock		      "handJntAngLimit"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "handJntAngLimit"
+	      SrcPort		      1
+	      DstBlock		      "Ref Jnt Ang"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "handTraj"
+	      SrcPort		      2
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "dummy"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 15]
+	      DstBlock		      "handTraj"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "camera"
+	      SrcPort		      1
+	      DstBlock		      "handTraj"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "1025"
+	  Ports			  [2, 1]
+	  Position		  [600, 258, 605, 322]
+	  ZOrder		  37
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Task Setting"
+	  SID			  "688"
+	  Ports			  [0, 1]
+	  Position		  [75, 187, 140, 243]
+	  ZOrder		  -12
+	  FunctionName		  "TaskSet"
+	  SFunctionDeploymentMode off
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP Receive"
+	  SID			  "689"
+	  Ports			  [0, 1]
+	  Position		  [90, 365, 190, 425]
+	  ZOrder		  17
+	  BackgroundColor	  "lightBlue"
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "UDP Receive"
+	    Location		    [106, 65, 1066, 999]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "ETHERNET_DECODE_BL2"
+	      SID		      "691"
+	      Ports		      [1, 1]
+	      Position		      [455, 225, 585, 285]
+	      ZOrder		      16
+	      FunctionName	      "rtiethernetdecode"
+	      Parameters	      "byteordering,offset,auto_offset,datatype,one_datatype,sampletime"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	      Object {
+		$PropName		"MaskObject"
+		$ObjectID		24
+		$ClassName		"Simulink.Mask"
+		Type			"Ethernet Decode"
+		Description		"Converts a byte input data stream into the specified datatypes on the output port.\n\nDatatype codes:\n"
+		"BOOLEAN:  1   //   INT8:      2   //   UINT8:    3  \nINT16  :     4   //   UINT16:  5   //   INT32:     6  \nUINT32"
+		" :    7   //   FLOAT:    8   //   DOUBLE:  9"
+		Help			"To get further information on this block, refer to the RTI Ethernet blockset documentation."
+		Display			"text(0.5,0.5, 'Ethernet\\nDecode', 'HorizontalAlignment', 'center')"
+		IconUnits		"normalized"
+		Array {
+		  Type			  "Simulink.MaskParameter"
+		  Dimension		  6
+		  Object {
+		    $ObjectID		    25
+		    Type		    "popup"
+		    Array {
+		    Type		    "Cell"
+		    Dimension		    2
+		    Cell		    "Big endian (Motorola)"
+		    Cell		    "Little endian (Intel)"
+		    PropName		    "TypeOptions"
+		    }
+		    Name		    "byteordering"
+		    Prompt		    "Byte ordering:"
+		    Value		    "Little endian (Intel)"
+		  }
+		  Object {
+		    $ObjectID		    26
+		    Type		    "edit"
+		    Name		    "offset"
+		    Prompt		    "Offset (bytes):"
+		    Value		    "[0]"
+		    Enabled		    "off"
+		  }
+		  Object {
+		    $ObjectID		    27
+		    Type		    "checkbox"
+		    Name		    "auto_offset"
+		    Prompt		    "Auto offset"
+		    Value		    "on"
+		    Callback		    "rtiethernetfcnlib('EnableEnDecodeGuiControl', gcbh, 'auto_offset', 2)"
+		  }
+		  Object {
+		    $ObjectID		    28
+		    Type		    "edit"
+		    Name		    "datatype"
+		    Prompt		    "Datatype:"
+		    Value		    "9"
+		  }
+		  Object {
+		    $ObjectID		    29
+		    Type		    "checkbox"
+		    Name		    "one_datatype"
+		    Prompt		    "One datatype only"
+		    Value		    "on"
+		  }
+		  Object {
+		    $ObjectID		    30
+		    Type		    "edit"
+		    Name		    "sampletime"
+		    Prompt		    "Sampletime:"
+		    Value		    "-1"
+		  }
+		  PropName		  "Parameters"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ETHERNET_UDP_RX_BL1"
+	      SID		      "692"
+	      Ports		      [1, 3]
+	      Position		      [160, 237, 390, 333]
+	      ZOrder		      17
+	      LibraryVersion	      "1.355"
+	      SourceBlock	      "rtiethernetlib/ETHERNET_UDP_RX_BL1"
+	      SourceType	      "RTI"
+	      ContentPreviewEnabled   off
+	      DSProperties	      "struct('RTI',struct('Version',uint32(1),'BlockType',struct('isSLSource',uint8(1),'isSLSink'"
+	      ",uint8(1),'isHWSource',uint8(0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',uint8("
+	      "0),'isInterrupt',uint8(0),'isChannelwise',uint8(0)),'IOBoardType','DSETHERNET','UnitType','UDP','Identifier','R"
+	      "XUDP','DialogType','ML','BlockSet','RTIETHERNET','SlaveProcessor','NONE'))"
+	      RTIBlockInterface	      "struct('OutputPortsWidth',int32([112 1 1 1 4 1]),'OutputPortsActive',[1 1 1 0 0 0],'Ou"
+	      "tputPortsName',{{'Data','Status',['Received Frames'],['Received Bytes'],['Remote IP'],['Remote Port']}},'Output"
+	      "PortsDataType',{{'SS_UINT8','SS_UINT32','SS_DOUBLE','SS_UINT32','SS_UINT8','SS_UINT16'}},'InputPortsWidth',int3"
+	      "2(1),'InputPortsActive',1,'InputPortsName',{{'Enable'}},'InputPortsDataType',{{'SS_BOOLEAN'}},'RWork',{{{'RECEI"
+	      "VED_FRAMES',uint32(1)}}},'InitLevel',3,'IconTransparency','on','BlockDisplay',{{['Ethernet UDP/IP\\nRX\\n\\nSoc"
+	      "ket ID: 0'],'center'}},'DialogFcn','rtiethernetrxudpgui','BlockName',struct('Token',{{'ETHERNET_UDP_RX_BL1'}}))"
+	      RTIBlockParameters      "struct('SocketIdIndex',{{2,'OFF',[1 2]}},'SocketId',{{0,'OFF',[-1 inf]}},'RemoteIp',{{"
+	      "['<NOT AVAILABLE>'],'OFF',[]}},'RemotePort',{{['<NOT AVAILABLE>'],'OFF',[]}},'LocalPort',{{50006,'OFF',[]}},'Fr"
+	      "ameSize',{{'112','OFF',[1 65507]}},'EnableVariableFrameSize',{{0,'OFF',[0 1]}},'VariableFrameSizeMode',{{1,'OFF"
+	      "',[1 2]}},'InterruptMode',{{0,'OFF',[0 1]}},'RemoteIpOutPortMode',{{0,'OFF',[0 1]}},'RemotePortOutPortMode',{{0"
+	      ",'OFF',[0 1]}},'TLCFileName',{{'rtiethernetrxudp','OFF',[]}})"
+	      RTISFcnParameters	      "struct('SocketIdIndex','int32','SocketId','double','FrameSize','uint16','EnableVariabl"
+	      "eFrameSize','int32','VariableFrameSizeMode','int32','InterruptMode','int32','RemoteIpOutPortMode','int32','Remo"
+	      "tePortOutPortMode','int32','TLCFileName','char')"
+	      RTIBlockParaDefault     "struct('SocketIdIndex',1,'SocketId',-1,'RemoteIp',['<NOT AVAILABLE>'],'RemotePort',['<"
+	      "NOT AVAILABLE>'],'LocalPort',['<NOT AVAILABLE>'],'FrameSize',1024,'EnableVariableFrameSize',0,'VariableFrameSiz"
+	      "eMode',1,'InterruptMode',0,'RemoteIpOutPortMode',0,'RemotePortOutPortMode',0,'TLCFileName','rtiethernetrxudp')"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Receive Switcher"
+	      SID		      "690"
+	      Position		      [25, 270, 90, 300]
+	      ZOrder		      18
+	      Value		      "boolean(1)"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RecvData"
+	      SID		      "693"
+	      Position		      [695, 248, 725, 262]
+	      ZOrder		      19
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "ETHERNET_DECODE_BL2"
+	      SrcPort		      1
+	      DstBlock		      "RecvData"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "ETHERNET_UDP_RX_BL1"
+	      SrcPort		      1
+	      DstBlock		      "ETHERNET_DECODE_BL2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Receive Switcher"
+	      SrcPort		      1
+	      DstBlock		      "ETHERNET_UDP_RX_BL1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP Send"
+	  SID			  "867"
+	  Ports			  [1]
+	  Position		  [665, 262, 765, 318]
+	  ZOrder		  -21
+	  BackgroundColor	  "red"
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "UDP Send"
+	    Location		    [106, 65, 1066, 999]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SendData"
+	      SID		      "868"
+	      Position		      [155, 238, 185, 252]
+	      ZOrder		      30
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "ETHERNET_ENCODE_BL1"
+	      SID		      "873"
+	      Ports		      [1, 1]
+	      Position		      [230, 215, 360, 275]
+	      ZOrder		      35
+	      FunctionName	      "rtiethernetencode"
+	      Parameters	      "byteordering,offset,auto_offset,datatype,one_datatype,sampletime"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	      Object {
+		$PropName		"MaskObject"
+		$ObjectID		31
+		$ClassName		"Simulink.Mask"
+		Type			"Ethernet Encode"
+		Description		"Converts an input signal consisting of datatypes into a byte data stream on the output port.\n\nDataty"
+		"pe codes:\nBOOLEAN:  1   //   INT8:      2   //   UINT8:    3  \nINT16  :     4   //   UINT16:  5   //   INT32:     "
+		"6  \nUINT32 :    7   //   FLOAT:    8   //   DOUBLE:  9"
+		Help			"To get further information on this block, refer to the RTI Ethernet blockset documentation."
+		Display			"text(0.5,0.5, 'Ethernet\\nEncode', 'HorizontalAlignment', 'center')"
+		IconUnits		"normalized"
+		Array {
+		  Type			  "Simulink.MaskParameter"
+		  Dimension		  6
+		  Object {
+		    $ObjectID		    32
+		    Type		    "popup"
+		    Array {
+		    Type		    "Cell"
+		    Dimension		    2
+		    Cell		    "Big endian (Motorola)"
+		    Cell		    "Little endian (Intel)"
+		    PropName		    "TypeOptions"
+		    }
+		    Name		    "byteordering"
+		    Prompt		    "Byte ordering:"
+		    Value		    "Little endian (Intel)"
+		  }
+		  Object {
+		    $ObjectID		    33
+		    Type		    "edit"
+		    Name		    "offset"
+		    Prompt		    "Offset (bytes):"
+		    Value		    "[0] "
+		    Enabled		    "off"
+		  }
+		  Object {
+		    $ObjectID		    34
+		    Type		    "checkbox"
+		    Name		    "auto_offset"
+		    Prompt		    "Auto offset"
+		    Value		    "on"
+		    Callback		    "rtiethernetfcnlib('EnableEnDecodeGuiControl', gcbh, 'auto_offset', 2)"
+		  }
+		  Object {
+		    $ObjectID		    35
+		    Type		    "edit"
+		    Name		    "datatype"
+		    Prompt		    "Datatype:"
+		    Value		    "9"
+		  }
+		  Object {
+		    $ObjectID		    36
+		    Type		    "checkbox"
+		    Name		    "one_datatype"
+		    Prompt		    "One datatype only "
+		    Value		    "on"
+		  }
+		  Object {
+		    $ObjectID		    37
+		    Type		    "edit"
+		    Name		    "sampletime"
+		    Prompt		    "Sampletime:"
+		    Value		    "-1"
+		  }
+		  PropName		  "Parameters"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ETHERNET_UDP_TX_BL1"
+	      SID		      "866"
+	      Ports		      [2, 2]
+	      Position		      [455, 265, 685, 360]
+	      ZOrder		      29
+	      LibraryVersion	      "1.355"
+	      SourceBlock	      "rtiethernetlib/ETHERNET_UDP_TX_BL1"
+	      SourceType	      "RTI"
+	      ContentPreviewEnabled   off
+	      DSProperties	      "struct('RTI',struct('Version',uint32(1),'BlockType',struct('isSLSource',uint8(1),'isSLSink'"
+	      ",uint8(1),'isHWSource',uint8(0),'isHWSink',uint8(1),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',uint8("
+	      "0),'isInterrupt',uint8(0),'isChannelwise',uint8(0)),'IOBoardType','DSETHERNET','UnitType','UDP','Identifier','T"
+	      "XUDP','DialogType','ML','BlockSet','RTIETHERNET','SlaveProcessor','NONE'))"
+	      RTIBlockInterface	      "struct('OutputPortsWidth',int32([1 1]),'OutputPortsActive',[1 1],'OutputPortsName',{{'"
+	      "Status',['Sent Frames']}},'OutputPortsDataType',{{'SS_UINT32','SS_DOUBLE'}},'InputPortsWidth',int32([96 1 1 4 1"
+	      "]),'InputPortsActive',[1 1 0 0 0],'InputPortsName',{{'Data','Enable',['Bytes to Send'],['Remote IP'],['Remote P"
+	      "ort']}},'InputPortsDataType',{{'SS_UINT8','SS_BOOLEAN','SS_UINT32','SS_UINT8','SS_UINT16'}},'RWork',{{{'SENT_FR"
+	      "AMES',uint32(1)}}},'InitLevel',3,'IconTransparency','on','BlockDisplay',{{['Ethernet UDP/IP\\nTX\\n\\nSocket ID"
+	      ": 0'],'center'}},'DialogFcn','rtiethernettxudpgui','BlockName',struct('Token',{{'ETHERNET_UDP_TX_BL1'}}))"
+	      RTIBlockParameters      "struct('SocketIdIndex',{{2,'OFF',[1 2]}},'SocketId',{{0,'OFF',[-1 inf]}},'RemoteIp',{{"
+	      "'10.1.196.178','OFF',[]}},'RemotePort',{{52001,'OFF',[]}},'LocalPort',{{50006,'OFF',[]}},'EnableDynamicRemoteIp"
+	      "',{{0,'OFF',[0 1]}},'EnableDynamicRemotePort',{{0,'OFF',[0 1]}},'FrameSize',{{'96','OFF',[1 65507]}},'EnableVar"
+	      "iableFrameSize',{{0,'OFF',[0 1]}},'SentFramesOutPortMode',{{1,'OFF',[0 1]}},'RemoteIpNum',{{[10 1 196 178],'OFF"
+	      "',[0 255]}},'RemotePortNum',{{52001,'OFF',[0 65535]}},'TLCFileName',{{'rtiethernettxudp','OFF',[]}})"
+	      RTISFcnParameters	      "struct('SocketIdIndex','int32','SocketId','double','EnableDynamicRemoteIp','int32','En"
+	      "ableDynamicRemotePort','int32','FrameSize','uint16','EnableVariableFrameSize','int32','SentFramesOutPortMode','"
+	      "int32','RemoteIpNum','uint8','RemotePortNum','uint16','TLCFileName','char')"
+	      RTIBlockParaDefault     "struct('SocketIdIndex',1,'SocketId',-1,'RemoteIp',['<NOT AVAILABLE>'],'RemotePort',['<"
+	      "NOT AVAILABLE>'],'LocalPort',['<NOT AVAILABLE>'],'EnableDynamicRemoteIp',0,'EnableDynamicRemotePort',0,'FrameSi"
+	      "ze',1024,'EnableVariableFrameSize',0,'SentFramesOutPortMode',1,'RemoteIpNum',[0 0 0 0],'RemotePortNum',0,'TLCFi"
+	      "leName','rtiethernettxudp')"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Send Switcher"
+	      SID		      "863"
+	      Position		      [275, 320, 340, 350]
+	      ZOrder		      28
+	      Value		      "boolean(1)"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "871"
+	      Position		      [745, 280, 765, 300]
+	      ZOrder		      33
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      SID		      "872"
+	      Position		      [745, 325, 765, 345]
+	      ZOrder		      34
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      "Send Switcher"
+	      SrcPort		      1
+	      DstBlock		      "ETHERNET_UDP_TX_BL1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      21
+	      SrcBlock		      "ETHERNET_UDP_TX_BL1"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      22
+	      SrcBlock		      "ETHERNET_UDP_TX_BL1"
+	      SrcPort		      2
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      23
+	      SrcBlock		      "ETHERNET_ENCODE_BL1"
+	      SrcPort		      1
+	      Points		      [43, 0; 0, 45]
+	      DstBlock		      "ETHERNET_UDP_TX_BL1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      24
+	      SrcBlock		      "SendData"
+	      SrcPort		      1
+	      DstBlock		      "ETHERNET_ENCODE_BL1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "XYZstage Control"
+	  SID			  "694"
+	  Ports			  [2]
+	  Position		  [455, 329, 550, 396]
+	  ZOrder		  19
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "XYZstage Control"
+	    Location		    [505, 0, 1465, 946]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "135"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Ref Angle"
+	      SID		      "695"
+	      Position		      [90, 118, 120, 132]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Jnt Angle"
+	      SID		      "696"
+	      Position		      [100, 258, 130, 272]
+	      ZOrder		      1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "697"
+	      Position		      [685, 185, 705, 205]
+	      ZOrder		      -2
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "XYZstageCtrl"
+	      SID		      "698"
+	      Ports		      [2, 1]
+	      Position		      [275, 55, 345, 335]
+	      ZOrder		      -3
+	      FunctionName	      "XYZstageCtrl"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "XYZstageDALimit"
+	      SID		      "699"
+	      Ports		      [1, 1]
+	      Position		      [540, 168, 645, 222]
+	      ZOrder		      -4
+	      FunctionName	      "XYZstageDALimit"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "XYZstageTrq2DA"
+	      SID		      "700"
+	      Ports		      [1, 1]
+	      Position		      [395, 167, 495, 223]
+	      ZOrder		      -6
+	      FunctionName	      "XYZstageTrq2DA"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Jnt Angle"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageCtrl"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Ref Angle"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "XYZstageCtrl"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageTrq2DA"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "XYZstageDALimit"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "XYZstageTrq2DA"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageDALimit"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "XYZstage Trajectory"
+	  SID			  "701"
+	  Ports			  [2, 2]
+	  Position		  [290, 328, 395, 397]
+	  ZOrder		  18
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "XYZstage Trajectory"
+	    Location		    [106, 65, 1066, 999]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "142"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Time"
+	      SID		      "702"
+	      Position		      [70, 88, 100, 102]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Camera"
+	      SID		      "703"
+	      Position		      [75, 163, 105, 177]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "XYZstageEnc2JntAng"
+	      SID		      "704"
+	      Ports		      [0, 1]
+	      Position		      [125, 211, 230, 259]
+	      ZOrder		      1
+	      FunctionName	      "XYZstageEnc2JntAng"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "XYZstageJntAngLimit"
+	      SID		      "705"
+	      Ports		      [1, 1]
+	      Position		      [270, 83, 365, 137]
+	      ZOrder		      -3
+	      FunctionName	      "XYZstageAngLimit"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "XYZstageTraj"
+	      SID		      "706"
+	      Ports		      [4, 2]
+	      Position		      [170, 82, 230, 183]
+	      ZOrder		      -4
+	      FunctionName	      "XYZstageTraj"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ref Angle"
+	      SID		      "707"
+	      Position		      [410, 103, 440, 117]
+	      ZOrder		      -5
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Jnt Angle"
+	      SID		      "708"
+	      Position		      [410, 228, 440, 242]
+	      ZOrder		      2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "XYZstageJntAngLimit"
+	      SrcPort		      1
+	      DstBlock		      "Ref Angle"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Time"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageTraj"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "XYZstageTraj"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageJntAngLimit"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "Camera"
+	      SrcPort		      1
+	      DstBlock		      "XYZstageTraj"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "XYZstageEnc2JntAng"
+	      SrcPort		      1
+	      DstBlock		      "Jnt Angle"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Hand Trajectory"
+	  SrcPort		  1
+	  DstBlock		  "Hand Control"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Hand Trajectory"
+	  SrcPort		  2
+	  Points		  [25, 0]
+	  Branch {
+	    ZOrder		    30
+	    Points		    [0, 55]
+	    DstBlock		    "Mux"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    29
+	    DstBlock		    "Hand Control"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "Task Setting"
+	  SrcPort		  1
+	  Points		  [74, 0]
+	  Branch {
+	    ZOrder		    4
+	    Points		    [0, 130]
+	    DstBlock		    "XYZstage Trajectory"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    5
+	    Points		    [43, 0]
+	    Branch {
+	      ZOrder		      28
+	      Points		      [0, -37; 311, 0; 0, 97]
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      27
+	      DstBlock		      "Hand Trajectory"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "UDP Receive"
+	  SrcPort		  1
+	  Points		  [47, 0; 0, -15]
+	  Branch {
+	    ZOrder		    7
+	    DstBlock		    "XYZstage Trajectory"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    8
+	    Points		    [0, -130]
+	    DstBlock		    "Hand Trajectory"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "XYZstage Trajectory"
+	  SrcPort		  1
+	  DstBlock		  "XYZstage Control"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "XYZstage Trajectory"
+	  SrcPort		  2
+	  DstBlock		  "XYZstage Control"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  26
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "UDP Send"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ETHERNET_SETUP_BL1"
+      SID		      "447"
+      Ports		      [0, 1]
+      Position		      [75, 292, 305, 388]
+      ZOrder		      12
+      LibraryVersion	      "1.355"
+      SourceBlock	      "rtiethernetlib/ETHERNET_SETUP_BL1"
+      SourceType	      "RTI"
+      ContentPreviewEnabled   off
+      DSProperties	      "struct('RTI',struct('Version',uint32(2),'BlockType',struct('isSLSource',uint8(0),'isSLSink',"
+      "uint8(0),'isHWSource',uint8(0),'isHWSink',uint8(0),'isSetup',uint8(1),'isInline',uint8(1),'isNonInline',uint8(0)"
+      ",'isInterrupt',uint8(0),'isChannelwise',uint8(0)),'IOBoardType','DSETHERNET','UnitType','ETHERNET','Identifier',"
+      "'SETUP','DialogType','ML','BlockSet','RTIETHERNET','SlaveProcessor','NONE'))"
+      RTIBlockInterface	      "struct('OutputPortsWidth',int32([2 1 1 4]),'OutputPortsActive',[1 0 0 0],'OutputPortsNa"
+      "me',{{['Link Status'],['Watchdog Status'],['DHCP Status'],['Local IP']}},'OutputPortsDataType',{{'SS_UINT32','SS"
+      "_UINT32','SS_UINT32','SS_UINT8'}},'InitLevel',3,'IconTransparency','on','BlockDisplay',{{['Ethernet Setup\\n\\nL"
+      "ocal IP: 10.1.196.179'],'left'}},'DialogFcn','rtiethernetsetupgui','BlockName',struct('Token',{{'ETHERNET_SETUP_"
+      "BL1'}}))"
+      RTIBlockParameters      "struct('DHCPserverMode',{{0,'OFF',[0 1]}},'LocalIpNum1',{{'10','OFF',[0 255]}},'LocalIp"
+      "Num2',{{'1','OFF',[0 255]}},'LocalIpNum3',{{'196','OFF',[0 255]}},'LocalIpNum4',{{'179','OFF',[0 255]}},'SubnetM"
+      "askNum1',{{'255','OFF',[0 255]}},'SubnetMaskNum2',{{'255','OFF',[0 255]}},'SubnetMaskNum3',{{'255','OFF',[0 255]"
+      "}},'SubnetMaskNum4',{{'0','OFF',[0 255]}},'GatewayNum1',{{'0','OFF',[0 255]}},'GatewayNum2',{{'0','OFF',[0 255]}"
+      "},'GatewayNum3',{{'0','OFF',[0 255]}},'GatewayNum4',{{'0','OFF',[0 255]}},'LinkStatusOutPortMode',{{1,'OFF',[0 1"
+      "]}},'NumOfEthConnectors',{{2,'ON',[1 16]}},'WatchdogStatusOutPortMode',{{0,'OFF',[0 1]}},'LocalIpOutPortMode',{{"
+      "0,'OFF',[0 1]}},'IpAndSubmaskCheck',{{int32(1),'OFF',[0 1]}},'TLCFileName',{{'rtiethernetsetup','OFF',[]}})"
+      RTISFcnParameters	      "struct('DHCPserverMode','int32','LocalIpNum1','uint8','LocalIpNum2','uint8','LocalIpNum"
+      "3','uint8','LocalIpNum4','uint8','SubnetMaskNum1','uint8','SubnetMaskNum2','uint8','SubnetMaskNum3','uint8','Sub"
+      "netMaskNum4','uint8','GatewayNum1','uint8','GatewayNum2','uint8','GatewayNum3','uint8','GatewayNum4','uint8','Li"
+      "nkStatusOutPortMode','int32','NumOfEthConnectors','int32','WatchdogStatusOutPortMode','int32','LocalIpOutPortMod"
+      "e','int32','TLCFileName','char')"
+      RTIBlockParaDefault     "struct('DHCPserverMode',0,'LocalIpNum1',192,'LocalIpNum2',168,'LocalIpNum3',140,'LocalI"
+      "pNum4',6,'SubnetMaskNum1',255,'SubnetMaskNum2',255,'SubnetMaskNum3',255,'SubnetMaskNum4',0,'GatewayNum1',0,'Gate"
+      "wayNum2',0,'GatewayNum3',0,'GatewayNum4',0,'LinkStatusOutPortMode',1,'NumOfEthConnectors',3,'WatchdogStatusOutPo"
+      "rtMode',0,'LocalIpOutPortMode',0,'IpAndSubmaskCheck',1,'TLCFileName','rtiethernetsetup')"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ETHERNET_UDP_SETUP_BL1"
+      SID		      "448"
+      Ports		      []
+      Position		      [75, 409, 305, 501]
+      ZOrder		      13
+      LibraryVersion	      "1.355"
+      SourceBlock	      "rtiethernetlib/ETHERNET_UDP_SETUP_BL1"
+      SourceType	      "RTI"
+      ContentPreviewEnabled   off
+      DSProperties	      "struct('RTI',struct('Version',uint32(2),'BlockType',struct('isSLSource',uint8(1),'isSLSink',"
+      "uint8(1),'isHWSource',uint8(0),'isHWSink',uint8(0),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',uint8(0)"
+      ",'isInterrupt',uint8(0),'isChannelwise',uint8(0)),'IOBoardType','DSETHERNET','UnitType','UDP','Identifier','SETU"
+      "PUDP','DialogType','ML','BlockSet','RTIETHERNET','SlaveProcessor','NONE'))"
+      RTIBlockInterface	      "struct('OutputPortsWidth',int32(2),'OutputPortsActive',0,'OutputPortsName',{{['RX Dropp"
+      "ed Frames']}},'OutputPortsDataType',{{'SS_DOUBLE'}},'InputPortsWidth',int32([4 1]),'InputPortsActive',int32([0 0"
+      "]),'InputPortsName',{{['RX Remote IP Filter'],['RX Remote Port Filter']}},'InputPortsDataType',{{'SS_UINT8','SS_"
+      "UINT16'}},'RWork',{{{'RX_DROPPED_FRAMES',uint32(2)}}},'InitLevel',3,'IconTransparency','on','BlockDisplay',{{['E"
+      "thernet UDP/IP\\nSetup\\n\\nSocket ID: 0'],'center'}},'DialogFcn','rtiethernetsetupudpgui','BlockName',struct('T"
+      "oken',{{'ETHERNET_UDP_SETUP_BL1'}}))"
+      RTIBlockParameters      "struct('SocketId',{{0,'OFF',[]}},'EnableSocketBind',{{1,'OFF',[0 1]}},'AcceptAnyRxRemot"
+      "eIp',{{1,'OFF',[0 1]}},'RxRemoteIpNum1',{{'10','OFF',[0 255]}},'RxRemoteIpNum2',{{'1','OFF',[0 255]}},'RxRemoteI"
+      "pNum3',{{'196','OFF',[0 255]}},'RxRemoteIpNum4',{{'18','OFF',[0 255]}},'EnableDynamicRxRemoteIpFilter',{{0,'OFF'"
+      ",[0 1]}},'AcceptAnyRxRemotePort',{{1,'OFF',[0 1]}},'RxRemotePort',{{'49002','OFF',[1 65535]}},'EnableDynamicRxRe"
+      "motePortFilter',{{0,'OFF',[0 1]}},'TxRemoteIpNum1',{{'10','OFF',[0 255]}},'TxRemoteIpNum2',{{'1','OFF',[0 255]}}"
+      ",'TxRemoteIpNum3',{{'196','OFF',[0 255]}},'TxRemoteIpNum4',{{'178','OFF',[0 255]}},'TxRemotePort',{{'52001','OFF"
+      "',[1 65535]}},'SpecifyLocalPort',{{1,'OFF',[0 1]}},'LocalPort',{{'50006','OFF',[1 65535]}},'InterruptMode',{{0,'"
+      "OFF',[0 1]}},'RxDroppedFramesOutPortMode',{{0,'OFF',[0 1]}},'RemoteIpNumCheck',{{0,'OFF',[0 1]}},'RemotePortChec"
+      "k',{{0,'OFF',[0 1]}},'LocalPortCheck',{{1,'OFF',[0 1]}},'DHCPserverModeEnabled',{{0,'OFF',[0 1]}},'TLCFileName',"
+      "{{'rtiethernetsetupudp','OFF',[]}})"
+      RTISFcnParameters	      "struct('SocketId','double','EnableSocketBind','int32','AcceptAnyRxRemoteIp','int32','Rx"
+      "RemoteIpNum1','uint8','RxRemoteIpNum2','uint8','RxRemoteIpNum3','uint8','RxRemoteIpNum4','uint8','EnableDynamicR"
+      "xRemoteIpFilter','int32','AcceptAnyRxRemotePort','int32','RxRemotePort','uint16','EnableDynamicRxRemotePortFilte"
+      "r','int32','TxRemoteIpNum1','uint8','TxRemoteIpNum2','uint8','TxRemoteIpNum3','uint8','TxRemoteIpNum4','uint8','"
+      "TxRemotePort','uint16','SpecifyLocalPort','int32','LocalPort','uint16','InterruptMode','int32','RxDroppedFramesO"
+      "utPortMode','int32','DHCPserverModeEnabled','int32','TLCFileName','char')"
+      RTIBlockParaDefault     "struct('SocketId',-1,'EnableSocketBind',1,'AcceptAnyRxRemoteIp',1,'RxRemoteIpNum1',0,'R"
+      "xRemoteIpNum2',0,'RxRemoteIpNum3',0,'RxRemoteIpNum4',0,'EnableDynamicRxRemoteIpFilter',0,'AcceptAnyRxRemotePort'"
+      ",1,'RxRemotePort',49002,'EnableDynamicRxRemotePortFilter',0,'TxRemoteIpNum1',0,'TxRemoteIpNum2',0,'TxRemoteIpNum"
+      "3',0,'TxRemoteIpNum4',0,'TxRemotePort',49002,'SpecifyLocalPort',0,'LocalPort',49001,'InterruptMode',0,'RxDropped"
+      "FramesOutPortMode',0,'RemoteIpNumCheck',0,'RemotePortCheck',0,'LocalPortCheck',0,'DHCPserverModeEnabled',0,'TLCF"
+      "ileName','rtiethernetsetupudp')"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "RTI Data"
+      SID		      "86"
+      Tag		      "struct('RTIDataServer',struct('RTIDataServerVs','2','RTIModelDescription','struct(''main'',''base'',"
+      "''sub'','''',''isMp'',0)'))"
+      Ports		      []
+      Position		      [15, 15, 66, 27]
+      ZOrder		      -5
+      ForegroundColor	      "gray"
+      BackgroundColor	      "[0.752941, 0.752941, 0.752941]"
+      DropShadow	      on
+      ShowName		      off
+      CopyFcn		      "if exist('rtidc'), try,  rtidc('DataHostBlockClbCopy', gcbh); catch, disp(['Warning: ''CopyFcn''"
+      " for RTI Data block failed: ' lasterr]); end, end, "
+      DeleteFcn		      "if exist('rtidc'), try,  rtidc('DataHostBlockClbDelete', gcbh); catch, disp(['Warning: ''Delet"
+      "eFcn'' for RTI Data block failed: ' lasterr]); end, end, "
+      LoadFcn		      "if exist('rtidc'), try,  rtidc('DataHostBlockClbLoad', gcbh); catch, disp(['Warning: ''LoadFcn''"
+      " for RTI Data block failed: ' lasterr]); end, end, "
+      ModelCloseFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockClbModelClose', gcbh); catch, disp(['Warning: "
+      "''ModelCloseFcn'' for RTI Data block failed: ' lasterr]); end, end, "
+      PreSaveFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockClbPreSave', gcbh); catch, disp(['Warning: ''PreS"
+      "aveFcn'' for RTI Data block failed: ' lasterr]); end, end, "
+      PostSaveFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockClbPostSave', gcbh); catch, disp(['Warning: ''Po"
+      "stSaveFcn'' for RTI Data block failed: ' lasterr]); end, end, "
+      NameChangeFcn	      "if exist('rtidc'), try,  rtidc('DataHostBlockClbNameChange', gcbh); catch, disp(['Warning: "
+      "''NameChangeFcn'' for RTI Data block failed: ' lasterr]); end, end, "
+      RequestExecContextInheritance off
+      Variant		      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		38
+	$ClassName		"Simulink.Mask"
+	Type			"RTI_DATA_HOST"
+	Description		"RTI Data Block.\nThis block is used by RTI to store internal model-dependent data.\nPlease keep this bl"
+	"ock on the root level of the model. Deleting this block will result in data loss.\n\nNEVER DELETE OR COPY THIS BLOCK!"
+	Help			"RTI Data Block.\nThis block is used by RTI to store internal model-dependent data.\nPlease keep this block on"
+	" the root level of the model. Deleting this block will result in data loss.\n\nNEVER DELETE OR COPY THIS BLOCK!"
+	Display			"text(0.5, 0.5, 'RTI Data', 'HorizontalAlignment', 'center');\nplot([1 0]);"
+	IconUnits		"normalized"
+      }
+      System {
+	Name			"RTI Data"
+	Location		[450, 250, 640, 300]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "RTI Data Store"
+	  SID			  "1034"
+	  Tag			  "struct('private',struct('version',struct('dsVer',uint32(2)),'access',struct('modified',['23-Jul-2018 20:42"
+	  ":30'],'type','Model','isPerm',1)),'public',struct('main',struct('data',[]),'sub',struct('name',{{'base'}},'data',{{"
+	  "struct('TH',struct('thTaskInfo',struct('taskType',{'TIMER','HWINT','TMRINT','SWINT','GLINT'},'tasksNumOf',{1,0,0,0,"
+	  "0},'srcIds',{{'TIMERA'},{},{},{},{}},'taskNames',{{['Timer Task 1']},{},{},{},{}})),'th_tc',struct('dataType','TASK"
+	  "','taskGroupId','','taskGroupList',{{}},'taskSchedulingPolicy','FCFS','taskType','TIMER','blkh',-1,'srcId','TIMERA'"
+	  ",'srcSgnName',['Timer A interrupt'],'srcCpuName','','taskName',['Timer Task 1  [0.001] s'],'taskNameDisplayExt','',"
+	  "'smplTime',0.001,'smplTimeOffs',0,'hasFixedPriority',0,'priority',1,'hasFixedOvc',0,'ovcType',1,'ovcMax',1),'tc_th'"
+	  ",struct('dataType','TASK','taskGroupId','','taskGroupList',{{}},'taskSchedulingPolicy','FCFS','taskType','TIMER','b"
+	  "lkh',-1,'srcId','TIMERA','srcSgnName',['Timer A interrupt'],'srcCpuName','','taskName',['Timer Task 1  [0.001] s'],"
+	  "'taskNameDisplayExt','','smplTime',0.001,'smplTimeOffs',0,'hasFixedPriority',0,'priority',1,'hasFixedOvc',0,'ovcTyp"
+	  "e',1,'ovcMax',1))}})))"
+	  Ports			  []
+	  Position		  [146, 12, 181, 25]
+	  ZOrder		  168
+	  ForegroundColor	  "white"
+	  ShowName		  off
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  Object {
+	    $PropName		    "MaskObject"
+	    $ObjectID		    39
+	    $ClassName		    "Simulink.Mask"
+	    Type		    "RTI_DATA_STORE"
+	    Description		    "RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deletin"
+	    "g this block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+	    Help		    "RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleting this "
+	    "block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+	    Display		    "text(0.5, 0.5, ' ', 'HorizontalAlignment', 'center');"
+	    IconFrame		    "off"
+	    IconUnits		    "normalized"
+	  }
+	  System {
+	    Name		    "RTI Data Store"
+	    Location		    [450, 250, 640, 300]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "RTI Data Store"
+	      SID		      "1035"
+	      Ports		      []
+	      Position		      [146, 12, 181, 25]
+	      ZOrder		      169
+	      ForegroundColor	      "white"
+	      ShowName		      off
+	      RequestExecContextInheritance off
+	      Variant		      off
+	      Object {
+		$PropName		"MaskObject"
+		$ObjectID		40
+		$ClassName		"Simulink.Mask"
+		Type			"RTI_DATA_STORE"
+		Description		"RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleting this "
+		"block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		Help			"RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleting this block "
+		"will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		Display			"text(0.5, 0.5, ' ', 'HorizontalAlignment', 'center');"
+		IconFrame		"off"
+		IconUnits		"normalized"
+	      }
+	      System {
+		Name			"RTI Data Store"
+		Location		[450, 250, 640, 300]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RTI Data Store"
+		  SID			  "1036"
+		  Ports			  []
+		  Position		  [146, 12, 181, 25]
+		  ZOrder		  170
+		  ForegroundColor	  "white"
+		  ShowName		  off
+		  RequestExecContextInheritance	off
+		  Variant		  off
+		  Object {
+		    $PropName		    "MaskObject"
+		    $ObjectID		    41
+		    $ClassName		    "Simulink.Mask"
+		    Type		    "RTI_DATA_STORE"
+		    Description		    "RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleti"
+		    "ng this block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		    Help		    "RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleting this"
+		    " block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		    Display		    "text(0.5, 0.5, ' ', 'HorizontalAlignment', 'center');"
+		    IconFrame		    "off"
+		    IconUnits		    "normalized"
+		  }
+		  System {
+		    Name		    "RTI Data Store"
+		    Location		    [450, 250, 640, 300]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "RTI Data Store"
+		    SID			    "1037"
+		    Ports		    []
+		    Position		    [146, 12, 181, 25]
+		    ZOrder		    171
+		    ForegroundColor	    "white"
+		    ShowName		    off
+		    RequestExecContextInheritance off
+		    Variant		    off
+		    Object {
+		    $PropName		    "MaskObject"
+		    $ObjectID		    42
+		    $ClassName		    "Simulink.Mask"
+		    Type		    "RTI_DATA_STORE"
+		    Description		    "RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleti"
+		    "ng this block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		    Help		    "RTI Data Store Block. This block is used by RTI to store internal model dependent data. Deleting this"
+		    " block will result in data loss.\n\nNEVER DELETE, COPY, OR MODIFY THIS BLOCK!"
+		    Display		    "text(0.5, 0.5, ' ', 'HorizontalAlignment', 'center');"
+		    IconFrame		    "off"
+		    IconUnits		    "normalized"
+		    }
+		    System {
+		    Name		    "RTI Data Store"
+		    Location		    [450, 250, 640, 300]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "System Setting"
+      SID		      "91"
+      Ports		      [0, 1]
+      Position		      [95, 53, 170, 247]
+      ZOrder		      -6
+      FunctionName	      "SystemSet"
+      SFunctionDeploymentMode off
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      SID		      "92"
+      Position		      [360, 330, 380, 350]
+      ZOrder		      -7
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "simState SET"
+      SID		      "709"
+      Ports		      [0, 0, 0, 1]
+      Position		      [360, 185, 470, 225]
+      ZOrder		      14
+      LibraryVersion	      "1.63"
+      SourceBlock	      "dsextras/simState SET"
+      SourceType	      "RTI"
+      ContentPreviewEnabled   off
+      TriggerPort	      "falling"
+      EnablePort	      "none"
+      SimStateMode	      "STOP"
+      TLCFileName	      "rti_simstate_set"
+      Reserved1		      "[]"
+      Reserved2		      "[]"
+      Reserved3		      "[]"
+      Reserved4		      "[]"
+      DSProperties	      "struct('RTI',struct('Version',uint32(1),'BlockType',struct('isSLSource',uint8(1),'isSLSink',"
+      "uint8(0),'isHWSource',uint8(0),'isHWSink',uint8(0),'isSetup',uint8(0),'isInline',uint8(1),'isNonInline',uint8(0)"
+      ",'isInterrupt',uint8(0),'isChannelwise',uint8(0)),'IOBoardType','EXTRAS','UnitType','SIMSTATESET','Identifier','"
+      "SIMSTATESET','DialogType','SL','BlockSet','NONE','SlaveProcessor','NONE'))"
+      RTIBlockInterface	      "struct('OutputPortsWidth',int32(0),'BlockDisplay',{{['simState STOP'],'center'}},'IconT"
+      "ransparency','on','InitLevel',2,'BlockName',struct('Token',{{['simState SET']}}),'TriggerPort',{{'falling'}},'En"
+      "ablePort',{{'none'}},'MaskDescription',['Set simState to the specified value when the block is executed.'])"
+      RTIBlockParameters      "struct('TriggerPort',{{3,'OFF',[]}},'EnablePort',{{1,'OFF',[]}},'SimStateMode',{{3,'OFF"
+      "',[]}},'TLCFileName',{{'rti_simstate_set','OFF',[]}})"
+      RTISFcnParameters	      "struct('TriggerPort','double','EnablePort','double','SimStateMode','char','TLCFileName'"
+      ",'char')"
+      RTIBlockParaDefault     "struct('TriggerPort',2,'EnablePort',1,'SimStateMode',1,'TLCFileName','rti_simstate_set')"
+    }
+    Line {
+      ZOrder		      12
+      SrcBlock		      "ETHERNET_SETUP_BL1"
+      SrcPort		      1
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      17
+      SrcBlock		      "System Setting"
+      SrcPort		      1
+      Points		      [100, 0]
+      Branch {
+	ZOrder			15
+	DstBlock		"Application"
+	DstPort			enable
+      }
+      Branch {
+	ZOrder			14
+	Points			[140, 0]
+	DstBlock		"simState SET"
+	DstPort			trigger
+      }
+    }
+  }
+}

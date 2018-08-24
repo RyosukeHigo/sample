@@ -1,0 +1,73 @@
+-c
+-fno-common
+-nostdinc
+-fno-strict-aliasing
+-pipe
+-ffast-math
+-fomit-frame-pointer
+-mpowerpc
+-mcpu=e500mc
+-mhard-float
+-mdouble-float
+-EB
+-x
+c
+-std=gnu99
+-Werror-implicit-function-declaration
+-o
+rt_matrx.o07
+-O2
+-DUSE_RTMODEL
+-DMODEL=base
+-DMT=0
+-DRT
+-DNUMST=1
+-DNCSTATES=0
+-DTID01EQ=0
+-DNO_PRINTF
+-D__KERNEL__
+-DMODULE
+-DRTI_BUILD
+-D_DS1007
+-DDS_PLATFORM_PPC
+-DDS_PLATFORM_PPCE5500
+-DDS_PLATFORM_BE
+-DDS_PLATFORM_QNX
+-DDS_PLATFORM_POSIX
+-DDS_PLATFORM_CN
+-DDS_PLATFORM_SMART
+-DDS_PLATFORM_SMARTRTK
+-DFEATURE_GIGALINK
+-DFEATURE_PHS_BUS
+-DFEATURE_ONBOARD_UART
+-DFEATURE_IO_ETHERNET
+-DFEATURE_DAQ
+-DFEATURE_MOTION_MANAGER
+-U_INLINE
+-DRTI_ASSERTION_MODE=RTI_ASSERTION_MODE_OFF
+-DSMODE=RTSIM
+-DENABLE_DATASET_STORAGE
+-DRTT_ENABLE
+-I.
+-I..
+-I../../../system
+-I../../../hand
+-I../../../wam
+-I../../../avs
+-I../../../force
+-I../../../basis
+-I../../../xyzstage
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/Compiler/QNX650_463/target/qnx6/usr/include/c++/4.6.3"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/Compiler/QNX650_463/target/qnx6/usr/include/c++/4.6.3/i486-pc-nto-qnx6.5.0"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/Compiler/QNX650_463/target/qnx6/usr/include"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/DS1007/Include"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/MATLAB/RTI/RTI/C"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/MATLAB/RTI/RTI/SFcn"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/MATLAB/RTI/RTI1007/C"
+"-IC:/Program Files/dSPACE RCPHIL 2016-A/MATLAB/RTI/RTI1007/SFcn"
+-IC:/MATLAB/R2016a/simulink/include
+-IC:/MATLAB/R2016a/extern/include
+-IC:/MATLAB/R2016a/rtw/c/src
+-IC:/MATLAB/R2016a/rtw/c/src/ext_mode/common
+-ID:/matlab_work/higo/test/app/sample/base_rti1007
+-ID:/matlab_work/higo/test/app/sample 

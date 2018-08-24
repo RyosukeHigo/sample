@@ -1,0 +1,15 @@
+[System]
+Version=2.2
+SystemType=SingleProcessorSystem
+DAQService=DsDAQ
+DsDAQBackground=1
+Status=Start
+File=base.rta
+RTP=Master
+
+[Master]
+Type=DS1007
+State=Enabled
+ServiceID=1
+TraceFile=base.trc
+ID=62760FAF-2D22-40E8-8994-1FDA4D08E8F0

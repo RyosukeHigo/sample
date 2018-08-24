@@ -1,0 +1,13 @@
+-- ******** accessible variable for Control Desk *********
+
+app_num
+{
+	type:	uint
+	desc:	"Demo Number"
+}
+
+host_access_flag
+{
+	type:	int
+	desc:	"Flag Variable for Host Communication"
+}

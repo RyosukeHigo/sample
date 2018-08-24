@@ -1,0 +1,65 @@
+#ifndef APP_H
+#define APP_H
+
+#include "Data.h"
+#include "SysDef.h"
+#if SYSTEM_HAND
+#include <Hand.h>
+#endif
+#if SYSTEM_WAM
+#include <WAM.h>
+#endif
+#if SYSTEM_AVS
+#include <AVS.h>
+#endif
+#if SYSTEM_XYZ
+#include <XYZstage.h>
+#endif //SYSTEM_XYZ
+
+// 時間設定
+#define START_TIME	(5.0)       // 初期姿勢から準備姿勢への時間
+#define END_TIME	(5.0)       // 終了姿勢から初期姿勢への時間
+#define MOTION_TIME	(13.0)      // 動作時間
+#define ALL_APP_TIME    (START_TIME+MOTION_TIME+END_TIME)
+
+// 初期姿勢
+#define WAM_M1_INIT_JNT_ANG		0.0
+#define WAM_M2_INIT_JNT_ANG		-2.00283
+#define WAM_M3_INIT_JNT_ANG		0.0
+#define WAM_M4_INIT_JNT_ANG		2.50422
+#define WAM_M5_INIT_JNT_ANG		0.0
+
+//シミュレーションか実機実験かの選択
+#define SIM_OR_EXP (0)			//1:シミュレーション，0:実機実験
+
+// ハンド
+#if SYSTEM_HAND
+int handTrajApp(HANDJnt ref_jnt_ang, DATA *data, double time, double *eoCam);
+//int handTrajApp(HANDJnt ref_jnt_ang, DATA *data, double time, double *eoCam, double *output);
+int handAppSet(HAND *hand);
+#endif
+// アーム
+#if SYSTEM_WAM
+int wamTrajApp(WAMJnt ref_jnt_ang, DATA *data, double time, int appNum);
+int wamAppSet(WAM *wam);
+int wam2TrajApp(WAMJnt ref_jnt_ang, DATA *data, double time);
+int wam2AppSet(WAM *wam);
+#endif
+// アクティブビジョン
+#if SYSTEM_AVS
+int avsTrajApp(AVSJntAll ref_jnt_ang, AVSJntAll past_jnt_ang, AVSJntAll jnt_ang, double time);
+int avsVisualTrajApp(AVSImgCenAll ref_img_center, const AVSImgCenAll img_center, double time);
+int avsAppSet(AVSALL *avs);
+#endif
+// XYZステージ
+#if SYSTEM_XYZ
+int xyzTrajApp(XYZJnt ref_jnt_pos, XYZJnt data, double *obj, double time, double *sensor, double *camera);
+int xyzAppSet(XYZ *xyz);
+#endif //SYSTEM_XYZ
+
+//外部からのデータ
+#define Ethernet_RECV_NUM (3) //イーサネット受信データ数　画像処理PCから
+#define Ethernet_SEND_NUM (12) //イーサネット送信データ数　画像処理PC等へ
+#define SENSOR_DATA_NUM (18) //センサデータ数
+
+#endif

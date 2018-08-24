@@ -1,0 +1,27 @@
+
+
+-- Type definitions for structures
+
+struct base_struct_isB4Cw3Ovpp8VfzP6RUqbD
+{
+  array-incr: -1
+}
+    OutputPortsWidth 
+    {
+      type:    int(32)
+      offs:    -1
+    }
+endstruct
+
+
+-- Type definitions for arrays
+typedef base_ArrayDT0_11 flt(64,IEEE)[11]
+typedef base_ArrayDT0_10 flt(64,IEEE)[10]
+typedef base_ArrayDT0_14 flt(64,IEEE)[14]
+typedef base_ArrayDT0_3 flt(64,IEEE)[3]
+typedef base_ArrayDT7_2 uint(32)[2]
+typedef base_ArrayDT3_112 uint(8)[112]
+typedef base_ArrayDT3_96 uint(8)[96]
+typedef base_ArrayDT0_2 flt(64,IEEE)[2]
+
+

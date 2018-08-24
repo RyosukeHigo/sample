@@ -1,0 +1,915 @@
+-- ****************************************************************************
+--
+--  Trace file: base.trc
+--
+--  RTI1007 7.6 (02-May-2016)
+--  Fri Aug 03 14:28:41 2018
+--
+--  Copyright 2018, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 0
+--    TRCGenerateLabels             = 0
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 3
+
+-- ******** Keywords **********************************************************
+-- _application "base.map"
+
+_genname     "RTI"
+_genversion  "7.6"
+_gendate     "08/03/2018 14:28:48"
+_description ""
+_author      "RTI1007 7.6 (02-May-2016)"
+_model       "base"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.001
+  alias:       "HostService"
+  increment:   0.001
+  unit:        "s"
+}
+
+
+
+-- Type definitions for structures
+
+struct base_struct_isB4Cw3Ovpp8VfzP6RUqbD
+{
+  array-incr: 4         
+}
+    OutputPortsWidth 
+    {
+      type:    int(32)
+      offs:    0
+    }
+endstruct
+
+
+-- Type definitions for arrays
+typedef base_ArrayDT0_11 flt(64,IEEE)[11]
+typedef base_ArrayDT0_10 flt(64,IEEE)[10]
+typedef base_ArrayDT0_14 flt(64,IEEE)[14]
+typedef base_ArrayDT0_3 flt(64,IEEE)[3]
+typedef base_ArrayDT7_2 uint(32)[2]
+typedef base_ArrayDT3_112 uint(8)[112]
+typedef base_ArrayDT3_96 uint(8)[96]
+typedef base_ArrayDT0_2 flt(64,IEEE)[2]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  READONLY
+ unit:  "s"
+ addr:    0x4806f6e0
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+ addr:    0x4806f6dc
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+ addr:    0x4806f6e8
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 RUN=2"
+ flags: SYSTEM
+ unit:  "-"
+ addr:    0x48062b78
+}
+
+p_msg_last_error_no
+{
+ type:  uint(32)*
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: READONLY
+ addr:    0x4805f3c8
+}
+
+p_dsts_sum_of_reset_time
+{
+ type:  flt(64,IEEE)*
+ alias: "sumOfResetTime"
+ desc:  "Internal variable for summing up reset time."
+ unit:  "s"
+ flags: READONLY|HIDDEN
+ addr:    0x4805f3c4
+}
+
+
+-- ******** Task Information variables ****************************************
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: READONLY
+ addr:    0x4806f6f0
+}
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: READONLY
+ addr:    0x4806f6f4
+}
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: READONLY
+ addr:    0x4806f6f8
+}
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: READONLY
+ addr:    0x4806f6fc
+}
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: READONLY
+ addr:    0x4806f700
+}
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: READONLY
+ addr:    0x4806f704
+}
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: READONLY
+ addr:    0x4806f708
+}
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: READONLY
+ addr:    0x4806f70c
+}
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: READONLY
+ addr:    0x4806f710
+}
+  endgroup
+
+
+endgroup
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "System Setting" -- block-group
+	{
+	 block: "S-Function"
+	}
+		p_0_base_int32_T_1[0]
+		{
+		 type:    int(32)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+ addr:    0x4806f298
+}
+
+
+	endgroup -- block-group "System Setting"
+
+  
+  
+	group "Application" -- subsystem-group
+
+
+
+		group "Task Setting" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_base_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+		endgroup -- block-group "Task Setting"
+
+  
+  
+		group "Hand Control" -- subsystem-group
+
+
+
+			group "handCtrl" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[60]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "handCtrl"
+
+			group "handDALimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[82]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "handDALimit"
+
+			group "handJntTrq2DA" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[71]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "handJntTrq2DA"
+
+
+
+		endgroup -- subsystem-group "Hand Control"
+  
+  
+		group "Hand Trajectory" -- subsystem-group
+
+			p_0_base_real_T_0[49]
+			{
+			 type:    base_ArrayDT0_11*
+			 alias:   "Ref Jnt Ang"
+			 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+			p_0_base_real_T_0[1]
+			{
+			 type:    base_ArrayDT0_11*
+			 alias:   "Jnt Ang"
+			 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			group "dummy" -- block-group
+			{
+			 block: "Constant"
+			}
+				p_0_base_real_T_0[12]
+				{
+				 type:    base_ArrayDT0_10*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+				p_1_base_real_T_0[0]
+				{
+				 type:    base_ArrayDT0_10*
+				 alias:   "Value"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+
+
+			endgroup -- block-group "dummy"
+
+			group "handEnc2JntAng" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[1]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "handEnc2JntAng"
+
+			group "handJntAngLimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[49]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "handJntAngLimit"
+
+			group "handTraj" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[37]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+				p_0_base_real_T_0[48]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out2"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "handTraj"
+
+
+
+		endgroup -- subsystem-group "Hand Trajectory"
+  
+  
+		group "UDP Receive" -- subsystem-group
+
+			p_0_base_real_T_0[23]
+			{
+			 type:    base_ArrayDT0_14*
+			 alias:   "RecvData"
+			 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			group "Receive Switcher" -- block-group
+			{
+			 block: "Constant"
+			}
+				-- Skipping output Out1
+				p_1_base_boolean_T_1[0]
+				{
+				 type:    uint(8)*
+				 alias:   "Value"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   PARAM
+ addr:    0x4806f288
+}
+
+
+			endgroup -- block-group "Receive Switcher"
+
+			group "ETHERNET_DECODE_BL2" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[23]
+				{
+				 type:    base_ArrayDT0_14*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+				p_1_base_real_T_0[12]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[15]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[18]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[21]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[24]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[27]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P6"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+
+
+			endgroup -- block-group "ETHERNET_DECODE_BL2"
+
+  
+  
+			group "ETHERNET_UDP_RX_BL1" -- subsystem-group
+
+				p_0_base_uint8_T_3[0]
+				{
+				 type:    base_ArrayDT3_112*
+				 alias:   "Data"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f290
+}
+				p_0_base_uint32_T_2[2]
+				{
+				 type:    uint(32)*
+				 alias:   "Status"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f294
+}
+				p_0_base_real_T_0[22]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Received Frames"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+			endgroup -- subsystem-group "ETHERNET_UDP_RX_BL1"
+
+
+		endgroup -- subsystem-group "UDP Receive"
+  
+  
+		group "UDP Send" -- subsystem-group
+
+
+
+			group "Send Switcher" -- block-group
+			{
+			 block: "Constant"
+			}
+				-- Skipping output Out1
+				p_1_base_boolean_T_1[1]
+				{
+				 type:    uint(8)*
+				 alias:   "Value"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   PARAM
+ addr:    0x4806f288
+}
+
+
+			endgroup -- block-group "Send Switcher"
+
+			group "ETHERNET_ENCODE_BL1" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_uint8_T_3[112]
+				{
+				 type:    base_ArrayDT3_96*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f290
+}
+
+				p_1_base_real_T_0[30]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[33]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[36]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[39]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[42]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+				p_1_base_real_T_0[45]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P6"
+				 flags:   PARAM
+ addr:    0x4806f28c
+}
+
+
+			endgroup -- block-group "ETHERNET_ENCODE_BL1"
+
+  
+  
+			group "ETHERNET_UDP_TX_BL1" -- subsystem-group
+
+				p_0_base_uint32_T_2[3]
+				{
+				 type:    uint(32)*
+				 alias:   "Status"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f294
+}
+				p_0_base_real_T_0[93]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Sent Frames"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+			endgroup -- subsystem-group "ETHERNET_UDP_TX_BL1"
+
+
+		endgroup -- subsystem-group "UDP Send"
+  
+  
+		group "XYZstage Control" -- subsystem-group
+
+
+
+			group "XYZstageCtrl" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[106]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "XYZstageCtrl"
+
+			group "XYZstageDALimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[112]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "XYZstageDALimit"
+
+			group "XYZstageTrq2DA" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[109]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "XYZstageTrq2DA"
+
+
+
+		endgroup -- subsystem-group "XYZstage Control"
+  
+  
+		group "XYZstage Trajectory" -- subsystem-group
+
+			p_0_base_real_T_0[100]
+			{
+			 type:    base_ArrayDT0_3*
+			 alias:   "Ref Angle"
+			 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+			p_0_base_real_T_0[103]
+			{
+			 type:    base_ArrayDT0_3*
+			 alias:   "Jnt Angle"
+			 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			group "XYZstageEnc2JntAng" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[103]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "XYZstageEnc2JntAng"
+
+			group "XYZstageJntAngLimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[100]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "XYZstageJntAngLimit"
+
+			group "XYZstageTraj" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[94]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+				p_0_base_real_T_0[97]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out2"
+				 flags:   OUTPUT|READONLY
+ addr:    0x4806f29c
+}
+
+
+			endgroup -- block-group "XYZstageTraj"
+
+
+
+		endgroup -- subsystem-group "XYZstage Trajectory"
+
+
+	endgroup -- subsystem-group "Application"
+  
+  
+	group "ETHERNET_SETUP_BL1" -- subsystem-group
+
+		p_0_base_uint32_T_2[0]
+		{
+		 type:    base_ArrayDT7_2*
+		 alias:   "Link Status"
+		 desc:    "No data (unused channel) "
+		 flags:   OUTPUT|READONLY
+ addr:    0x4806f294
+}
+
+	endgroup -- subsystem-group "ETHERNET_SETUP_BL1"
+  
+  
+	group "ETHERNET_UDP_SETUP_BL1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "ETHERNET_UDP_SETUP_BL1"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "simState SET" -- subsystem-group
+
+
+	endgroup -- subsystem-group "simState SET"
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+-- Generation of labels turned off with TRCGenerateLabels option.
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+
+-- ******** User variables from model_usr.trc *********************************
+-- RTI_USR_TRC_BEGIN
+
+group "User Variables"
+
+-- Contents of file base_usr.trc:
+-- ******** accessible variable for Control Desk *********
+
+app_num
+{
+	type:	uint
+	desc:	"Demo Number"
+ addr:    0x4806f718
+}
+
+host_access_flag
+{
+	type:	int
+	desc:	"Flag Variable for Host Communication"
+ addr:    0x4806f720
+}
+endgroup
+
+-- RTI_USR_TRC_END
+
+-- ******** EESPort States Variables ******************************************
+group "XIL API"
+{ 
+  flags: COLLAPSED
+}
+
+  group "EESPort"
+  {  
+    flags: COLLAPSED
+  }
+
+    p_xilapi_eesport_activeerrorset_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Active ErrorSet"
+      desc:    "Index of active ErrorSet or 0 if no ErrorSet is active."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+ addr:    0x48062b88
+}
+
+    p_xilapi_eesport_erroractivated_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Activated"
+      desc:    "0 - no error is activated on hardware, 1 - at least one error is activated on hardware."  
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+ addr:    0x48062b84
+}
+
+    p_xilapi_eesport_errorswitching_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Switching"
+      desc:    "0 - no switching operation running on hardware, 1 -  switching operation running on hardware."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+ addr:    0x48062b80
+}
+
+    xilapi_eesport_flags_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Flags"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+ addr:    0x4806f784
+}
+
+    xilapi_eesport_trigger_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Trigger"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+ addr:    0x4806f780
+}
+
+    endgroup -- "EESPort"
+
+endgroup -- "XILAPI"
+
+
+
+-- ******** [EOF] *************************************************************
+

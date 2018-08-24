@@ -1,0 +1,541 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "System Setting" -- block-group
+	{
+	 block: "S-Function"
+	}
+		p_0_base_int32_T_1[0]
+		{
+		 type:    int(32)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "System Setting"
+
+  
+  
+	group "Application" -- subsystem-group
+
+
+
+		group "Task Setting" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_base_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Task Setting"
+
+  
+  
+		group "Hand Control" -- subsystem-group
+
+
+
+			group "handCtrl" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[60]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "handCtrl"
+
+			group "handDALimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[82]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "handDALimit"
+
+			group "handJntTrq2DA" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[71]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "handJntTrq2DA"
+
+
+
+		endgroup -- subsystem-group "Hand Control"
+  
+  
+		group "Hand Trajectory" -- subsystem-group
+
+			p_0_base_real_T_0[49]
+			{
+			 type:    base_ArrayDT0_11*
+			 alias:   "Ref Jnt Ang"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_base_real_T_0[1]
+			{
+			 type:    base_ArrayDT0_11*
+			 alias:   "Jnt Ang"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "dummy" -- block-group
+			{
+			 block: "Constant"
+			}
+				p_0_base_real_T_0[12]
+				{
+				 type:    base_ArrayDT0_10*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_base_real_T_0[0]
+				{
+				 type:    base_ArrayDT0_10*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "dummy"
+
+			group "handEnc2JntAng" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[1]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "handEnc2JntAng"
+
+			group "handJntAngLimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[49]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "handJntAngLimit"
+
+			group "handTraj" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[37]
+				{
+				 type:    base_ArrayDT0_11*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_0_base_real_T_0[48]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out2"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "handTraj"
+
+
+
+		endgroup -- subsystem-group "Hand Trajectory"
+  
+  
+		group "UDP Receive" -- subsystem-group
+
+			p_0_base_real_T_0[23]
+			{
+			 type:    base_ArrayDT0_14*
+			 alias:   "RecvData"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "Receive Switcher" -- block-group
+			{
+			 block: "Constant"
+			}
+				-- Skipping output Out1
+				p_1_base_boolean_T_1[0]
+				{
+				 type:    uint(8)*
+				 alias:   "Value"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Receive Switcher"
+
+			group "ETHERNET_DECODE_BL2" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[23]
+				{
+				 type:    base_ArrayDT0_14*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+				p_1_base_real_T_0[12]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[15]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[18]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[21]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[24]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[27]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P6"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "ETHERNET_DECODE_BL2"
+
+  
+  
+			group "ETHERNET_UDP_RX_BL1" -- subsystem-group
+
+				p_0_base_uint8_T_3[0]
+				{
+				 type:    base_ArrayDT3_112*
+				 alias:   "Data"
+				 flags:   OUTPUT|READONLY
+				}
+				p_0_base_uint32_T_2[2]
+				{
+				 type:    uint(32)*
+				 alias:   "Status"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+				}
+				p_0_base_real_T_0[22]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Received Frames"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+				}
+
+			endgroup -- subsystem-group "ETHERNET_UDP_RX_BL1"
+
+
+		endgroup -- subsystem-group "UDP Receive"
+  
+  
+		group "UDP Send" -- subsystem-group
+
+
+
+			group "Send Switcher" -- block-group
+			{
+			 block: "Constant"
+			}
+				-- Skipping output Out1
+				p_1_base_boolean_T_1[1]
+				{
+				 type:    uint(8)*
+				 alias:   "Value"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Send Switcher"
+
+			group "ETHERNET_ENCODE_BL1" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_uint8_T_3[112]
+				{
+				 type:    base_ArrayDT3_96*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+				p_1_base_real_T_0[30]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[33]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[36]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[39]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[42]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+				}
+				p_1_base_real_T_0[45]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P6"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "ETHERNET_ENCODE_BL1"
+
+  
+  
+			group "ETHERNET_UDP_TX_BL1" -- subsystem-group
+
+				p_0_base_uint32_T_2[3]
+				{
+				 type:    uint(32)*
+				 alias:   "Status"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+				}
+				p_0_base_real_T_0[93]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Sent Frames"
+				 desc:    "No data (unused channel) "
+				 flags:   OUTPUT|READONLY
+				}
+
+			endgroup -- subsystem-group "ETHERNET_UDP_TX_BL1"
+
+
+		endgroup -- subsystem-group "UDP Send"
+  
+  
+		group "XYZstage Control" -- subsystem-group
+
+
+
+			group "XYZstageCtrl" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[106]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "XYZstageCtrl"
+
+			group "XYZstageDALimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[112]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "XYZstageDALimit"
+
+			group "XYZstageTrq2DA" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[109]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "XYZstageTrq2DA"
+
+
+
+		endgroup -- subsystem-group "XYZstage Control"
+  
+  
+		group "XYZstage Trajectory" -- subsystem-group
+
+			p_0_base_real_T_0[100]
+			{
+			 type:    base_ArrayDT0_3*
+			 alias:   "Ref Angle"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_base_real_T_0[103]
+			{
+			 type:    base_ArrayDT0_3*
+			 alias:   "Jnt Angle"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "XYZstageEnc2JntAng" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[103]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "XYZstageEnc2JntAng"
+
+			group "XYZstageJntAngLimit" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[100]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "XYZstageJntAngLimit"
+
+			group "XYZstageTraj" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_base_real_T_0[94]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_0_base_real_T_0[97]
+				{
+				 type:    base_ArrayDT0_3*
+				 alias:   "Out2"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "XYZstageTraj"
+
+
+
+		endgroup -- subsystem-group "XYZstage Trajectory"
+
+
+	endgroup -- subsystem-group "Application"
+  
+  
+	group "ETHERNET_SETUP_BL1" -- subsystem-group
+
+		p_0_base_uint32_T_2[0]
+		{
+		 type:    base_ArrayDT7_2*
+		 alias:   "Link Status"
+		 desc:    "No data (unused channel) "
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "ETHERNET_SETUP_BL1"
+  
+  
+	group "ETHERNET_UDP_SETUP_BL1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "ETHERNET_UDP_SETUP_BL1"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "simState SET" -- subsystem-group
+
+
+	endgroup -- subsystem-group "simState SET"
+
+
+
+endgroup -- "Model Root"
