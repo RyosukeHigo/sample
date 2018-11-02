@@ -1,0 +1,69 @@
+//運動学で関節角から右指、左指の指先座標を求める
+/*
+*  同次変換行列
+*     T={{nx, ox, ax, px},
+*        {ny, oy, ay, py},
+*        {nz, oz, az, pz},
+*        { 0,  0,  0,  1}};
+*/
+/*void forKine(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, char finger_type)
+{
+double qw1 = ref_jnt_ang[HAND02_M10];//手首屈曲関節
+double qw2 = ref_jnt_ang[HAND02_M9];//手首旋回関節
+double q1 = 0;
+double q2 = 0;
+double q3 = 0;
+double Lp = 0;
+//左指
+if(finger_type == 'r')
+{
+q1 = ref_jnt_ang[HAND02_M7];
+q2 = ref_jnt_ang[HAND02_M1];
+q3 = ref_jnt_ang[HAND02_M2];
+Lp = Lpr;
+}
+//中指
+else if(finger_type == 'm')
+{
+q1 = 0;
+Lp = Lpm;
+}
+//右指
+else if(finger_type == 'l')
+{
+q1 = ref_jnt_ang[HAND02_M8];
+q2 = ref_jnt_ang[HAND02_M3];
+q3 = ref_jnt_ang[HAND02_M4];
+Lp = Lpl;
+}
+HomoMat T;
+T.nvec[0] = sin(qw1); T.ovec[0] = cos(qw1)*sin(qw2);  T.avec[0] = cos(qw1)*cos(qw2);  T.pvec[0] = 0;
+T.nvec[1] = 0; 		  T.ovec[1] = -cos(qw2);          T.avec[1] = sin(qw2);           T.pvec[1] = 0;
+T.nvec[2] = cos(qw1); T.ovec[2] = -sin(qw1)*sin(qw2); T.avec[2] = -sin(qw1)*cos(qw2); T.pvec[2] = 0;
+HomoMat A0;
+A0.nvec[0] = 1; A0.ovec[0] = 0; A0.avec[0] = 0; A0.pvec[0] = Lw0;
+A0.nvec[1] = 0; A0.ovec[1] = 1; A0.avec[1] = 0; A0.pvec[1] = Lp;
+A0.nvec[2] = 0; A0.ovec[2] = 0; A0.avec[2] = 1; A0.pvec[2] = Lw1;
+HomoMat A1;
+A1.nvec[0] = cos(q1); A1.ovec[0] = 0; A1.avec[0] = sin(q1);  A1.pvec[0] = Lr*cos(q1);
+A1.nvec[1] = sin(q1); A1.ovec[1] = 0; A1.avec[1] = -cos(q1); A1.pvec[1] = Lr*sin(q1);
+A1.nvec[2] = 0;       A1.ovec[2] = 1; A1.avec[2] = 0;        A1.pvec[2] = 0;
+HomoMat A2;
+A2.nvec[0] = -sin(q2);  A2.ovec[0] = -cos(q2); A2.avec[0] = 0; A2.pvec[0] = -L1*sin(q2);
+A2.nvec[1] = cos(q2);   A2.ovec[1] = -sin(q2); A2.avec[1] = 0; A2.pvec[1] = L1*cos(q2);
+A2.nvec[2] = 0;         A2.ovec[2] = 0;        A2.avec[2] = 1; A2.pvec[2] = 0;
+HomoMat A3;
+A3.nvec[0] = cos(q3); A3.ovec[0] = -sin(q3); A3.avec[0] = 0; A3.pvec[0] = L2*cos(q3);
+A3.nvec[1] = sin(q3); A3.ovec[1] = cos(q3);  A3.avec[1] = 0; A3.pvec[1] = L2*sin(q3);
+A3.nvec[2] = 0;       A3.ovec[2] = 0;       A3.avec[2] = 1; A3.pvec[2] = 0;
+
+HomoMat *hand0,*hand1,*hand2,*hand3,*hand4;
+homoMatProduct(hand0, &T,  &A0);
+homoMatProduct(hand1, hand0, &A1);
+homoMatProduct(hand2, hand1, &A2);
+homoMatProduct(hand3, hand2, &A3);
+ref_jnt_ang[HAND02_M8] = hand3->pvec[2];
+ref_jnt_ang[HAND02_M3] = hand3->pvec[0];
+ref_jnt_ang[HAND02_M4] = hand3->pvec[1];
+}
+*/

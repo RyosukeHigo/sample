@@ -2,7 +2,7 @@
 #  Make include file base_rti.mk:
 #
 #   RTI1007 7.6 (02-May-2016)
-#   Fri Aug 03 14:28:41 2018
+#   Thu Nov 01 18:11:40 2018
 #
 #   Copyright 2016, dSPACE GmbH. All rights reserved.
 # =============================================================================
