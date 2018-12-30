@@ -812,13 +812,14 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 	double L_2 = 0.0365;			//指先リンク
 	double x_f;						//指先のx座標
 	double y_f;						//指先のy座標
-	double omega = PI/2;				//目標とするルービックキューブの角速度
+	double omega = PI;			//目標とするルービックキューブの角速度
 	double O_x = camera[0] - 0.045; //ロボット座標系から見たルービックキューブの重心位置のx座標
 	double O_y = camera[1];			//ロボット座標系から見たルービックキューブの重心位置のy座標
 	double u_1;						//接触点座標系からみたルービックキューブの重心の位置
 	double u_3 = g_cube_d / 2;		//接触点座標系からみたルービックキューブの重心の位置
 	double tmp;
 	double tmp2;
+	double tmp_n;
 	double A[3][3]; //逆行列
 	double S12f;
 	double C12f;
@@ -840,7 +841,7 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 	//キューブの回転方向によって軌道を変える
 	//左指
 	d = 0.06;
-	
+	/*
 	a_1 = hand.var.jnt_ang[HAND_M1]; //指根元関節角
 	a_2 = hand.var.jnt_ang[HAND_M2];
 	x_f = L_2 * cos(a_1 + a_2) + L_1 * cos(a_1);	  //指先のx座標
@@ -867,7 +868,7 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 
 		A[1][0] = -(C12f * u_3 + S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp);
 		A[1][1] = (S12f * u_3 - C12f * u_1 - L_2 * S12 - L_1 * sin(a_1)) / (L_1 * tmp);
-		A[1][2] = (d * C12f * u_3 + S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp);
+		A[1][2] = d * (C12f * u_3 + S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp);
 	}
 	else
 	{
@@ -877,15 +878,16 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 
 		A[1][0] = -(C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
 		A[1][1] = (S12f * u_3 + C12f * u_1 - L_2 * S12 - L_1 * sin(a_1)) / (L_1 * tmp2);
-		A[1][2] = (d * C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
+		A[1][2] = d * (C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
 	}
 	da_1 = A[0][0] * (O_y * omega) + A[0][1] * (-O_x * omega) + A[0][2] * omega;
 	da_2 = A[1][0] * (O_y * omega) + A[1][1] * (-O_x * omega) + A[1][2] * omega;
 	ref_jnt_ang[HAND_M1] = a_1 + da_1 / 1000;
 	ref_jnt_ang[HAND_M2] = a_2 + da_2 / 1000;
 	//ref_jnt_ang[HAND_M9] = u_1;
+	*/
 	//右指
-	/*
+
 	d = -d;
 	a_1 = -hand.var.jnt_ang[HAND_M5]; //指根元関節角
 	a_2 = -hand.var.jnt_ang[HAND_M6];
@@ -904,7 +906,8 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 	{
 		u_1 = -u_1;
 	}
-	if (omega > 0)
+	/*
+	if (omega > 0.0)
 	{
 		A[0][0] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
 		A[0][1] = -(S12f * u_3 - C12f * u_1 - L_2 * S12) / (L_1 * tmp);
@@ -912,7 +915,7 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 
 		A[1][0] = -(C12f * u_3 + S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp);
 		A[1][1] = (S12f * u_3 - C12f * u_1 - L_2 * S12 - L_1 * sin(a_1)) / (L_1 * tmp);
-		A[1][2] = (d * C12f * u_3 + S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp);
+		A[1][2] = d * (C12f * u_3 + S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp);
 	}
 	else
 	{
@@ -922,17 +925,63 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 
 		A[1][0] = -(C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
 		A[1][1] = (S12f * u_3 + C12f * u_1 - L_2 * S12 - L_1 * sin(a_1)) / (L_1 * tmp2);
-		A[1][2] = (d * C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
+		A[1][2] = d * (C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
 	}
-	//A[0][0] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
-	//A[0][1] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
-	//A[0][2] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
-	da_5 = A[0][0] * (O_y * omega) + A[0][1] * (-O_x * omega) + A[0][2] * omega;
-	da_6 = A[1][0] * (O_y * omega) + A[1][1] * (-O_x * omega) + A[1][2] * omega;
-	ref_jnt_ang[HAND_M5] = -a_1 - da_5 / 1000;
-	ref_jnt_ang[HAND_M6] = -a_2 - da_6 / 1000;
-	//ref_jnt_ang[HAND_M9] = u_1;
 	*/
+	//NEW1
+	/*
+	tmp_n = sin(a_2 - f) * u_3 - cos(a_2 - f) * u_1 + r * sin(a_2 - f);
+	if (omega > 0.0)
+	{
+		A[0][0] = (C12f * u_3 + S12f * u_1 + r * C12f) / (L_1 * tmp_n);
+		A[0][1] = -(S12f * u_3 - C12f * u_1 + r * S12f) / (L_1 * tmp_n);
+		A[0][2] = -((d * C12f * u_3) + (L_1 * sin(a_2 - f) * u_3) + (d * S12f * u_1) - (L_1 * cos(a_2 - f) * u_1) + (d * r * C12f) + (L_1 * r * sin(a_2 - f))) / (L_1 * tmp_n);
+
+		A[1][0] = -((C12f * u_3) + (S12f * u_1) + r * C12f) / (L_1 * tmp_n);
+		A[1][1] = ((S12f * u_3) - (C12f * u_1) + (r * S12f)) / (L_1 * tmp_n);
+		A[1][2] = d * ((C12f * u_3) + (S12f * u_1) + (r * C12f)) / (L_1 * tmp_n);
+	}
+	else
+	{
+		A[0][0] = (C12f * u_3 - S12f * u_1 - L_2 * C12) / (L_1 * tmp2);
+		A[0][1] = -(S12f * u_3 + C12f * u_1 - L_2 * S12) / (L_1 * tmp2);
+		A[0][2] = -(d * C12f * u_3 + L_1 * sin(a_2 - f) * u_3 - d * S12f * u_1 + L_1 * cos(a_2 - f) * u_1 - L_2 * d * C12 - L_1 * L_2 * sin(a_2)) / (L_1 * tmp2);
+
+		A[1][0] = -(C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
+		A[1][1] = (S12f * u_3 + C12f * u_1 - L_2 * S12 - L_1 * sin(a_1)) / (L_1 * tmp2);
+		A[1][2] = d * (C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
+	}
+	*/
+	//NEW2
+	tmp_n = sin(a_2 - f) * u_3 - cos(a_2 - f) * u_1 + r * sin(a_2 - f) + 2 * L_2 * sin(a_2);
+	if (omega > 0.0)
+	{
+		A[0][0] = (C12f * u_3 + S12f * u_1 + r * C12f + 2 * L_2 * C12) / (L_1 * tmp_n);
+		A[0][1] = -(S12f * u_3 - C12f * u_1 + r * S12f + 2 * L_2 * S12) / (L_1 * tmp_n);
+		A[0][2] = -((d * C12f * u_3) + (L_1 * sin(a_2 - f) * u_3) + (d * S12f * u_1) - (L_1 * cos(a_2 - f) * u_1) + (d * r * C12f) + (2 * L_2 * d * C12) + (L_1 * r * sin(a_2 - f)) + (2 * L_1 * L_2 * sin(a_2))) / (L_1 * tmp_n);
+
+		A[1][0] = -((C12f * u_3) + (S12f * u_1) + r * C12f + (2 * L_2 * C12) + 2 * L_1 * cos(a_1)) / (L_1 * tmp_n);
+		A[1][1] = ((S12f * u_3) - (C12f * u_1) + (r * S12f) + (2 * L_2 * S12) + (2 * L_1 * sin(a_1))) / (L_1 * tmp_n);
+		A[1][2] = d * ((C12f * u_3) + (S12f * u_1) + (r * C12f) + (2 * L_2 * C12) + (2 * L_2 * cos(a_1))) / (L_1 * tmp_n);
+	}
+	else
+	{
+		A[0][0] = (C12f * u_3 - S12f * u_1 - L_2 * C12) / (L_1 * tmp2);
+		A[0][1] = -(S12f * u_3 + C12f * u_1 - L_2 * S12) / (L_1 * tmp2);
+		A[0][2] = -(d * C12f * u_3 + L_1 * sin(a_2 - f) * u_3 - d * S12f * u_1 + L_1 * cos(a_2 - f) * u_1 - L_2 * d * C12 - L_1 * L_2 * sin(a_2)) / (L_1 * tmp2);
+
+		A[1][0] = -(C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
+		A[1][1] = (S12f * u_3 + C12f * u_1 - L_2 * S12 - L_1 * sin(a_1)) / (L_1 * tmp2);
+		A[1][2] = d * (C12f * u_3 - S12f * u_1 - L_2 * C12 - L_1 * cos(a_1)) / (L_1 * tmp2);
+	}
+		//A[0][0] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
+		//A[0][1] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
+		//A[0][2] = (C12f * u_3 + S12f * u_1 - L_2 * C12) / (L_1 * tmp);
+		da_5 = A[0][0] * (O_y * omega) + A[0][1] * (-O_x * omega) + A[0][2] * omega;
+	da_6 = A[1][0] * (O_y * omega) + A[1][1] * (-O_x * omega) + A[1][2] * omega;
+	ref_jnt_ang[HAND_M5] = -a_1 - da_5 / 1000.0;
+	ref_jnt_ang[HAND_M6] = -a_2 - da_6 / 1000.0;
+	//ref_jnt_ang[HAND_M9] = u_1;
 }
 
 //回転記号の配列を受け取り順番に実行する
