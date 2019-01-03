@@ -3,9 +3,9 @@
 --  Trace file: base.trc
 --
 --  RTI1007 7.6 (02-May-2016)
---  Sun Dec 30 22:18:13 2018
+--  Thu Jan 03 20:45:22 2019
 --
---  Copyright 2018, dSPACE GmbH. All rights reserved.
+--  Copyright 2019, dSPACE GmbH. All rights reserved.
 --
 -- ****************************************************************************
 --
@@ -26,7 +26,7 @@
 
 _genname     "RTI"
 _genversion  "7.6"
-_gendate     "12/30/2018 22:18:18"
+_gendate     "01/03/2019 20:45:26"
 _description ""
 _author      "RTI1007 7.6 (02-May-2016)"
 _model       "base"
@@ -80,7 +80,7 @@ finalTime
  desc:  "Simulation stop time. When reached, simState switches to STOP."
  flags:  READONLY
  unit:  "s"
- addr:    0x4806f5f8
+ addr:    0x4806f600
 }
 
 currentTime
@@ -90,7 +90,7 @@ currentTime
  desc:  "Current simulation time. Increments with execution of Timer Task 1."
  flags: READONLY
  unit:  "s"
- addr:    0x4806f5f4
+ addr:    0x4806f5fc
 }
 
 modelStepSize
@@ -100,7 +100,7 @@ modelStepSize
  desc:  "Fixed step size of the model, sample time of Timer Task 1."
  flags: READONLY
  unit:  "s"
- addr:    0x4806f600
+ addr:    0x4806f608
 }
 
 simState
@@ -120,7 +120,7 @@ p_msg_last_error_no
  desc:  "Error number of last error message (zero if no error)."
  unit:  "-"
  flags: READONLY
- addr:    0x4805ffb0
+ addr:    0x4805fd98
 }
 
 p_dsts_sum_of_reset_time
@@ -130,7 +130,7 @@ p_dsts_sum_of_reset_time
  desc:  "Internal variable for summing up reset time."
  unit:  "s"
  flags: READONLY|HIDDEN
- addr:    0x4805ffac
+ addr:    0x4805fd94
 }
 
 
@@ -149,63 +149,63 @@ group "Task Info"
    type:  flt(64,IEEE)*
    alias: "sampleTime"
    flags: READONLY
- addr:    0x4806f608
+ addr:    0x4806f610
 }
   pRti_TIMERA_TTime
   {
    type:  flt(64,IEEE)*
    alias: "turnaroundTime"
    flags: READONLY
- addr:    0x4806f60c
+ addr:    0x4806f614
 }
   pRti_TIMERA_TState
   {
    type:  int(32)*
    alias: "state"
    flags: READONLY
- addr:    0x4806f610
+ addr:    0x4806f618
 }
   pRti_TIMERA_OType
   {
    type:  int(32)*
    alias: "overrunCheckType"
    flags: READONLY
- addr:    0x4806f614
+ addr:    0x4806f61c
 }
   pRti_TIMERA_OMax
   {
    type:  int(32)*
    alias: "overrunQueueMax"
    flags: READONLY
- addr:    0x4806f618
+ addr:    0x4806f620
 }
   pRti_TIMERA_ORpt
   {
    type:  int(32)*
    alias: "overrunQueueCount"
    flags: READONLY
- addr:    0x4806f61c
+ addr:    0x4806f624
 }
   pRti_TIMERA_OCnt
   {
    type:  int(32)*
    alias: "overrunCount"
    flags: READONLY
- addr:    0x4806f620
+ addr:    0x4806f628
 }
   pRti_TIMERA_TCnt
   {
    type:  flt(64,IEEE)*
    alias: "taskCallCount"
    flags: READONLY
- addr:    0x4806f624
+ addr:    0x4806f62c
 }
   pRti_TIMERA_Prio
   {
    type:  int(32)*
    alias: "priority"
    flags: READONLY
- addr:    0x4806f628
+ addr:    0x4806f630
 }
   endgroup
 
@@ -225,7 +225,7 @@ group "Model Root"
 		 type:    int(32)*
 		 alias:   "Out1"
 		 flags:   OUTPUT|READONLY
- addr:    0x4806f1b0
+ addr:    0x4806f1b8
 }
 
 
@@ -246,7 +246,7 @@ group "Model Root"
 			 type:    flt(64,IEEE)*
 			 alias:   "Out1"
 			 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -267,7 +267,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_11*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -282,7 +282,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_11*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -297,7 +297,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_11*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -315,14 +315,14 @@ group "Model Root"
 			 type:    base_ArrayDT0_11*
 			 alias:   "Ref Jnt Ang"
 			 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 			p_0_base_real_T_0[1]
 			{
 			 type:    base_ArrayDT0_11*
 			 alias:   "Jnt Ang"
 			 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -335,14 +335,14 @@ group "Model Root"
 				 type:    base_ArrayDT0_10*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 				p_1_base_real_T_0[0]
 				{
 				 type:    base_ArrayDT0_10*
 				 alias:   "Value"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 
 
@@ -357,7 +357,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_11*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -372,7 +372,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_11*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -387,14 +387,14 @@ group "Model Root"
 				 type:    base_ArrayDT0_11*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 				p_0_base_real_T_0[48]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "Out2"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -412,7 +412,7 @@ group "Model Root"
 			 type:    base_ArrayDT0_14*
 			 alias:   "RecvData"
 			 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -428,7 +428,7 @@ group "Model Root"
 				 range:   < 0 ; 1 >
 				 bitmask: 0x01
 				 flags:   PARAM
- addr:    0x4806f1a0
+ addr:    0x4806f1a8
 }
 
 
@@ -443,7 +443,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_14*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 				p_1_base_real_T_0[12]
@@ -451,42 +451,42 @@ group "Model Root"
 				 type:    flt(64,IEEE)*
 				 alias:   "P1"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[15]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P2"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[18]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P3"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[21]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P4"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[24]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P5"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[27]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P6"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 
 
@@ -501,7 +501,7 @@ group "Model Root"
 				 type:    base_ArrayDT3_112*
 				 alias:   "Data"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1a8
+ addr:    0x4806f1b0
 }
 				p_0_base_uint32_T_2[2]
 				{
@@ -509,7 +509,7 @@ group "Model Root"
 				 alias:   "Status"
 				 desc:    "No data (unused channel) "
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1ac
+ addr:    0x4806f1b4
 }
 				p_0_base_real_T_0[22]
 				{
@@ -517,7 +517,7 @@ group "Model Root"
 				 alias:   "Received Frames"
 				 desc:    "No data (unused channel) "
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 			endgroup -- subsystem-group "ETHERNET_UDP_RX_BL1"
@@ -542,7 +542,7 @@ group "Model Root"
 				 range:   < 0 ; 1 >
 				 bitmask: 0x01
 				 flags:   PARAM
- addr:    0x4806f1a0
+ addr:    0x4806f1a8
 }
 
 
@@ -557,7 +557,7 @@ group "Model Root"
 				 type:    base_ArrayDT3_96*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1a8
+ addr:    0x4806f1b0
 }
 
 				p_1_base_real_T_0[30]
@@ -565,42 +565,42 @@ group "Model Root"
 				 type:    flt(64,IEEE)*
 				 alias:   "P1"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[33]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P2"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[36]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P3"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[39]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P4"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[42]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P5"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 				p_1_base_real_T_0[45]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P6"
 				 flags:   PARAM
- addr:    0x4806f1a4
+ addr:    0x4806f1ac
 }
 
 
@@ -616,7 +616,7 @@ group "Model Root"
 				 alias:   "Status"
 				 desc:    "No data (unused channel) "
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1ac
+ addr:    0x4806f1b4
 }
 				p_0_base_real_T_0[93]
 				{
@@ -624,7 +624,7 @@ group "Model Root"
 				 alias:   "Sent Frames"
 				 desc:    "No data (unused channel) "
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 			endgroup -- subsystem-group "ETHERNET_UDP_TX_BL1"
@@ -646,7 +646,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -661,7 +661,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -676,7 +676,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -694,14 +694,14 @@ group "Model Root"
 			 type:    base_ArrayDT0_3*
 			 alias:   "Ref Angle"
 			 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 			p_0_base_real_T_0[103]
 			{
 			 type:    base_ArrayDT0_3*
 			 alias:   "Jnt Angle"
 			 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -714,7 +714,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -729,7 +729,7 @@ group "Model Root"
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -744,14 +744,14 @@ group "Model Root"
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out1"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 				p_0_base_real_T_0[97]
 				{
 				 type:    base_ArrayDT0_3*
 				 alias:   "Out2"
 				 flags:   OUTPUT|READONLY
- addr:    0x4806f1b4
+ addr:    0x4806f1bc
 }
 
 
@@ -773,7 +773,7 @@ group "Model Root"
 		 alias:   "Link Status"
 		 desc:    "No data (unused channel) "
 		 flags:   OUTPUT|READONLY
- addr:    0x4806f1ac
+ addr:    0x4806f1b4
 }
 
 	endgroup -- subsystem-group "ETHERNET_SETUP_BL1"
@@ -833,14 +833,14 @@ app_num
 {
 	type:	uint
 	desc:	"Demo Number"
- addr:    0x4806f630
+ addr:    0x4806f638
 }
 
 host_access_flag
 {
 	type:	int
 	desc:	"Flag Variable for Host Communication"
- addr:    0x4806f638
+ addr:    0x4806f640
 }
 endgroup
 
@@ -893,7 +893,7 @@ group "XIL API"
       alias:   "Flags"
       flags:   OUTPUT|READONLY
       range:   < 0 ; 4294967295 >
- addr:    0x4806f69c
+ addr:    0x4806f6a4
 }
 
     xilapi_eesport_trigger_uint32_T
@@ -902,7 +902,7 @@ group "XIL API"
       alias:   "Trigger"
       flags:   OUTPUT|READONLY
       range:   < 0 ; 4294967295 >
- addr:    0x4806f698
+ addr:    0x4806f6a0
 }
 
     endgroup -- "EESPort"

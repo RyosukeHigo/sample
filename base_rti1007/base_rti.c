@@ -6,9 +6,9 @@
    the hardware and software interrupts used.
 
    RTI1007 7.6 (02-May-2016)
-   Sun Dec 30 22:18:13 2018
+   Thu Jan 03 20:45:22 2019
 
-   Copyright 2018, dSPACE GmbH. All rights reserved.
+   Copyright 2019, dSPACE GmbH. All rights reserved.
 
  *****************************************************************************/
 
