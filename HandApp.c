@@ -808,37 +808,42 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 	double a_2;				   //指先関節角
 	double r = 0.045 - 0.0365; //指先半径
 	double cube_angle;		   //弧度法で表したキューブの角度
-	double f;				   //指先の接触点の角度
-	double L_1 = 0.062;		   //指先根元リンク
-	double f2;				   // = a_1 + a_2 + (90 - angle) * PI / 180 - PI / 2;
-	double L_2 = 0.0365;	   //指先リンク
-	double x_f;				   //指先のx座標
-	double y_f;				   //指先のy座標
-	double omega_r = 10 * PI;  //目標とするルービックキューブの角速度
+	double cube_angle_tmp;
+	double f_left;		 //左指先の接触点の角度
+	double f_right;		 //右指先の接触点の角度
+	double L_1 = 0.062;  //指先根元リンク
+	double f2;			 // = a_1 + a_2 + (90 - angle) * PI / 180 - PI / 2;
+	double L_2 = 0.0365; //指先リンク
+	double x_f;			 //指先のx座標
+	double y_f;			 //指先のy座標
+	double omega_r;		 //目標とするルービックキューブの角速度
 	double omega_l;
 	double O_x = camera[0] - 0.045; //ロボット座標系から見たルービックキューブの重心位置のx座標
 	double O_y = camera[1];			//ロボット座標系から見たルービックキューブの重心位置のy座標
 	double u_1;						//接触点座標系からみたルービックキューブの重心の位置
 	double u_3 = g_cube_d / 2;		//接触点座標系からみたルービックキューブの重心の位置
+	double d_left;					//左指先からルービックキューブの面までの距離
+	double d_right;					//右指先からルービックキューブの面までの距離
+	double in_jnt_ang[11];
 	double tmp;
 	double tmp2;
 	double tmp_n;
-	double A[3][3]; //逆行列
-	double S12f;
-	double C12f;
-	double S12;
-	double C12;
+	double A[3][3];								 //逆行列
 	double da_1;								 //関節角の速度
 	double da_2;								 //関節角の速度
 	double da_5;								 //関節角の速度
 	double da_6;								 //関節角の速度
-	double theta_cube = PI * (time - stime); //目標のルービックキューブの角度
+	double theta_cube = 4 * PI * (time - stime); //目標のルービックキューブの角度
 	double p_r = 1000;							 //比例制御ゲイン
 	double p_l = 500;
-	double d_r = 250; //比例制御ゲイン
-	double d_l = 125;
-	double v; //速度ゲイン
-
+	double d_r = 125; //比例制御ゲイン
+	double d_l = 62.5;
+	double v;	  //速度ゲイン
+	double v_x_in; //内力ベクトル
+	double v_y_in; //内力ベクトル
+	//double gain = 25.0;
+	double gain = 5.0;
+	//-pi/4 < cube_angle < pi/4
 	if (angle > 45.0)
 	{
 		cube_angle = (90.0 - angle) * PI / 180.0;
@@ -848,8 +853,15 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 		cube_angle = -angle * PI / 180.0;
 	}
 
-	omega_r = p_r * (theta_cube - cube_angle) - d_r * (cube_angle - prev_cube_ang);
-	omega_l = p_l * (theta_cube - cube_angle) - d_l * (cube_angle - prev_cube_ang);
+	//omega_r = p_r * (theta_cube - cube_angle) - d_r * (cube_angle - prev_cube_ang);
+	//omega_l = p_l * (theta_cube - cube_angle) - d_l * (cube_angle - prev_cube_ang);
+	omega_r = 4 * PI;
+	omega_l = 4 * PI;
+	if (clock_wise == 0)
+	{
+		omega_r = -omega_r;
+		omega_l = -omega_l;
+	}
 	prev_cube_ang = cube_angle;
 	//キューブの回転方向によって軌道を変える
 	//左指
@@ -859,29 +871,43 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 	a_2 = hand.var.jnt_ang[HAND_M2];
 	x_f = L_2 * cos(a_1 + a_2) + L_1 * cos(a_1);	  //指先のx座標
 	y_f = -L_2 * sin(a_1 + a_2) - L_1 * sin(a_1) + d; //指先のy座標
-	f = a_1 + a_2 + cube_angle - PI / 2;
+	f_left = a_1 + a_2 + cube_angle - PI / 2;
 	//u_1 = (tan(cube_angle) * x_f - y_f - tan(cube_angle) * O_x + O_y) / sqrt(tan(cube_angle) * tan(cube_angle) + 1);
-	u_1 = (tan(cube_angle) * (-y_f) - x_f + O_x + tan(cube_angle) * O_y) / sqrt(tan(cube_angle) * tan(cube_angle) + 1);
-	tmp = sin(a_2 - f) * u_3 - cos(a_2 - f) * u_1 - L_2 * sin(a_2);
-	tmp2 = sin(a_2 - f) * u_3 + cos(a_2 - f) * u_1 - L_2 * sin(a_2);
-	S12f = sin(a_1 + a_2 - f);
-	C12f = cos(a_1 + a_2 - f);
-	S12 = sin(a_1 + a_2);
-	C12 = cos(a_1 + a_2);
+	//u_1 = (tan(cube_angle) * (-y_f) - x_f + O_x + tan(cube_angle) * O_y) / sqrt(tan(cube_angle) * tan(cube_angle) + 1);
+	// -pi < cube_angle_tmp < -pi/4, pi/4 < cube_angle_tmp < pi/2
+	if (cube_angle > 0.0)
+	{
+		cube_angle_tmp = cube_angle - PI / 2;
+	}
+	else
+	{
+		cube_angle_tmp = cube_angle + PI / 2;
+	}
+	u_1 = ((-y_f) + (-x_f + O_x) / tan(cube_angle_tmp) + O_y) / sqrt(1 + 1 / (tan(cube_angle_tmp) * tan(cube_angle_tmp)));
+	//法線ベクトルは(tanθ,1)
+	v_x_in = 1 / sqrt((tan(cube_angle_tmp) * tan(cube_angle_tmp) + 1));
+	v_y_in = -1 / sqrt(1 + 1 / (tan(cube_angle_tmp) * tan(cube_angle_tmp)));
+	if (cube_angle_tmp > 0)
+	{
+		v_x_in = -v_x_in;
+	}
+	d_left = fabs(u_1) - r - g_cube_d / 2;
+	invKine(ref_jnt_ang, prepare_jnt_ang1, time, 0.0, 0.0, x_f + 0.045 + v_x_in * d_left, y_f + v_y_in * d_left, g_Lw0, LEFT_FINGER);
+	in_jnt_ang[HAND_M1] = ref_jnt_ang[HAND_M1];
+	in_jnt_ang[HAND_M2] = ref_jnt_ang[HAND_M2];
+	A[0][0] = (r * cos(a_2 + a_1 - f_left) + L_2 * cos(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f_left) + L_2 * sin(a_2)));
+	A[0][1] = -(r * sin(a_2 + a_1 - f_left) + L_2 * sin(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f_left) + L_2 * sin(a_2)));
+	A[0][2] = -(d * r * cos(a_2 + a_1 - f_left) + L_2 * d * cos(a_2 + a_1) + L_1 * r * sin(a_2 - f_left) + L_1 * L_2 * sin(a_2)) / (L_1 * (r * sin(a_2 - f_left) + L_2 * sin(a_2)));
 
-	A[0][0] = (r * cos(a_2 + a_1 - f) + L_2 * cos(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[0][1] = -(r * sin(a_2 + a_1 - f) + L_2 * sin(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[0][2] = -(d * r * cos(a_2 + a_1 - f) + L_2 * d * cos(a_2 + a_1) + L_1 * r * sin(a_2 - f) + L_1 * L_2 * sin(a_2)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
+	A[1][0] = -(r * cos(a_2 + a_1 - f_left) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1)) / (L_1 * (r * sin(a_2 - f_left) + L_2 * sin(a_2)));
+	A[1][1] = (r * sin(a_2 + a_1 - f_left) + L_2 * sin(a_2 + a_1) + L_1 * sin(a_1)) / (L_1 * (r * sin(a_2 - f_left) + L_2 * sin(a_2)));
+	A[1][2] = (d * (r * cos(a_2 + a_1 - f_left) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1))) / (L_1 * (r * sin(a_2 - f_left) + L_2 * sin(a_2)));
 
-	A[1][0] = -(r * cos(a_2 + a_1 - f) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[1][1] = (r * sin(a_2 + a_1 - f) + L_2 * sin(a_2 + a_1) + L_1 * sin(a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[1][2] = (d * (r * cos(a_2 + a_1 - f) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1))) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-
-	da_1 = A[0][0] * (O_y * omega_r) + A[0][1] * (-O_x * omega_r) + A[0][2] * omega_r;
-	da_2 = A[1][0] * (O_y * omega_r) + A[1][1] * (-O_x * omega_r) + A[1][2] * omega_r;
-	ref_jnt_ang[HAND_M1] = a_1 + da_1 / 1000;
-	ref_jnt_ang[HAND_M2] = a_2 + da_2 / 1000;
-	//ref_jnt_ang[HAND_M9] = u_1;
+	da_1 = A[0][0] * (O_y * omega_r) + A[0][1] * (-O_x * omega_r - 40 * camera[1]) + A[0][2] * omega_r;
+	da_2 = A[1][0] * (O_y * omega_r) + A[1][1] * (-O_x * omega_r - 40 * camera[1]) + A[1][2] * omega_r;
+	ref_jnt_ang[HAND_M1] = (a_1 + gain * da_1 / 1000) + in_jnt_ang[HAND_M1];
+	ref_jnt_ang[HAND_M2] = (a_2 + gain * da_2 / 1000) + in_jnt_ang[HAND_M2];
+	ref_jnt_ang[HAND_M9] = d_left;
 
 	//右指
 
@@ -890,28 +916,67 @@ void Yturn_Rolling(HANDJnt ref_jnt_ang, HANDJnt prepare_jnt_ang1, double TRAJ_RA
 	a_2 = -hand.var.jnt_ang[HAND_M6];
 	x_f = L_2 * cos(a_1 + a_2) + L_1 * cos(a_1);	  //指先のx座標
 	y_f = -L_2 * sin(a_1 + a_2) - L_1 * sin(a_1) + d; //指先のy座標
-	f = a_1 + a_2 + cube_angle + PI / 2;
+	f_right = a_1 + a_2 + cube_angle + PI / 2;
 	//u_1 = -(tan(cube_angle) * x_f - y_f - tan(cube_angle) * O_x + O_y) / sqrt(tan(cube_angle) * tan(cube_angle) + 1);
-	u_1 = -(tan(cube_angle) * (-y_f) - x_f + O_x + tan(cube_angle) * O_y) / sqrt(tan(cube_angle) * tan(cube_angle) + 1);
-	tmp = sin(a_2 - f) * u_3 - cos(a_2 - f) * u_1 - L_2 * sin(a_2);
-	tmp2 = sin(a_2 - f) * u_3 + cos(a_2 - f) * u_1 - L_2 * sin(a_2);
-	S12f = sin(a_1 + a_2 - f);
-	C12f = cos(a_1 + a_2 - f);
-	S12 = sin(a_1 + a_2);
-	C12 = cos(a_1 + a_2);
+	//u_1 = -(tan(cube_angle) * (-y_f) - x_f + O_x + tan(cube_angle) * O_y) / sqrt(tan(cube_angle) * tan(cube_angle) + 1);
+	if (cube_angle > 0.0)
+	{
+		cube_angle_tmp = cube_angle - PI / 2;
+	}
+	else
+	{
+		cube_angle_tmp = cube_angle + PI / 2;
+	}
+	u_1 = -((-y_f) + (-x_f + O_x) / tan(cube_angle_tmp) + O_y) / sqrt(1 + 1 / (tan(cube_angle_tmp) * tan(cube_angle_tmp)));
+	//法線ベクトルは(tanθ,1)
+	v_x_in = -1 / sqrt((tan(cube_angle_tmp) * tan(cube_angle_tmp) + 1));
+	v_y_in = 1 / sqrt(1 + 1 / (tan(cube_angle_tmp) * tan(cube_angle_tmp)));
+	if (cube_angle_tmp > 0)
+	{
+		v_x_in = -v_x_in;
+	}
+	d_right = fabs(u_1) - r - g_cube_d / 2;
+	invKine(ref_jnt_ang, prepare_jnt_ang1, time, 0.0, 0.0, x_f + 0.045 + v_x_in * d_right, y_f + v_y_in * d_right, g_Lw0, RIGHT_FINGER);
+	in_jnt_ang[HAND_M5] = ref_jnt_ang[HAND_M5];
+	in_jnt_ang[HAND_M6] = ref_jnt_ang[HAND_M6];
+	ref_jnt_ang[HAND_M11] = d_right;
+	A[0][0] = (r * cos(a_2 + a_1 - f_right) + L_2 * cos(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f_right) + L_2 * sin(a_2)));
+	A[0][1] = -(r * sin(a_2 + a_1 - f_right) + L_2 * sin(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f_right) + L_2 * sin(a_2)));
+	A[0][2] = -(d * r * cos(a_2 + a_1 - f_right) + L_2 * d * cos(a_2 + a_1) + L_1 * r * sin(a_2 - f_right) + L_1 * L_2 * sin(a_2)) / (L_1 * (r * sin(a_2 - f_right) + L_2 * sin(a_2)));
 
-	A[0][0] = (r * cos(a_2 + a_1 - f) + L_2 * cos(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[0][1] = -(r * sin(a_2 + a_1 - f) + L_2 * sin(a_2 + a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[0][2] = -(d * r * cos(a_2 + a_1 - f) + L_2 * d * cos(a_2 + a_1) + L_1 * r * sin(a_2 - f) + L_1 * L_2 * sin(a_2)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
+	A[1][0] = -(r * cos(a_2 + a_1 - f_right) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1)) / (L_1 * (r * sin(a_2 - f_right) + L_2 * sin(a_2)));
+	A[1][1] = (r * sin(a_2 + a_1 - f_right) + L_2 * sin(a_2 + a_1) + L_1 * sin(a_1)) / (L_1 * (r * sin(a_2 - f_right) + L_2 * sin(a_2)));
+	A[1][2] = (d * (r * cos(a_2 + a_1 - f_right) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1))) / (L_1 * (r * sin(a_2 - f_right) + L_2 * sin(a_2)));
 
-	A[1][0] = -(r * cos(a_2 + a_1 - f) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[1][1] = (r * sin(a_2 + a_1 - f) + L_2 * sin(a_2 + a_1) + L_1 * sin(a_1)) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
-	A[1][2] = (d * (r * cos(a_2 + a_1 - f) + L_2 * cos(a_2 + a_1) + L_1 * cos(a_1))) / (L_1 * (r * sin(a_2 - f) + L_2 * sin(a_2)));
+	da_5 = A[0][0] * (O_y * omega_l) + A[0][1] * (-O_x * omega_l - 40 * camera[1]) + A[0][2] * omega_l;
+	da_6 = A[1][0] * (O_y * omega_l) + A[1][1] * (-O_x * omega_l - 40 * camera[1]) + A[1][2] * omega_l;
+	ref_jnt_ang[HAND_M5] = (-a_1 - gain * da_5 / 1000.0) + in_jnt_ang[HAND_M5];
+	ref_jnt_ang[HAND_M6] = (-a_2 - gain * da_6 / 1000.0) + in_jnt_ang[HAND_M6];
 
-	da_5 = A[0][0] * (O_y * omega_l) + A[0][1] * (-O_x * omega_l) + A[0][2] * omega_l;
-	da_6 = A[1][0] * (O_y * omega_l) + A[1][1] * (-O_x * omega_l) + A[1][2] * omega_l;
-	ref_jnt_ang[HAND_M5] = -a_1 - da_5 / 1000.0;
-	ref_jnt_ang[HAND_M6] = -a_2 - da_6 / 1000.0;
+	//特異姿勢周辺で指を離す
+	if ((f_right > (70.0 / 180.0 * PI)) || (70.0 > angle && angle > 20.0))
+	{
+		ref_jnt_ang[HAND_M1] = -PI / 6;
+		ref_jnt_ang[HAND_M5] = -PI / 6;
+		ref_jnt_ang[HAND_M2] = hand.var.jnt_ang[HAND_M2];
+		ref_jnt_ang[HAND_M6] = -PI / 6; //hand.var.jnt_ang[HAND_M6];
+	}
+	/*
+	if ((f_right > (70.0 / 180.0 * PI)) && clock_wise == 1)
+	{
+		ref_jnt_ang[HAND_M1] = hand.var.jnt_ang[HAND_M1];
+		ref_jnt_ang[HAND_M5] = hand.var.jnt_ang[HAND_M5];
+		ref_jnt_ang[HAND_M2] = hand.var.jnt_ang[HAND_M2];
+		ref_jnt_ang[HAND_M6] = hand.var.jnt_ang[HAND_M6];
+	}
+	else if ((f_left < -(70.0 / 180.0 * PI)) && clock_wise == 0)
+	{
+		ref_jnt_ang[HAND_M1] = hand.var.jnt_ang[HAND_M1];
+		ref_jnt_ang[HAND_M5] = hand.var.jnt_ang[HAND_M5];
+		ref_jnt_ang[HAND_M2] = hand.var.jnt_ang[HAND_M2];
+		ref_jnt_ang[HAND_M6] = hand.var.jnt_ang[HAND_M6];
+	}
+	*/
 	//ref_jnt_ang[HAND_M9] = u_1;
 }
 
@@ -1051,7 +1116,7 @@ int handTrajApp(HANDJnt ref_jnt_ang, DATA *data, double time, double *camData)
 	double theta_m_s = PI / 6;
 	double theta_m = 0.0;
 	double interval = 0.0;
-
+	int n = 0;
 	int i = 0;
 	//data[0] = camData[0];
 	//for (jnt = 0; jnt < HAND_JNT; jnt++)
@@ -1082,8 +1147,8 @@ int handTrajApp(HANDJnt ref_jnt_ang, DATA *data, double time, double *camData)
 			cog_x = camData[0];
 			cog_y = camData[1];
 		}
-		offset = 0.005;					//把持力に関係している　大きくすると強く把持してキューブが回転しないかもしれない。小さくてもキューブが把持できない。
-		xs = cog_x - g_cube_d / 3;		//キューブ手前列の真ん中を持つ 前のハンドでは手前列の真ん中より更に手前を把持している。　リンクの長さが間違っていた可能性がある
+		offset = 0.008;					//把持力に関係している　大きくすると強く把持してキューブが回転しないかもしれない。小さくてもキューブが把持できない。
+		xs = cog_x;						// - g_cube_d / 3;		//キューブ手前列の真ん中を持つ 前のハンドでは手前列の真ん中より更に手前を把持している。　リンクの長さが間違っていた可能性がある
 		ys = g_cube_d / 2 + r - offset; //- offset;// - 0.004; //+ 2 * offset;
 		zs = g_Lw0;
 		prev_mfinger_x = cog_x - g_cube_d / 3;
@@ -1123,10 +1188,21 @@ int handTrajApp(HANDJnt ref_jnt_ang, DATA *data, double time, double *camData)
 	//execFromString(ref_jnt_ang, prepare_jnt_ang, TRAJ_RATE3, time, camData, operation);
 
 	//転がり接触を利用したルービックキューブの傾き制御テスト
-	if (time >= 2.000 && time < 3.000)
+	for (n = 0; n < 10; n++)
 	{
-		Yturn_Rolling(ref_jnt_ang, prepare_jnt_ang, TRAJ_RATE3, time, 2.0, camData[2], camData, COUNTER_CLOCKWISE);
+		if (time >= 2.000 + 0.500 * n && time < 2.000 + 0.500 * (n + 1))
+		{
+			if (n % 2 == 0)
+			{
+				Yturn_Rolling(ref_jnt_ang, prepare_jnt_ang, TRAJ_RATE3, time, 2.0, camData[2], camData, CLOCKWISE);
+			}
+			else
+			{
+				Yturn_Rolling(ref_jnt_ang, prepare_jnt_ang, TRAJ_RATE3, time, 2.0, camData[2], camData, COUNTER_CLOCKWISE);
+			}
+		}
 	}
+
 	//関節角を保存
 	//ref_jnt_ang[8] = hand.var.jnt_ang[0];
 	for (jnt = 0; jnt < HAND_JNT; jnt++)

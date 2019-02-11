@@ -525,7 +525,7 @@ LOAD C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe
  .init          0x480423bc        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtend.o
  .init          0x480423c0       0x10 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crtn.o
 
-.text           0x480423d0    0x1cb60
+.text           0x480423d0    0x1cf30
                 0x480423d0                _btext = .
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x480423d0      0x118 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crt1.o
@@ -560,912 +560,913 @@ LOAD C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe
                 0x48043a40                avsCheckInitEnc
                 0x48043b70                avsServoOff
  *fill*         0x48043b78        0x8 00000000
- .text          0x48043b80     0x2b78 HandApp.o07
+ .text          0x48043b80     0x2f48 HandApp.o07
                 0x48043b80                invKine
                 0x48043e70                UturnKine
                 0x48044820                Xturn2
                 0x48044c70                Yturn2
                 0x480455f0                Yturn
                 0x480457c0                Yturn_Rolling
-                0x48046080                execFromString
-                0x480462b0                trajGeneLine
-                0x480462d0                handWaveGeneSin
-                0x48046340                handTrajApp
-                0x480466b0                handAppSet
- *fill*         0x480466f8        0x8 00000000
- .text          0x48046700      0x214 WAMApp.o07
-                0x48046700                least_square
-                0x48046880                wamTrajApp
-                0x480468b0                wamAppSet
- *fill*         0x48046914        0xc 00000000
- .text          0x48046920      0x574 WAM2App.o07
-                0x48046920                wamTra5th
-                0x480469b0                waveGeneSin
-                0x48046a20                waveGeneExp
-                0x48046b80                wam2TrajApp
-                0x48046e30                wam2AppSet
- *fill*         0x48046e94        0xc 00000000
- .text          0x48046ea0      0x130 AVSApp.o07
-                0x48046ea0                avsTrajApp
-                0x48046f70                avsVisualTrajApp
-                0x48046fa0                avsAppSet
- .text          0x48046fd0      0x124 XYZstageApp.o07
-                0x48046fd0                xyzTrajApp
-                0x480470d0                xyzAppSet
- *fill*         0x480470f4        0xc 00000000
- .text          0x48047100      0x15c LinkHomoMat.o07
-                0x48047100                linkHomoMat
-                0x48047200                linkHomoMatCS
- *fill*         0x4804725c        0x4 00000000
- .text          0x48047260       0x6c vec3DRot.o07
-                0x48047260                vec3DRot
- *fill*         0x480472cc        0x4 00000000
- .text          0x480472d0       0x28 vec3DInProduct.o07
-                0x480472d0                vec3DInProduct
- *fill*         0x480472f8        0x8 00000000
- .text          0x48047300      0x5e4 pmatrix.o07
-                0x48047300                pmatPrint
-                0x480473f0                pmatCopy
-                0x48047450                pmatCompare
-                0x480474d0                pmatUnit
-                0x48047550                pmatAdd
-                0x480475c0                pmatSub
-                0x48047630                pmatMul
-                0x480477a0                pmatTrans
-                0x480478b0                pmatTrace
- *fill*         0x480478e4        0xc 00000000
- .text          0x480478f0      0x480 homoMat.o07
-                0x480478f0                homoMatPrint
-                0x480479f0                homoMatCopy
-                0x48047a30                homoMatFile
-                0x48047b40                homoMatMul
-                0x48047ce0                homoMatInv
- .text          0x48047d70      0x58c myMatrix.o07
-                0x48047d70                dmatInit
-                0x48047ec0                dmatZeros
-                0x48047f60                dmatFree
-                0x48047fe0                dmatCopy
-                0x48048090                fmatInit
-                0x480481e0                fmatZeros
-                0x48048280                fmatFree
- *fill*         0x480482fc        0x4 00000000
- .text          0x48048300      0x304 Vector.o07
-                0x48048300                dvecInit
-                0x480483a0                dvecZeros
-                0x48048410                dvecCopy
-                0x48048440                dvecFree
-                0x48048470                fvecInit
-                0x48048510                fvecFree
-                0x48048540                ivecInit
-                0x480485e0                ivecFree
- *fill*         0x48048604        0xc 00000000
- .text          0x48048610      0xb68 Kalman.o07
-                0x48048610                mat2UD
-                0x48048830                UD2mat
-                0x48048a40                kalmanObservUpdateUD
-                0x48048d80                kalmanTimeUpdateUD
- *fill*         0x48049178        0x8 00000000
- .text          0x48049180      0x7f4 Predict3D.o07
-                0x48049180                predict3D_init
-                0x48049350                predict3D_start
-                0x48049410                predict3D
-                0x48049620                predict3D_calc
-                0x480496c0                predict_trajectory
-                0x48049850                predict3D_exit
-                0x48049940                predict3D_get
- *fill*         0x48049974        0xc 00000000
- .text          0x48049980     0x16dc throwJnt2armJnt.o07
-                0x48049980                throwModelJnt2armJnt
-                0x4804a0b0                battingModelJnt2armJnt
-                0x4804a900                armJnt2battingModelJnt
- *fill*         0x4804b05c        0x4 00000000
- .text          0x4804b060       0x7c storeData.o07
-                0x4804b060                storeInDATA
- *fill*         0x4804b0dc        0x4 00000000
- .text          0x4804b0e0      0x180 TaskSet.o07
-                0x4804b220                TaskSet
- .text          0x4804b260      0x1d4 handEnc2JntAng.o07
-                0x4804b400                handEnc2JntAng
- *fill*         0x4804b434        0xc 00000000
- .text          0x4804b440     0x1000 rtiethernetdecode.o07
-                0x4804c400                rtiethernetdecode
- .text          0x4804c440      0x830 handTraj.o07
-                0x4804c5b0                handTrajStart
-                0x4804c740                handTrajEnd
-                0x4804cc30                handTraj
- .text          0x4804cc70      0x1e4 handJntAngLimit.o07
-                0x4804ce20                handJntAngLimit
- *fill*         0x4804ce54        0xc 00000000
- .text          0x4804ce60      0x420 handCtrl.o07
-                0x4804cf50                handCtrlPD
-                0x4804d240                handCtrl
- .text          0x4804d280      0x104 handJntTrq2DA.o07
-                0x4804d350                handJntTrq2DA
- *fill*         0x4804d384        0xc 00000000
- .text          0x4804d390      0x174 handDALimit.o07
-                0x4804d4d0                handDALimit
- *fill*         0x4804d504        0xc 00000000
- .text          0x4804d510      0xfb0 rtiethernetencode.o07
-                0x4804e480                rtiethernetencode
- .text          0x4804e4c0      0x650 XYZstageTraj.o07
-                0x4804e5e0                xyzTrajStart
-                0x4804e770                xyzTrajEnd
-                0x4804ead0                XYZstageTraj
- .text          0x4804eb10      0x194 XYZstageAngLimit.o07
-                0x4804ec70                XYZstageAngLimit
- *fill*         0x4804eca4        0xc 00000000
- .text          0x4804ecb0      0x174 XYZstageEnc2JntAng.o07
-                0x4804edf0                XYZstageEnc2JntAng
- *fill*         0x4804ee24        0xc 00000000
- .text          0x4804ee30      0x230 XYZstageCtrl.o07
-                0x4804ef00                xyzCtrlPD
-                0x4804f020                XYZstageCtrl
- .text          0x4804f060      0x104 XYZstageTrq2DA.o07
-                0x4804f130                XYZstageTrq2DA
- *fill*         0x4804f164        0xc 00000000
- .text          0x4804f170      0x1c0 XYZstageDALimit.o07
-                0x4804f2f0                XYZstageDALimit
- .text          0x4804f330      0x200 SystemSet.o07
-                0x4804f4f0                SystemSet
- .text          0x4804f530     0x2c4c base.o07
-                0x4804f530                MdlOutputs
-                0x4804f990                MdlUpdate
-                0x4804fa10                MdlInitializeSizes
-                0x4804fa20                MdlInitializeSampleTimes
-                0x4804fa30                MdlInitialize
-                0x4804fa40                MdlStart
-                0x4804fd30                MdlTerminate
-                0x4804feb0                base
- .text          0x4805217c        0x0 base_data.o07
- *fill*         0x4805217c        0x4 00000000
- .text          0x48052180       0xf0 base_trc_ptr.o07
-                0x48052240                base_rti_init_trc_pointers
- .text          0x48052270       0x5c rtGetInf.o07
-                0x48052270                rtGetInf
-                0x48052290                rtGetInfF
-                0x480522a0                rtGetMinusInf
-                0x480522c0                rtGetMinusInfF
- *fill*         0x480522cc        0x4 00000000
- .text          0x480522d0       0x4c rtGetNaN.o07
-                0x480522d0                rtGetNaN
-                0x48052300                rtGetNaNF
- *fill*         0x4805231c        0x4 00000000
- .text          0x48052320       0xdc rt_i32zcfcn.o07
-                0x48052320                rt_I32ZCFcn
- *fill*         0x480523fc        0x4 00000000
- .text          0x48052400      0x65c rt_matrx.o07
-                0x48052400                rt_mxCreateCharMatrixFromStrings
-                0x480525f0                rt_mxCreateString
-                0x480526c0                rt_mxCreateDoubleMatrix
-                0x48052760                rt_mxCreateNumericArray
-                0x48052790                rt_mxDuplicateArray
-                0x48052880                rt_mxGetDimensions
-                0x48052940                rt_mxGetEps
-                0x48052950                rt_mxGetString
- *fill*         0x48052a5c        0x4 00000000
- .text          0x48052a60       0xf4 rt_nonfinite.o07
-                0x48052a60                rt_InitInfAndNaN
-                0x48052ac0                rtIsInf
-                0x48052af0                rtIsInfF
-                0x48052b20                rtIsNaN
-                0x48052b40                rtIsNaNF
- *fill*         0x48052b54        0xc 00000000
- .text          0x48052b60       0xc8 rt_printf.o07
-                0x48052b60                rtPrintfNoOp
- *fill*         0x48052c28        0x8 00000000
- .text          0x48052c30      0x524 rti_sim_engine.o07
-                0x480530e0                rtk_idle_function
-                0x480530f0                rti_th_timertask1_trigger_source
-                0x48053140                initConditions
-                0x48053150                initVariables
- *fill*         0x48053154        0xc 00000000
- .text.startup  0x48053160      0x694 rti_sim_engine.o07
-                0x48053160                main
- *fill*         0x480537f4        0xc 00000000
- .text          0x48053800       0x40 rti_init_c.o07
-                0x48053800                rti_init
- .text          0x48053840       0x34 rt_sim.o07
-                0x48053840                rt_SimInitTimingEngine
-                0x48053860                rt_SimGetNextSampleHit
-                0x48053870                rt_SimUpdateDiscreteTaskSampleHits
- *fill*         0x48053874        0xc 00000000
- .text          0x48053880      0x124 rti_assert.o07
-                0x48053880                rti_assertion_handler
-                0x48053930                rti_assertion_mode_msg
- .text          0x480539a4        0x0 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\librtversion.a(RtVersion.o)
- *fill*         0x480539a4        0xc 00000000
- .text          0x480539b0        0x4 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\librtglobals.a(DsEESPort.o)
-                0x480539b0                DsEesPort_init()
- .text          0x480539b4       0x20 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(w_pow.o)
-                0x480539b4                pow
- .text          0x480539d4      0x85c C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
-                0x480539d4                __ieee754_pow
- .text          0x48054230      0x188 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(s_scalbn.o)
-                0x48054230                scalbn
- .text          0x480543b8       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_muldi3.o)
-                0x480543b8                __muldi3
- .text          0x480543d4       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negdi2.o)
-                0x480543d4                __negdi2
- .text          0x480543f4       0x40 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lshrdi3.o)
-                0x480543f4                __lshrdi3
- .text          0x48054434       0x40 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ashldi3.o)
-                0x48054434                __ashldi3
- .text          0x48054474       0x40 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ashrdi3.o)
-                0x48054474                __ashrdi3
- .text          0x480544b4       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_cmpdi2.o)
-                0x480544b4                __cmpdi2
- .text          0x480544e0       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ucmpdi2.o)
-                0x480544e0                __ucmpdi2
- .text          0x4805450c        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clear_cache.o)
-                0x4805450c                __clear_cache
- .text          0x48054510        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_enable_execute_stack.o)
-                0x48054510                __enable_execute_stack
- .text          0x48054514        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_trampoline.o)
- .text          0x48054514        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(__main.o)
- .text          0x48054514       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_absvsi2.o)
-                0x48054514                __absvsi2
- .text          0x4805454c       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_absvdi2.o)
-                0x4805454c                __absvdi2
- .text          0x48054584       0x54 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addvsi3.o)
-                0x48054584                __addvsi3
- .text          0x480545d8       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addvdi3.o)
-                0x480545d8                __addvdi3
- .text          0x48054640       0x54 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_subvsi3.o)
-                0x48054640                __subvsi3
- .text          0x48054694       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_subvdi3.o)
-                0x48054694                __subvdi3
- .text          0x480546fc       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulvsi3.o)
-                0x480546fc                __mulvsi3
- .text          0x48054734      0x1d0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulvdi3.o)
-                0x48054734                __mulvdi3
- .text          0x48054904       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negvsi2.o)
-                0x48054904                __negvsi2
- .text          0x48054948       0x58 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negvdi2.o)
-                0x48054948                __negvdi2
- .text          0x480549a0        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ctors.o)
- .text          0x480549a0       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ffssi2.o)
-                0x480549a0                __ffssi2
- .text          0x480549c0       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ffsdi2.o)
-                0x480549c0                __ffsdi2
- .text          0x48054a0c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clz.o)
- .text          0x48054a0c        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clzsi2.o)
-                0x48054a0c                __clzsi2
- .text          0x48054a14       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clzdi2.o)
-                0x48054a14                __clzdi2
- .text          0x48054a34       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ctzsi2.o)
-                0x48054a34                __ctzsi2
- .text          0x48054a48       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ctzdi2.o)
-                0x48054a48                __ctzdi2
- .text          0x48054a74        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcount_tab.o)
- .text          0x48054a74       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcountsi2.o)
-                0x48054a74                __popcountsi2
- .text          0x48054aac       0x6c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcountdi2.o)
-                0x48054aac                __popcountdi2
- .text          0x48054b18       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_paritysi2.o)
-                0x48054b18                __paritysi2
- .text          0x48054b44       0x30 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_paritydi2.o)
-                0x48054b44                __paritydi2
- .text          0x48054b74       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powisf2.o)
-                0x48054b74                __powisf2
- .text          0x48054bd8       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powidf2.o)
-                0x48054bd8                __powidf2
- .text          0x48054c3c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powixf2.o)
- .text          0x48054c3c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powitf2.o)
- .text          0x48054c3c      0x3bc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulsc3.o)
-                0x48054c3c                __mulsc3
- .text          0x48054ff8      0x3ec c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_muldc3.o)
-                0x48054ff8                __muldc3
- .text          0x480553e4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulxc3.o)
- .text          0x480553e4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_multc3.o)
- .text          0x480553e4      0x304 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divsc3.o)
-                0x480553e4                __divsc3
- .text          0x480556e8      0x2fc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdc3.o)
-                0x480556e8                __divdc3
- .text          0x480559e4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divxc3.o)
- .text          0x480559e4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divtc3.o)
- .text          0x480559e4       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_bswapsi2.o)
-                0x480559e4                __bswapsi2
- .text          0x480559f8       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_bswapdi2.o)
-                0x480559f8                __bswapdi2
- .text          0x48055a1c       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfsi.o)
-                0x48055a1c                __fixunssfsi
- .text          0x48055a64       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsdfsi.o)
-                0x48055a64                __fixunsdfsi
- .text          0x48055aac        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsxfsi.o)
- .text          0x48055aac       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
-                0x48055aac                __fixsfdi
- .text          0x48055b14       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixdfdi.o)
-                0x48055b14                __fixdfdi
- .text          0x48055b7c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixxfdi.o)
- .text          0x48055b7c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixtfdi.o)
- .text          0x48055b7c       0xf0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfdi.o)
-                0x48055b7c                __fixunssfdi
- .text          0x48055c6c       0xec c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsdfdi.o)
-                0x48055c6c                __fixunsdfdi
- .text          0x48055d58        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsxfdi.o)
- .text          0x48055d58        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunstfdi.o)
- .text          0x48055d58       0xac c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdisf.o)
-                0x48055d58                __floatdisf
- .text          0x48055e04       0x50 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdidf.o)
-                0x48055e04                __floatdidf
- .text          0x48055e54        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdixf.o)
- .text          0x48055e54        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatditf.o)
- .text          0x48055e54       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundisf.o)
-                0x48055e54                __floatundisf
- .text          0x48055ebc       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundidf.o)
-                0x48055ebc                __floatundidf
- .text          0x48055f00        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundixf.o)
- .text          0x48055f00        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatunditf.o)
- .text          0x48055f00       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eprintf.o)
-                0x48055f00                __eprintf
- .text          0x48055f48       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(__gcc_bcmp.o)
-                0x48055f48                __gcc_bcmp
- .text          0x48055f94      0x448 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdi3.o)
-                0x48055f94                __divdi3
- .text          0x480563dc      0x430 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_moddi3.o)
-                0x480563dc                __moddi3
- .text          0x4805680c      0x400 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivdi3.o)
-                0x4805680c                __udivdi3
- .text          0x48056c0c      0x3d4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_umoddi3.o)
-                0x48056c0c                __umoddi3
- .text          0x48056fe0        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udiv_w_sdiv.o)
-                0x48056fe0                __udiv_w_sdiv
- .text          0x48056fe8      0x4d4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivmoddi4.o)
-                0x48056fe8                __udivmoddi4
- .text          0x480574bc      0x130 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_pack_sf.o)
-                0x480574bc                __pack_f
- .text          0x480575ec       0xb0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unpack_sf.o)
-                0x480575ec                __unpack_f
- .text          0x4805769c      0x2e0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_sf.o)
-                0x480578d0                __addsf3
-                0x48057920                __subsf3
- .text          0x4805797c      0x1e4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_sf.o)
-                0x4805797c                __mulsf3
- .text          0x48057b60      0x16c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_sf.o)
-                0x48057b60                __divsf3
- .text          0x48057ccc      0x108 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fpcmp_parts_sf.o)
-                0x48057ccc                __fpcmp_parts_f
- .text          0x48057dd4       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_sf.o)
-                0x48057dd4                __cmpsf2
- .text          0x48057e1c       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_sf.o)
-                0x48057e1c                __eqsf2
- .text          0x48057e80       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_sf.o)
-                0x48057e80                __nesf2
- .text          0x48057ee4       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_sf.o)
-                0x48057ee4                __gtsf2
- .text          0x48057f48       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_sf.o)
-                0x48057f48                __gesf2
- .text          0x48057fac       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_sf.o)
-                0x48057fac                __ltsf2
- .text          0x48058010       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_sf.o)
-                0x48058010                __lesf2
- .text          0x48058074       0x5c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_sf.o)
-                0x48058074                __unordsf2
- .text          0x480580d0       0x94 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_sf.o)
-                0x480580d0                __floatsisf
- .text          0x48058164       0xb8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_si.o)
-                0x48058164                __fixsfsi
- .text          0x4805821c       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_sf.o)
-                0x4805821c                __negsf2
- .text          0x48058260       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_sf.o)
-                0x48058260                __make_fp
- .text          0x48058294       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_df.o)
-                0x48058294                __extendsfdf2
- .text          0x480582dc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_sf.o)
- .text          0x480582dc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_usi.o)
- .text          0x480582dc       0xd4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_sf.o)
-                0x480582dc                __floatunsisf
- .text          0x480583b0      0x248 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_pack_df.o)
-                0x480583b0                __pack_d
- .text          0x480585f8       0xe4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unpack_df.o)
-                0x480585f8                __unpack_d
- .text          0x480586dc      0x440 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_df.o)
-                0x48058a70                __adddf3
-                0x48058ac0                __subdf3
- .text          0x48058b1c      0x328 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_df.o)
-                0x48058b1c                __muldf3
- .text          0x48058e44      0x21c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_df.o)
-                0x48058e44                __divdf3
- .text          0x48059060      0x124 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fpcmp_parts_df.o)
-                0x48059060                __fpcmp_parts_d
- .text          0x48059184       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_df.o)
-                0x48059184                __cmpdf2
- .text          0x480591cc       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_df.o)
-                0x480591cc                __eqdf2
- .text          0x48059230       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_df.o)
-                0x48059230                __nedf2
- .text          0x48059294       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_df.o)
-                0x48059294                __gtdf2
- .text          0x480592f8       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_df.o)
-                0x480592f8                __gedf2
- .text          0x4805935c       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_df.o)
-                0x4805935c                __ltdf2
- .text          0x480593c0       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_df.o)
-                0x480593c0                __ledf2
- .text          0x48059424       0x5c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_df.o)
-                0x48059424                __unorddf2
- .text          0x48059480       0xc4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_df.o)
-                0x48059480                __floatsidf
- .text          0x48059544       0xe0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_si.o)
-                0x48059544                __fixdfsi
- .text          0x48059624       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_df.o)
-                0x48059624                __negdf2
- .text          0x48059668       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_df.o)
-                0x48059668                __make_dp
- .text          0x480596a0       0x5c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_sf.o)
-                0x480596a0                __truncdfsf2
- .text          0x480596fc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_df.o)
- .text          0x480596fc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_usi.o)
- .text          0x480596fc      0x124 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_df.o)
-                0x480596fc                __floatunsidf
- .text          0x48059820       0x8c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(tramp.o)
-                0x48059848                __trampoline_setup
- .text          0x480598ac       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavfpr.o)
-                0x480598ac                _savefpr_14
-                0x480598b0                _savefpr_15
-                0x480598b4                _savefpr_16
-                0x480598b8                _savefpr_17
-                0x480598bc                _savefpr_18
-                0x480598c0                _savefpr_19
-                0x480598c4                _savefpr_20
-                0x480598c8                _savefpr_21
-                0x480598cc                _savefpr_22
-                0x480598d0                _savefpr_23
-                0x480598d4                _savefpr_24
-                0x480598d8                _savefpr_25
-                0x480598dc                _savefpr_26
-                0x480598e0                _savefpr_27
-                0x480598e4                _savefpr_28
-                0x480598e8                _savefpr_29
-                0x480598ec                _savefpr_30
-                0x480598f0                _savefpr_31
- .text          0x480598f8       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresfpr.o)
-                0x480598f8                _restfpr_14
-                0x480598fc                _restfpr_15
-                0x48059900                _restfpr_16
-                0x48059904                _restfpr_17
-                0x48059908                _restfpr_18
-                0x4805990c                _restfpr_19
-                0x48059910                _restfpr_20
-                0x48059914                _restfpr_21
-                0x48059918                _restfpr_22
-                0x4805991c                _restfpr_23
-                0x48059920                _restfpr_24
-                0x48059924                _restfpr_25
-                0x48059928                _restfpr_26
-                0x4805992c                _restfpr_27
-                0x48059930                _restfpr_28
-                0x48059934                _restfpr_29
-                0x48059938                _restfpr_30
-                0x4805993c                _restfpr_31
- .text          0x48059944       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavgpr.o)
-                0x48059944                _savegpr_14
-                0x48059948                _savegpr_15
-                0x4805994c                _savegpr_16
-                0x48059950                _savegpr_17
-                0x48059954                _savegpr_18
-                0x48059958                _savegpr_19
-                0x4805995c                _savegpr_20
-                0x48059960                _savegpr_21
-                0x48059964                _savegpr_22
-                0x48059968                _savegpr_23
-                0x4805996c                _savegpr_24
-                0x48059970                _savegpr_25
-                0x48059974                _savegpr_26
-                0x48059978                _savegpr_27
-                0x4805997c                _savegpr_28
-                0x48059980                _savegpr_29
-                0x48059984                _savegpr_30
-                0x48059988                _savegpr_31
- .text          0x48059990       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresgpr.o)
-                0x48059990                _restgpr_14
-                0x48059994                _restgpr_15
-                0x48059998                _restgpr_16
-                0x4805999c                _restgpr_17
-                0x480599a0                _restgpr_18
-                0x480599a4                _restgpr_19
-                0x480599a8                _restgpr_20
-                0x480599ac                _restgpr_21
-                0x480599b0                _restgpr_22
-                0x480599b4                _restgpr_23
-                0x480599b8                _restgpr_24
-                0x480599bc                _restgpr_25
-                0x480599c0                _restgpr_26
-                0x480599c4                _restgpr_27
-                0x480599c8                _restgpr_28
-                0x480599cc                _restgpr_29
-                0x480599d0                _restgpr_30
-                0x480599d4                _restgpr_31
- .text          0x480599dc       0x58 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxfpr.o)
-                0x480599dc                _restfpr_14_x
-                0x480599e0                _restfpr_15_x
-                0x480599e4                _restfpr_16_x
-                0x480599e8                _restfpr_17_x
-                0x480599ec                _restfpr_18_x
-                0x480599f0                _restfpr_19_x
-                0x480599f4                _restfpr_20_x
-                0x480599f8                _restfpr_21_x
-                0x480599fc                _restfpr_22_x
-                0x48059a00                _restfpr_23_x
-                0x48059a04                _restfpr_24_x
-                0x48059a08                _restfpr_25_x
-                0x48059a0c                _restfpr_26_x
-                0x48059a10                _restfpr_27_x
-                0x48059a14                _restfpr_28_x
-                0x48059a18                _restfpr_29_x
-                0x48059a1c                _restfpr_30_x
-                0x48059a20                _restfpr_31_x
- .text          0x48059a34       0x58 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxgpr.o)
-                0x48059a34                _restgpr_14_x
-                0x48059a38                _restgpr_15_x
-                0x48059a3c                _restgpr_16_x
-                0x48059a40                _restgpr_17_x
-                0x48059a44                _restgpr_18_x
-                0x48059a48                _restgpr_19_x
-                0x48059a4c                _restgpr_20_x
-                0x48059a50                _restgpr_21_x
-                0x48059a54                _restgpr_22_x
-                0x48059a58                _restgpr_23_x
-                0x48059a5c                _restgpr_24_x
-                0x48059a60                _restgpr_25_x
-                0x48059a64                _restgpr_26_x
-                0x48059a68                _restgpr_27_x
-                0x48059a6c                _restgpr_28_x
-                0x48059a70                _restgpr_29_x
-                0x48059a74                _restgpr_30_x
-                0x48059a78                _restgpr_31_x
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtres32gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtres64gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtres64gprctr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtrest32gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtrest64gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtresx32gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtresx64gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsav32gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsav64gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsav64gprctr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsavg32gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsavg64gpr.o)
- .text          0x48059a8c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsavg64gprctr.o)
- .text          0x48059a8c     0x3250 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2.o)
-                0x4805bfec                _Unwind_GetGR
-                0x4805c060                _Unwind_GetCFA
-                0x4805c068                _Unwind_SetGR
-                0x4805c0f0                _Unwind_GetIP
-                0x4805c0f8                _Unwind_GetIPInfo
-                0x4805c10c                _Unwind_SetIP
-                0x4805c114                _Unwind_GetLanguageSpecificData
-                0x4805c11c                _Unwind_GetRegionStart
-                0x4805c124                _Unwind_FindEnclosingFunction
-                0x4805c15c                _Unwind_GetDataRelBase
-                0x4805c164                _Unwind_GetTextRelBase
-                0x4805c16c                __frame_state_for
-                0x4805c288                _Unwind_RaiseException
-                0x4805c50c                _Unwind_ForcedUnwind
-                0x4805c6fc                _Unwind_Resume
-                0x4805c8ec                _Unwind_Resume_or_Rethrow
-                0x4805cae0                _Unwind_DeleteException
-                0x4805cb18                _Unwind_Backtrace
- .text          0x4805ccdc     0x1924 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2-fde.o)
-                0x4805e0c8                __register_frame_info_bases
-                0x4805e150                __register_frame_info
-                0x4805e15c                __register_frame
-                0x4805e1b4                __register_frame_info_table_bases
-                0x4805e22c                __register_frame_info_table
-                0x4805e238                __register_frame_table
-                0x4805e270                __deregister_frame_info_bases
-                0x4805e3b4                __deregister_frame_info
-                0x4805e3b8                __deregister_frame
-                0x4805e3e8                _Unwind_Find_FDE
- .text          0x4805e600        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-sjlj.o)
- .text          0x4805e600      0x5a0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-c.o)
-                0x4805e780                __gcc_personality_v0
- .text          0x4805eba0      0x2f8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(emutls.o)
-                0x4805ec5c                __emutls_get_address
-                0x4805ee54                __emutls_register_common
- .text          0x4805ee98       0x98 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtend.o
- .text          0x4805ef30        0x0 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crtn.o
+                0x48046370                execFromString
+                0x480465a0                trajGeneLine
+                0x480465c0                handWaveGeneSin
+                0x48046630                handTrajApp
+                0x48046a80                handAppSet
+ *fill*         0x48046ac8        0x8 00000000
+ .text          0x48046ad0      0x214 WAMApp.o07
+                0x48046ad0                least_square
+                0x48046c50                wamTrajApp
+                0x48046c80                wamAppSet
+ *fill*         0x48046ce4        0xc 00000000
+ .text          0x48046cf0      0x574 WAM2App.o07
+                0x48046cf0                wamTra5th
+                0x48046d80                waveGeneSin
+                0x48046df0                waveGeneExp
+                0x48046f50                wam2TrajApp
+                0x48047200                wam2AppSet
+ *fill*         0x48047264        0xc 00000000
+ .text          0x48047270      0x130 AVSApp.o07
+                0x48047270                avsTrajApp
+                0x48047340                avsVisualTrajApp
+                0x48047370                avsAppSet
+ .text          0x480473a0      0x124 XYZstageApp.o07
+                0x480473a0                xyzTrajApp
+                0x480474a0                xyzAppSet
+ *fill*         0x480474c4        0xc 00000000
+ .text          0x480474d0      0x15c LinkHomoMat.o07
+                0x480474d0                linkHomoMat
+                0x480475d0                linkHomoMatCS
+ *fill*         0x4804762c        0x4 00000000
+ .text          0x48047630       0x6c vec3DRot.o07
+                0x48047630                vec3DRot
+ *fill*         0x4804769c        0x4 00000000
+ .text          0x480476a0       0x28 vec3DInProduct.o07
+                0x480476a0                vec3DInProduct
+ *fill*         0x480476c8        0x8 00000000
+ .text          0x480476d0      0x5e4 pmatrix.o07
+                0x480476d0                pmatPrint
+                0x480477c0                pmatCopy
+                0x48047820                pmatCompare
+                0x480478a0                pmatUnit
+                0x48047920                pmatAdd
+                0x48047990                pmatSub
+                0x48047a00                pmatMul
+                0x48047b70                pmatTrans
+                0x48047c80                pmatTrace
+ *fill*         0x48047cb4        0xc 00000000
+ .text          0x48047cc0      0x480 homoMat.o07
+                0x48047cc0                homoMatPrint
+                0x48047dc0                homoMatCopy
+                0x48047e00                homoMatFile
+                0x48047f10                homoMatMul
+                0x480480b0                homoMatInv
+ .text          0x48048140      0x58c myMatrix.o07
+                0x48048140                dmatInit
+                0x48048290                dmatZeros
+                0x48048330                dmatFree
+                0x480483b0                dmatCopy
+                0x48048460                fmatInit
+                0x480485b0                fmatZeros
+                0x48048650                fmatFree
+ *fill*         0x480486cc        0x4 00000000
+ .text          0x480486d0      0x304 Vector.o07
+                0x480486d0                dvecInit
+                0x48048770                dvecZeros
+                0x480487e0                dvecCopy
+                0x48048810                dvecFree
+                0x48048840                fvecInit
+                0x480488e0                fvecFree
+                0x48048910                ivecInit
+                0x480489b0                ivecFree
+ *fill*         0x480489d4        0xc 00000000
+ .text          0x480489e0      0xb68 Kalman.o07
+                0x480489e0                mat2UD
+                0x48048c00                UD2mat
+                0x48048e10                kalmanObservUpdateUD
+                0x48049150                kalmanTimeUpdateUD
+ *fill*         0x48049548        0x8 00000000
+ .text          0x48049550      0x7f4 Predict3D.o07
+                0x48049550                predict3D_init
+                0x48049720                predict3D_start
+                0x480497e0                predict3D
+                0x480499f0                predict3D_calc
+                0x48049a90                predict_trajectory
+                0x48049c20                predict3D_exit
+                0x48049d10                predict3D_get
+ *fill*         0x48049d44        0xc 00000000
+ .text          0x48049d50     0x16dc throwJnt2armJnt.o07
+                0x48049d50                throwModelJnt2armJnt
+                0x4804a480                battingModelJnt2armJnt
+                0x4804acd0                armJnt2battingModelJnt
+ *fill*         0x4804b42c        0x4 00000000
+ .text          0x4804b430       0x7c storeData.o07
+                0x4804b430                storeInDATA
+ *fill*         0x4804b4ac        0x4 00000000
+ .text          0x4804b4b0      0x180 TaskSet.o07
+                0x4804b5f0                TaskSet
+ .text          0x4804b630      0x1d4 handEnc2JntAng.o07
+                0x4804b7d0                handEnc2JntAng
+ *fill*         0x4804b804        0xc 00000000
+ .text          0x4804b810     0x1000 rtiethernetdecode.o07
+                0x4804c7d0                rtiethernetdecode
+ .text          0x4804c810      0x830 handTraj.o07
+                0x4804c980                handTrajStart
+                0x4804cb10                handTrajEnd
+                0x4804d000                handTraj
+ .text          0x4804d040      0x1e4 handJntAngLimit.o07
+                0x4804d1f0                handJntAngLimit
+ *fill*         0x4804d224        0xc 00000000
+ .text          0x4804d230      0x420 handCtrl.o07
+                0x4804d320                handCtrlPD
+                0x4804d610                handCtrl
+ .text          0x4804d650      0x104 handJntTrq2DA.o07
+                0x4804d720                handJntTrq2DA
+ *fill*         0x4804d754        0xc 00000000
+ .text          0x4804d760      0x174 handDALimit.o07
+                0x4804d8a0                handDALimit
+ *fill*         0x4804d8d4        0xc 00000000
+ .text          0x4804d8e0      0xfb0 rtiethernetencode.o07
+                0x4804e850                rtiethernetencode
+ .text          0x4804e890      0x650 XYZstageTraj.o07
+                0x4804e9b0                xyzTrajStart
+                0x4804eb40                xyzTrajEnd
+                0x4804eea0                XYZstageTraj
+ .text          0x4804eee0      0x194 XYZstageAngLimit.o07
+                0x4804f040                XYZstageAngLimit
+ *fill*         0x4804f074        0xc 00000000
+ .text          0x4804f080      0x174 XYZstageEnc2JntAng.o07
+                0x4804f1c0                XYZstageEnc2JntAng
+ *fill*         0x4804f1f4        0xc 00000000
+ .text          0x4804f200      0x230 XYZstageCtrl.o07
+                0x4804f2d0                xyzCtrlPD
+                0x4804f3f0                XYZstageCtrl
+ .text          0x4804f430      0x104 XYZstageTrq2DA.o07
+                0x4804f500                XYZstageTrq2DA
+ *fill*         0x4804f534        0xc 00000000
+ .text          0x4804f540      0x1c0 XYZstageDALimit.o07
+                0x4804f6c0                XYZstageDALimit
+ .text          0x4804f700      0x200 SystemSet.o07
+                0x4804f8c0                SystemSet
+ .text          0x4804f900     0x2c4c base.o07
+                0x4804f900                MdlOutputs
+                0x4804fd60                MdlUpdate
+                0x4804fde0                MdlInitializeSizes
+                0x4804fdf0                MdlInitializeSampleTimes
+                0x4804fe00                MdlInitialize
+                0x4804fe10                MdlStart
+                0x48050100                MdlTerminate
+                0x48050280                base
+ .text          0x4805254c        0x0 base_data.o07
+ *fill*         0x4805254c        0x4 00000000
+ .text          0x48052550       0xf0 base_trc_ptr.o07
+                0x48052610                base_rti_init_trc_pointers
+ .text          0x48052640       0x5c rtGetInf.o07
+                0x48052640                rtGetInf
+                0x48052660                rtGetInfF
+                0x48052670                rtGetMinusInf
+                0x48052690                rtGetMinusInfF
+ *fill*         0x4805269c        0x4 00000000
+ .text          0x480526a0       0x4c rtGetNaN.o07
+                0x480526a0                rtGetNaN
+                0x480526d0                rtGetNaNF
+ *fill*         0x480526ec        0x4 00000000
+ .text          0x480526f0       0xdc rt_i32zcfcn.o07
+                0x480526f0                rt_I32ZCFcn
+ *fill*         0x480527cc        0x4 00000000
+ .text          0x480527d0      0x65c rt_matrx.o07
+                0x480527d0                rt_mxCreateCharMatrixFromStrings
+                0x480529c0                rt_mxCreateString
+                0x48052a90                rt_mxCreateDoubleMatrix
+                0x48052b30                rt_mxCreateNumericArray
+                0x48052b60                rt_mxDuplicateArray
+                0x48052c50                rt_mxGetDimensions
+                0x48052d10                rt_mxGetEps
+                0x48052d20                rt_mxGetString
+ *fill*         0x48052e2c        0x4 00000000
+ .text          0x48052e30       0xf4 rt_nonfinite.o07
+                0x48052e30                rt_InitInfAndNaN
+                0x48052e90                rtIsInf
+                0x48052ec0                rtIsInfF
+                0x48052ef0                rtIsNaN
+                0x48052f10                rtIsNaNF
+ *fill*         0x48052f24        0xc 00000000
+ .text          0x48052f30       0xc8 rt_printf.o07
+                0x48052f30                rtPrintfNoOp
+ *fill*         0x48052ff8        0x8 00000000
+ .text          0x48053000      0x524 rti_sim_engine.o07
+                0x480534b0                rtk_idle_function
+                0x480534c0                rti_th_timertask1_trigger_source
+                0x48053510                initConditions
+                0x48053520                initVariables
+ *fill*         0x48053524        0xc 00000000
+ .text.startup  0x48053530      0x694 rti_sim_engine.o07
+                0x48053530                main
+ *fill*         0x48053bc4        0xc 00000000
+ .text          0x48053bd0       0x40 rti_init_c.o07
+                0x48053bd0                rti_init
+ .text          0x48053c10       0x34 rt_sim.o07
+                0x48053c10                rt_SimInitTimingEngine
+                0x48053c30                rt_SimGetNextSampleHit
+                0x48053c40                rt_SimUpdateDiscreteTaskSampleHits
+ *fill*         0x48053c44        0xc 00000000
+ .text          0x48053c50      0x124 rti_assert.o07
+                0x48053c50                rti_assertion_handler
+                0x48053d00                rti_assertion_mode_msg
+ .text          0x48053d74        0x0 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\librtversion.a(RtVersion.o)
+ *fill*         0x48053d74        0xc 00000000
+ .text          0x48053d80        0x4 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\librtglobals.a(DsEESPort.o)
+                0x48053d80                DsEesPort_init()
+ .text          0x48053d84       0x20 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(w_pow.o)
+                0x48053d84                pow
+ .text          0x48053da4      0x85c C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
+                0x48053da4                __ieee754_pow
+ .text          0x48054600      0x188 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(s_scalbn.o)
+                0x48054600                scalbn
+ .text          0x48054788       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_muldi3.o)
+                0x48054788                __muldi3
+ .text          0x480547a4       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negdi2.o)
+                0x480547a4                __negdi2
+ .text          0x480547c4       0x40 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lshrdi3.o)
+                0x480547c4                __lshrdi3
+ .text          0x48054804       0x40 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ashldi3.o)
+                0x48054804                __ashldi3
+ .text          0x48054844       0x40 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ashrdi3.o)
+                0x48054844                __ashrdi3
+ .text          0x48054884       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_cmpdi2.o)
+                0x48054884                __cmpdi2
+ .text          0x480548b0       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ucmpdi2.o)
+                0x480548b0                __ucmpdi2
+ .text          0x480548dc        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clear_cache.o)
+                0x480548dc                __clear_cache
+ .text          0x480548e0        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_enable_execute_stack.o)
+                0x480548e0                __enable_execute_stack
+ .text          0x480548e4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_trampoline.o)
+ .text          0x480548e4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(__main.o)
+ .text          0x480548e4       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_absvsi2.o)
+                0x480548e4                __absvsi2
+ .text          0x4805491c       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_absvdi2.o)
+                0x4805491c                __absvdi2
+ .text          0x48054954       0x54 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addvsi3.o)
+                0x48054954                __addvsi3
+ .text          0x480549a8       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addvdi3.o)
+                0x480549a8                __addvdi3
+ .text          0x48054a10       0x54 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_subvsi3.o)
+                0x48054a10                __subvsi3
+ .text          0x48054a64       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_subvdi3.o)
+                0x48054a64                __subvdi3
+ .text          0x48054acc       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulvsi3.o)
+                0x48054acc                __mulvsi3
+ .text          0x48054b04      0x1d0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulvdi3.o)
+                0x48054b04                __mulvdi3
+ .text          0x48054cd4       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negvsi2.o)
+                0x48054cd4                __negvsi2
+ .text          0x48054d18       0x58 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negvdi2.o)
+                0x48054d18                __negvdi2
+ .text          0x48054d70        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ctors.o)
+ .text          0x48054d70       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ffssi2.o)
+                0x48054d70                __ffssi2
+ .text          0x48054d90       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ffsdi2.o)
+                0x48054d90                __ffsdi2
+ .text          0x48054ddc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clz.o)
+ .text          0x48054ddc        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clzsi2.o)
+                0x48054ddc                __clzsi2
+ .text          0x48054de4       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clzdi2.o)
+                0x48054de4                __clzdi2
+ .text          0x48054e04       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ctzsi2.o)
+                0x48054e04                __ctzsi2
+ .text          0x48054e18       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ctzdi2.o)
+                0x48054e18                __ctzdi2
+ .text          0x48054e44        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcount_tab.o)
+ .text          0x48054e44       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcountsi2.o)
+                0x48054e44                __popcountsi2
+ .text          0x48054e7c       0x6c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcountdi2.o)
+                0x48054e7c                __popcountdi2
+ .text          0x48054ee8       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_paritysi2.o)
+                0x48054ee8                __paritysi2
+ .text          0x48054f14       0x30 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_paritydi2.o)
+                0x48054f14                __paritydi2
+ .text          0x48054f44       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powisf2.o)
+                0x48054f44                __powisf2
+ .text          0x48054fa8       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powidf2.o)
+                0x48054fa8                __powidf2
+ .text          0x4805500c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powixf2.o)
+ .text          0x4805500c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powitf2.o)
+ .text          0x4805500c      0x3bc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulsc3.o)
+                0x4805500c                __mulsc3
+ .text          0x480553c8      0x3ec c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_muldc3.o)
+                0x480553c8                __muldc3
+ .text          0x480557b4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulxc3.o)
+ .text          0x480557b4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_multc3.o)
+ .text          0x480557b4      0x304 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divsc3.o)
+                0x480557b4                __divsc3
+ .text          0x48055ab8      0x2fc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdc3.o)
+                0x48055ab8                __divdc3
+ .text          0x48055db4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divxc3.o)
+ .text          0x48055db4        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divtc3.o)
+ .text          0x48055db4       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_bswapsi2.o)
+                0x48055db4                __bswapsi2
+ .text          0x48055dc8       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_bswapdi2.o)
+                0x48055dc8                __bswapdi2
+ .text          0x48055dec       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfsi.o)
+                0x48055dec                __fixunssfsi
+ .text          0x48055e34       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsdfsi.o)
+                0x48055e34                __fixunsdfsi
+ .text          0x48055e7c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsxfsi.o)
+ .text          0x48055e7c       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
+                0x48055e7c                __fixsfdi
+ .text          0x48055ee4       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixdfdi.o)
+                0x48055ee4                __fixdfdi
+ .text          0x48055f4c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixxfdi.o)
+ .text          0x48055f4c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixtfdi.o)
+ .text          0x48055f4c       0xf0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfdi.o)
+                0x48055f4c                __fixunssfdi
+ .text          0x4805603c       0xec c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsdfdi.o)
+                0x4805603c                __fixunsdfdi
+ .text          0x48056128        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsxfdi.o)
+ .text          0x48056128        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunstfdi.o)
+ .text          0x48056128       0xac c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdisf.o)
+                0x48056128                __floatdisf
+ .text          0x480561d4       0x50 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdidf.o)
+                0x480561d4                __floatdidf
+ .text          0x48056224        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdixf.o)
+ .text          0x48056224        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatditf.o)
+ .text          0x48056224       0x68 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundisf.o)
+                0x48056224                __floatundisf
+ .text          0x4805628c       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundidf.o)
+                0x4805628c                __floatundidf
+ .text          0x480562d0        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundixf.o)
+ .text          0x480562d0        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatunditf.o)
+ .text          0x480562d0       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eprintf.o)
+                0x480562d0                __eprintf
+ .text          0x48056318       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(__gcc_bcmp.o)
+                0x48056318                __gcc_bcmp
+ .text          0x48056364      0x448 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdi3.o)
+                0x48056364                __divdi3
+ .text          0x480567ac      0x430 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_moddi3.o)
+                0x480567ac                __moddi3
+ .text          0x48056bdc      0x400 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivdi3.o)
+                0x48056bdc                __udivdi3
+ .text          0x48056fdc      0x3d4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_umoddi3.o)
+                0x48056fdc                __umoddi3
+ .text          0x480573b0        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udiv_w_sdiv.o)
+                0x480573b0                __udiv_w_sdiv
+ .text          0x480573b8      0x4d4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivmoddi4.o)
+                0x480573b8                __udivmoddi4
+ .text          0x4805788c      0x130 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_pack_sf.o)
+                0x4805788c                __pack_f
+ .text          0x480579bc       0xb0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unpack_sf.o)
+                0x480579bc                __unpack_f
+ .text          0x48057a6c      0x2e0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_sf.o)
+                0x48057ca0                __addsf3
+                0x48057cf0                __subsf3
+ .text          0x48057d4c      0x1e4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_sf.o)
+                0x48057d4c                __mulsf3
+ .text          0x48057f30      0x16c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_sf.o)
+                0x48057f30                __divsf3
+ .text          0x4805809c      0x108 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fpcmp_parts_sf.o)
+                0x4805809c                __fpcmp_parts_f
+ .text          0x480581a4       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_sf.o)
+                0x480581a4                __cmpsf2
+ .text          0x480581ec       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_sf.o)
+                0x480581ec                __eqsf2
+ .text          0x48058250       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_sf.o)
+                0x48058250                __nesf2
+ .text          0x480582b4       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_sf.o)
+                0x480582b4                __gtsf2
+ .text          0x48058318       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_sf.o)
+                0x48058318                __gesf2
+ .text          0x4805837c       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_sf.o)
+                0x4805837c                __ltsf2
+ .text          0x480583e0       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_sf.o)
+                0x480583e0                __lesf2
+ .text          0x48058444       0x5c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_sf.o)
+                0x48058444                __unordsf2
+ .text          0x480584a0       0x94 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_sf.o)
+                0x480584a0                __floatsisf
+ .text          0x48058534       0xb8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_si.o)
+                0x48058534                __fixsfsi
+ .text          0x480585ec       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_sf.o)
+                0x480585ec                __negsf2
+ .text          0x48058630       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_sf.o)
+                0x48058630                __make_fp
+ .text          0x48058664       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_df.o)
+                0x48058664                __extendsfdf2
+ .text          0x480586ac        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_sf.o)
+ .text          0x480586ac        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_usi.o)
+ .text          0x480586ac       0xd4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_sf.o)
+                0x480586ac                __floatunsisf
+ .text          0x48058780      0x248 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_pack_df.o)
+                0x48058780                __pack_d
+ .text          0x480589c8       0xe4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unpack_df.o)
+                0x480589c8                __unpack_d
+ .text          0x48058aac      0x440 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_df.o)
+                0x48058e40                __adddf3
+                0x48058e90                __subdf3
+ .text          0x48058eec      0x328 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_df.o)
+                0x48058eec                __muldf3
+ .text          0x48059214      0x21c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_df.o)
+                0x48059214                __divdf3
+ .text          0x48059430      0x124 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fpcmp_parts_df.o)
+                0x48059430                __fpcmp_parts_d
+ .text          0x48059554       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_df.o)
+                0x48059554                __cmpdf2
+ .text          0x4805959c       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_df.o)
+                0x4805959c                __eqdf2
+ .text          0x48059600       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_df.o)
+                0x48059600                __nedf2
+ .text          0x48059664       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_df.o)
+                0x48059664                __gtdf2
+ .text          0x480596c8       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_df.o)
+                0x480596c8                __gedf2
+ .text          0x4805972c       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_df.o)
+                0x4805972c                __ltdf2
+ .text          0x48059790       0x64 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_df.o)
+                0x48059790                __ledf2
+ .text          0x480597f4       0x5c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_df.o)
+                0x480597f4                __unorddf2
+ .text          0x48059850       0xc4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_df.o)
+                0x48059850                __floatsidf
+ .text          0x48059914       0xe0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_si.o)
+                0x48059914                __fixdfsi
+ .text          0x480599f4       0x44 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_df.o)
+                0x480599f4                __negdf2
+ .text          0x48059a38       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_df.o)
+                0x48059a38                __make_dp
+ .text          0x48059a70       0x5c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_sf.o)
+                0x48059a70                __truncdfsf2
+ .text          0x48059acc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_df.o)
+ .text          0x48059acc        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_usi.o)
+ .text          0x48059acc      0x124 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_df.o)
+                0x48059acc                __floatunsidf
+ .text          0x48059bf0       0x8c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(tramp.o)
+                0x48059c18                __trampoline_setup
+ .text          0x48059c7c       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavfpr.o)
+                0x48059c7c                _savefpr_14
+                0x48059c80                _savefpr_15
+                0x48059c84                _savefpr_16
+                0x48059c88                _savefpr_17
+                0x48059c8c                _savefpr_18
+                0x48059c90                _savefpr_19
+                0x48059c94                _savefpr_20
+                0x48059c98                _savefpr_21
+                0x48059c9c                _savefpr_22
+                0x48059ca0                _savefpr_23
+                0x48059ca4                _savefpr_24
+                0x48059ca8                _savefpr_25
+                0x48059cac                _savefpr_26
+                0x48059cb0                _savefpr_27
+                0x48059cb4                _savefpr_28
+                0x48059cb8                _savefpr_29
+                0x48059cbc                _savefpr_30
+                0x48059cc0                _savefpr_31
+ .text          0x48059cc8       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresfpr.o)
+                0x48059cc8                _restfpr_14
+                0x48059ccc                _restfpr_15
+                0x48059cd0                _restfpr_16
+                0x48059cd4                _restfpr_17
+                0x48059cd8                _restfpr_18
+                0x48059cdc                _restfpr_19
+                0x48059ce0                _restfpr_20
+                0x48059ce4                _restfpr_21
+                0x48059ce8                _restfpr_22
+                0x48059cec                _restfpr_23
+                0x48059cf0                _restfpr_24
+                0x48059cf4                _restfpr_25
+                0x48059cf8                _restfpr_26
+                0x48059cfc                _restfpr_27
+                0x48059d00                _restfpr_28
+                0x48059d04                _restfpr_29
+                0x48059d08                _restfpr_30
+                0x48059d0c                _restfpr_31
+ .text          0x48059d14       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavgpr.o)
+                0x48059d14                _savegpr_14
+                0x48059d18                _savegpr_15
+                0x48059d1c                _savegpr_16
+                0x48059d20                _savegpr_17
+                0x48059d24                _savegpr_18
+                0x48059d28                _savegpr_19
+                0x48059d2c                _savegpr_20
+                0x48059d30                _savegpr_21
+                0x48059d34                _savegpr_22
+                0x48059d38                _savegpr_23
+                0x48059d3c                _savegpr_24
+                0x48059d40                _savegpr_25
+                0x48059d44                _savegpr_26
+                0x48059d48                _savegpr_27
+                0x48059d4c                _savegpr_28
+                0x48059d50                _savegpr_29
+                0x48059d54                _savegpr_30
+                0x48059d58                _savegpr_31
+ .text          0x48059d60       0x4c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresgpr.o)
+                0x48059d60                _restgpr_14
+                0x48059d64                _restgpr_15
+                0x48059d68                _restgpr_16
+                0x48059d6c                _restgpr_17
+                0x48059d70                _restgpr_18
+                0x48059d74                _restgpr_19
+                0x48059d78                _restgpr_20
+                0x48059d7c                _restgpr_21
+                0x48059d80                _restgpr_22
+                0x48059d84                _restgpr_23
+                0x48059d88                _restgpr_24
+                0x48059d8c                _restgpr_25
+                0x48059d90                _restgpr_26
+                0x48059d94                _restgpr_27
+                0x48059d98                _restgpr_28
+                0x48059d9c                _restgpr_29
+                0x48059da0                _restgpr_30
+                0x48059da4                _restgpr_31
+ .text          0x48059dac       0x58 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxfpr.o)
+                0x48059dac                _restfpr_14_x
+                0x48059db0                _restfpr_15_x
+                0x48059db4                _restfpr_16_x
+                0x48059db8                _restfpr_17_x
+                0x48059dbc                _restfpr_18_x
+                0x48059dc0                _restfpr_19_x
+                0x48059dc4                _restfpr_20_x
+                0x48059dc8                _restfpr_21_x
+                0x48059dcc                _restfpr_22_x
+                0x48059dd0                _restfpr_23_x
+                0x48059dd4                _restfpr_24_x
+                0x48059dd8                _restfpr_25_x
+                0x48059ddc                _restfpr_26_x
+                0x48059de0                _restfpr_27_x
+                0x48059de4                _restfpr_28_x
+                0x48059de8                _restfpr_29_x
+                0x48059dec                _restfpr_30_x
+                0x48059df0                _restfpr_31_x
+ .text          0x48059e04       0x58 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxgpr.o)
+                0x48059e04                _restgpr_14_x
+                0x48059e08                _restgpr_15_x
+                0x48059e0c                _restgpr_16_x
+                0x48059e10                _restgpr_17_x
+                0x48059e14                _restgpr_18_x
+                0x48059e18                _restgpr_19_x
+                0x48059e1c                _restgpr_20_x
+                0x48059e20                _restgpr_21_x
+                0x48059e24                _restgpr_22_x
+                0x48059e28                _restgpr_23_x
+                0x48059e2c                _restgpr_24_x
+                0x48059e30                _restgpr_25_x
+                0x48059e34                _restgpr_26_x
+                0x48059e38                _restgpr_27_x
+                0x48059e3c                _restgpr_28_x
+                0x48059e40                _restgpr_29_x
+                0x48059e44                _restgpr_30_x
+                0x48059e48                _restgpr_31_x
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtres32gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtres64gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtres64gprctr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtrest32gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtrest64gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtresx32gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtresx64gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsav32gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsav64gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsav64gprctr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsavg32gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsavg64gpr.o)
+ .text          0x48059e5c        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(e500crtsavg64gprctr.o)
+ .text          0x48059e5c     0x3250 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2.o)
+                0x4805c3bc                _Unwind_GetGR
+                0x4805c430                _Unwind_GetCFA
+                0x4805c438                _Unwind_SetGR
+                0x4805c4c0                _Unwind_GetIP
+                0x4805c4c8                _Unwind_GetIPInfo
+                0x4805c4dc                _Unwind_SetIP
+                0x4805c4e4                _Unwind_GetLanguageSpecificData
+                0x4805c4ec                _Unwind_GetRegionStart
+                0x4805c4f4                _Unwind_FindEnclosingFunction
+                0x4805c52c                _Unwind_GetDataRelBase
+                0x4805c534                _Unwind_GetTextRelBase
+                0x4805c53c                __frame_state_for
+                0x4805c658                _Unwind_RaiseException
+                0x4805c8dc                _Unwind_ForcedUnwind
+                0x4805cacc                _Unwind_Resume
+                0x4805ccbc                _Unwind_Resume_or_Rethrow
+                0x4805ceb0                _Unwind_DeleteException
+                0x4805cee8                _Unwind_Backtrace
+ .text          0x4805d0ac     0x1924 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2-fde.o)
+                0x4805e498                __register_frame_info_bases
+                0x4805e520                __register_frame_info
+                0x4805e52c                __register_frame
+                0x4805e584                __register_frame_info_table_bases
+                0x4805e5fc                __register_frame_info_table
+                0x4805e608                __register_frame_table
+                0x4805e640                __deregister_frame_info_bases
+                0x4805e784                __deregister_frame_info
+                0x4805e788                __deregister_frame
+                0x4805e7b8                _Unwind_Find_FDE
+ .text          0x4805e9d0        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-sjlj.o)
+ .text          0x4805e9d0      0x5a0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-c.o)
+                0x4805eb50                __gcc_personality_v0
+ .text          0x4805ef70      0x2f8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(emutls.o)
+                0x4805f02c                __emutls_get_address
+                0x4805f224                __emutls_register_common
+ .text          0x4805f268       0x98 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtend.o
+ .text          0x4805f300        0x0 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crtn.o
  *(.gnu.warning)
  *(.glink)
  .glink         0x00000000        0x0 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crt1.o
 
-.fini           0x4805ef30       0x20
+.fini           0x4805f300       0x20
  *(.fini)
- .fini          0x4805ef30        0xc C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crti.o
-                0x4805ef30                _fini
- .fini          0x4805ef3c        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtbegin.o
- .fini          0x4805ef40       0x10 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crtn.o
-                0x4805ef50                PROVIDE (__etext, .)
-                0x4805ef50                PROVIDE (_etext, .)
-                0x4805ef50                PROVIDE (etext, .)
+ .fini          0x4805f300        0xc C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crti.o
+                0x4805f300                _fini
+ .fini          0x4805f30c        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtbegin.o
+ .fini          0x4805f310       0x10 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crtn.o
+                0x4805f320                PROVIDE (__etext, .)
+                0x4805f320                PROVIDE (_etext, .)
+                0x4805f320                PROVIDE (etext, .)
 
-.rodata         0x4805ef50     0x1bd4
+.rodata         0x4805f320     0x1be4
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x4805ef50       0x38 SystemFunc.o07
- .rodata.cst8   0x4805ef88       0x38 HandFunc.o07
- .rodata.cst4   0x4805efc0        0x4 WAMFunc.o07
- *fill*         0x4805efc4        0x4 00
- .rodata.cst8   0x4805efc8       0x50 WAMFunc.o07
+ .rodata        0x4805f320       0x38 SystemFunc.o07
+ .rodata.cst8   0x4805f358       0x38 HandFunc.o07
+ .rodata.cst4   0x4805f390        0x4 WAMFunc.o07
+ *fill*         0x4805f394        0x4 00
+ .rodata.cst8   0x4805f398       0x50 WAMFunc.o07
                                  0x58 (size before relaxing)
- .rodata.cst8   0x4805f018       0x38 AVSFunc.o07
+ .rodata.cst8   0x4805f3e8       0x38 AVSFunc.o07
  .rodata.str1.4
-                0x4805f050       0xad AVSFunc.o07
- *fill*         0x4805f0fd        0x3 00
- .rodata        0x4805f100       0x28 HandApp.o07
-                0x4805f100                g_cube_d
-                0x4805f108                g_Lw0
-                0x4805f110                r
-                0x4805f118                Lb
-                0x4805f120                table_h
- .rodata.cst8   0x4805f128      0x380 HandApp.o07
+                0x4805f420       0xad AVSFunc.o07
+ *fill*         0x4805f4cd        0x3 00
+ .rodata        0x4805f4d0       0x28 HandApp.o07
+                0x4805f4d0                g_cube_d
+                0x4805f4d8                g_Lw0
+                0x4805f4e0                r
+                0x4805f4e8                Lb
+                0x4805f4f0                table_h
+ .rodata.cst8   0x4805f4f8      0x388 HandApp.o07
                                 0x3d0 (size before relaxing)
- .rodata        0x4805f4a8       0x28 WAMApp.o07
- .rodata.cst4   0x4805f4d0        0x4 WAMApp.o07
- .rodata.cst8   0x00000000       0x10 WAMApp.o07
- *fill*         0x4805f4d4        0x4 00
- .rodata        0x4805f4d8       0x28 WAM2App.o07
- .rodata.cst8   0x4805f500       0x60 WAM2App.o07
+ .rodata        0x4805f880       0x28 WAMApp.o07
+ .rodata.cst4   0x4805f8a8        0x4 WAMApp.o07
+ *fill*         0x4805f8ac        0x4 00
+ .rodata.cst8   0x4805f8b0        0x8 WAMApp.o07
+                                 0x10 (size before relaxing)
+ .rodata        0x4805f8b8       0x28 WAM2App.o07
+ .rodata.cst8   0x4805f8e0       0x68 WAM2App.o07
                                  0xc0 (size before relaxing)
- .rodata.cst8   0x4805f560       0x10 AVSApp.o07
+ .rodata.cst8   0x4805f948       0x10 AVSApp.o07
                                  0x20 (size before relaxing)
- .rodata.cst8   0x4805f570       0x30 XYZstageApp.o07
+ .rodata.cst8   0x4805f958       0x30 XYZstageApp.o07
                                  0x40 (size before relaxing)
  .rodata.cst8   0x00000000       0x10 pmatrix.o07
  .rodata.str1.4
-                0x4805f5a0       0x22 pmatrix.o07
+                0x4805f988       0x22 pmatrix.o07
  .rodata.cst8   0x00000000       0x10 homoMat.o07
- *fill*         0x4805f5c2        0x2 00
+ *fill*         0x4805f9aa        0x2 00
  .rodata.str1.4
-                0x4805f5c4        0xe homoMat.o07
+                0x4805f9ac        0xe homoMat.o07
                                  0x16 (size before relaxing)
- *fill*         0x4805f5d2        0x6 00
- .rodata.cst8   0x4805f5d8        0x8 Kalman.o07
+ *fill*         0x4805f9ba        0x6 00
+ .rodata.cst8   0x4805f9c0        0x8 Kalman.o07
                                  0x18 (size before relaxing)
- .rodata.cst4   0x4805f5e0        0x4 Predict3D.o07
+ .rodata.cst4   0x4805f9c8        0x4 Predict3D.o07
                                   0x8 (size before relaxing)
- *fill*         0x4805f5e4        0x4 00
- .rodata.cst8   0x4805f5e8        0x8 Predict3D.o07
+ .rodata.cst8   0x00000000        0x8 Predict3D.o07
  .rodata.cst8   0x00000000        0x8 throwJnt2armJnt.o07
- .rodata.cst8   0x4805f5f0        0x8 TaskSet.o07
+ *fill*         0x4805f9cc        0x4 00
+ .rodata.cst8   0x4805f9d0        0x8 TaskSet.o07
                                  0x10 (size before relaxing)
- .rodata        0x4805f5f8       0xb0 handEnc2JntAng.o07
- .rodata.cst8   0x4805f6a8        0x8 handEnc2JntAng.o07
+ .rodata        0x4805f9d8       0xb0 handEnc2JntAng.o07
+ .rodata.cst8   0x4805fa88        0x8 handEnc2JntAng.o07
                                  0x10 (size before relaxing)
- .rodata        0x4805f6b0       0x74 rtiethernetdecode.o07
+ .rodata        0x4805fa90       0x74 rtiethernetdecode.o07
  .rodata.cst4   0x00000000        0x4 rtiethernetdecode.o07
- *fill*         0x4805f724        0x4 00
- .rodata.cst8   0x4805f728       0x10 rtiethernetdecode.o07
+ *fill*         0x4805fb04        0x4 00
+ .rodata.cst8   0x4805fb08       0x10 rtiethernetdecode.o07
                                  0x20 (size before relaxing)
  .rodata.str1.4
-                0x4805f738       0x8f rtiethernetdecode.o07
+                0x4805fb18       0x8f rtiethernetdecode.o07
  .rodata.cst4   0x00000000        0x4 handTraj.o07
- *fill*         0x4805f7c7        0x1 00
- .rodata.cst8   0x4805f7c8        0x8 handTraj.o07
+ *fill*         0x4805fba7        0x1 00
+ .rodata.cst8   0x4805fba8        0x8 handTraj.o07
                                  0x58 (size before relaxing)
- .rodata.cst8   0x4805f7d0        0x8 handJntAngLimit.o07
+ .rodata.cst8   0x4805fbb0        0x8 handJntAngLimit.o07
                                  0x38 (size before relaxing)
- .rodata        0x4805f7d8       0x58 handCtrl.o07
- .rodata.cst8   0x4805f830       0x40 handCtrl.o07
+ .rodata        0x4805fbb8       0x58 handCtrl.o07
+ .rodata.cst8   0x4805fc10       0x40 handCtrl.o07
                                  0x48 (size before relaxing)
  .rodata.cst8   0x00000000        0x8 handJntTrq2DA.o07
  .rodata.cst8   0x00000000        0x8 handDALimit.o07
- .rodata        0x4805f870       0x74 rtiethernetencode.o07
+ .rodata        0x4805fc50       0x74 rtiethernetencode.o07
  .rodata.cst8   0x00000000       0x18 rtiethernetencode.o07
  .rodata.str1.4
                 0x00000000       0x8f rtiethernetencode.o07
- *fill*         0x4805f8e4        0x4 00
- .rodata        0x4805f8e8       0x30 XYZstageTraj.o07
-                0x4805f8e8                xyz_init_jnt_pos
-                0x4805f900                xyz_end_jnt_pos
+ *fill*         0x4805fcc4        0x4 00
+ .rodata        0x4805fcc8       0x30 XYZstageTraj.o07
+                0x4805fcc8                xyz_init_jnt_pos
+                0x4805fce0                xyz_end_jnt_pos
  .rodata.cst4   0x00000000        0x4 XYZstageTraj.o07
  .rodata.cst8   0x00000000       0x50 XYZstageTraj.o07
  .rodata.cst8   0x00000000       0x10 XYZstageAngLimit.o07
- .rodata.cst8   0x4805f918       0x10 XYZstageEnc2JntAng.o07
+ .rodata.cst8   0x4805fcf8       0x10 XYZstageEnc2JntAng.o07
                                  0x18 (size before relaxing)
  .rodata.cst8   0x00000000        0x8 XYZstageCtrl.o07
  .rodata.cst8   0x00000000        0x8 XYZstageTrq2DA.o07
- .rodata.cst8   0x4805f928        0x8 XYZstageDALimit.o07
+ .rodata.cst8   0x4805fd08        0x8 XYZstageDALimit.o07
                                  0x18 (size before relaxing)
  .rodata.cst8   0x00000000        0x8 SystemSet.o07
- .rodata        0x4805f930        0xc base.o07
-                0x4805f930                base_RGND
-                0x4805f938                base_M
- *fill*         0x4805f93c        0x4 00
- .rodata.cst8   0x4805f940        0x8 base.o07
+ .rodata        0x4805fd10        0xc base.o07
+                0x4805fd10                base_RGND
+                0x4805fd18                base_M
+ *fill*         0x4805fd1c        0x4 00
+ .rodata.cst8   0x4805fd20        0x8 base.o07
                                  0x20 (size before relaxing)
  .rodata.str1.4
-                0x4805f948      0x400 base.o07
- .rodata.cst4   0x4805fd48        0x8 rtGetInf.o07
- .rodata.cst8   0x4805fd50       0x10 rtGetInf.o07
- .rodata        0x4805fd60       0x13 rt_i32zcfcn.o07
+                0x4805fd28      0x400 base.o07
+ .rodata.cst4   0x48060128        0x8 rtGetInf.o07
+ .rodata.cst8   0x48060130       0x10 rtGetInf.o07
+ .rodata        0x48060140       0x13 rt_i32zcfcn.o07
  .rodata.cst4   0x00000000        0x4 rt_matrx.o07
- *fill*         0x4805fd73        0x5 00
- .rodata.cst8   0x4805fd78        0x8 rt_matrx.o07
+ *fill*         0x48060153        0x5 00
+ .rodata.cst8   0x48060158        0x8 rt_matrx.o07
                                  0x28 (size before relaxing)
  .rodata.str1.4
-                0x4805fd80        0xf rt_printf.o07
- *fill*         0x4805fd8f        0x1 00
- .rodata        0x4805fd90        0xc rti_sim_engine.o07
-                0x4805fd90                rtiDataSetStorageEnabled
-                0x4805fd94                p_dsts_sum_of_reset_time
-                0x4805fd98                p_msg_last_error_no
+                0x48060160        0xf rt_printf.o07
+ *fill*         0x4806016f        0x1 00
+ .rodata        0x48060170        0xc rti_sim_engine.o07
+                0x48060170                rtiDataSetStorageEnabled
+                0x48060174                p_dsts_sum_of_reset_time
+                0x48060178                p_msg_last_error_no
  .rodata.cst8   0x00000000       0x10 rti_sim_engine.o07
  .rodata.str1.4
-                0x4805fd9c      0x3c1 rti_sim_engine.o07
+                0x4806017c      0x3c1 rti_sim_engine.o07
  .rodata.cst8   0x00000000       0x10 rt_sim.o07
- *fill*         0x4806015d        0x3 00
+ *fill*         0x4806053d        0x3 00
  .rodata.str1.4
-                0x48060160       0x71 rt_sim.o07
- *fill*         0x480601d1        0x3 00
+                0x48060540       0x71 rt_sim.o07
+ *fill*         0x480605b1        0x3 00
  .rodata.str1.4
-                0x480601d4       0x70 rti_assert.o07
+                0x480605b4       0x70 rti_assert.o07
                                  0x6d (size before relaxing)
- *fill*         0x48060244        0x4 00
- .rodata        0x48060248       0x30 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
- .rodata.cst4   0x48060278        0x8 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
- .rodata.cst8   0x48060280       0xa0 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
+ *fill*         0x48060624        0x4 00
+ .rodata        0x48060628       0x30 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
+ .rodata.cst4   0x48060658        0x8 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
+ .rodata.cst8   0x48060660       0xa0 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(e_pow.o)
                                  0xe8 (size before relaxing)
- .rodata.cst8   0x48060320       0x30 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(s_scalbn.o)
- .rodata        0x48060350      0x100 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clz.o)
-                0x48060350                __clz_tab
- .rodata        0x48060450      0x100 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcount_tab.o)
-                0x48060450                __popcount_tab
- .rodata.cst4   0x48060550        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powisf2.o)
+ .rodata.cst8   0x48060700       0x30 C:\Program Files\dSPACE RCPHIL 2016-A\DS1007\Lib\libm_fastpow.a(s_scalbn.o)
+ .rodata        0x48060730      0x100 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_clz.o)
+                0x48060730                __clz_tab
+ .rodata        0x48060830      0x100 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_popcount_tab.o)
+                0x48060830                __popcount_tab
+ .rodata.cst4   0x48060930        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powisf2.o)
  .rodata.cst4   0x00000000        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_powidf2.o)
- .rodata.cst4   0x48060554        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulsc3.o)
+ .rodata.cst4   0x48060934        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mulsc3.o)
                                  0x14 (size before relaxing)
  .rodata.cst4   0x00000000       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_muldc3.o)
  .rodata.cst8   0x00000000        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_muldc3.o)
  .rodata.cst4   0x00000000       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divsc3.o)
  .rodata.cst4   0x00000000        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdc3.o)
  .rodata.cst8   0x00000000        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdc3.o)
- .rodata.cst4   0x48060560        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfsi.o)
+ .rodata.cst4   0x48060940        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfsi.o)
  .rodata.cst4   0x00000000        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsdfsi.o)
  .rodata.cst4   0x00000000        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
  .rodata.cst8   0x00000000        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixdfdi.o)
- .rodata.cst4   0x48060564        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfdi.o)
+ .rodata.cst4   0x48060944        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunssfdi.o)
                                  0x10 (size before relaxing)
  .rodata.cst4   0x00000000       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixunsdfdi.o)
  .rodata.cst4   0x00000000        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdisf.o)
  .rodata.cst4   0x00000000        0xc c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatdidf.o)
  .rodata.cst4   0x00000000        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundisf.o)
  .rodata.cst4   0x00000000        0x8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_floatundidf.o)
- .rodata.cst4   0x48060570        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_sf.o)
- .rodata        0x48060574       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_sf.o)
-                0x48060574                __thenan_sf
+ .rodata.cst4   0x48060950        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_sf.o)
+ .rodata        0x48060954       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_sf.o)
+                0x48060954                __thenan_sf
  .rodata.cst4   0x00000000        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_df.o)
- *fill*         0x48060584        0x4 00
- .rodata        0x48060588       0x18 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_df.o)
-                0x48060588                __thenan_df
- .rodata        0x480605a0      0x51c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2.o)
- .rodata        0x48060abc       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2-fde.o)
- .rodata        0x48060af0       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-c.o)
+ *fill*         0x48060964        0x4 00
+ .rodata        0x48060968       0x18 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_thenan_df.o)
+                0x48060968                __thenan_df
+ .rodata        0x48060980      0x51c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2.o)
+ .rodata        0x48060e9c       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2-fde.o)
+ .rodata        0x48060ed0       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-c.o)
 
 .rodata1
  *(.rodata1)
 
-.sdata2         0x48060b24        0x0
+.sdata2         0x48060f04        0x0
                 0x00008000                PROVIDE (_SDA2_BASE_, 0x8000)
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
 
 .sbss2
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
 
-.eh_frame_hdr   0x48060b24      0x254
+.eh_frame_hdr   0x48060f04      0x254
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x48060b24      0x254 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
+ .eh_frame_hdr  0x48060f04      0x254 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
 
-.eh_frame       0x48060d78      0xda4
+.eh_frame       0x48061158      0xda4
  *(.eh_frame)
  .eh_frame      0x00000000        0x0 C:\Program Files\dSPACE RCPHIL 2016-A\Compiler\QNX650_463\target\qnx6/ppcbe/lib/crt1.o
- .eh_frame      0x48060d78        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtbegin.o
- .eh_frame      0x48060d78       0x30 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
- .eh_frame      0x48060da8       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixdfdi.o)
+ .eh_frame      0x48061158        0x0 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtbegin.o
+ .eh_frame      0x48061158       0x30 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixsfdi.o)
+ .eh_frame      0x48061188       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_fixdfdi.o)
                                  0x30 (size before relaxing)
- .eh_frame      0x48060dc8       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eprintf.o)
+ .eh_frame      0x480611a8       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eprintf.o)
                                  0x30 (size before relaxing)
- .eh_frame      0x48060de8       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdi3.o)
+ .eh_frame      0x480611c8       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_divdi3.o)
                                  0x38 (size before relaxing)
- .eh_frame      0x48060e10       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_moddi3.o)
+ .eh_frame      0x480611f0       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_moddi3.o)
                                  0x38 (size before relaxing)
- .eh_frame      0x48060e38       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivdi3.o)
+ .eh_frame      0x48061218       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivdi3.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x48060e70       0x3c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_umoddi3.o)
+ .eh_frame      0x48061250       0x3c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_umoddi3.o)
                                  0x4c (size before relaxing)
- .eh_frame      0x48060eac       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udiv_w_sdiv.o)
+ .eh_frame      0x4806128c       0x10 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udiv_w_sdiv.o)
                                  0x20 (size before relaxing)
- .eh_frame      0x48060ebc       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivmoddi4.o)
+ .eh_frame      0x4806129c       0x48 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_udivmoddi4.o)
                                  0x58 (size before relaxing)
- .eh_frame      0x48060f04       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_sf.o)
+ .eh_frame      0x480612e4       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_sf.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x48060f3c       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_sf.o)
+ .eh_frame      0x4806131c       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_sf.o)
                                  0x3c (size before relaxing)
- .eh_frame      0x48060f68       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_sf.o)
+ .eh_frame      0x48061348       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_sf.o)
                                  0x34 (size before relaxing)
- .eh_frame      0x48060f8c       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_sf.o)
+ .eh_frame      0x4806136c       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48060fa8       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_sf.o)
+ .eh_frame      0x48061388       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48060fc4       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_sf.o)
+ .eh_frame      0x480613a4       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48060fe0       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_sf.o)
+ .eh_frame      0x480613c0       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48060ffc       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_sf.o)
+ .eh_frame      0x480613dc       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061018       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_sf.o)
+ .eh_frame      0x480613f8       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061034       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_sf.o)
+ .eh_frame      0x48061414       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061050       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_sf.o)
+ .eh_frame      0x48061430       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x4806106c       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_sf.o)
+ .eh_frame      0x4806144c       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_sf.o)
                                  0x30 (size before relaxing)
- .eh_frame      0x4806108c       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_si.o)
+ .eh_frame      0x4806146c       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_si.o)
                                  0x34 (size before relaxing)
- .eh_frame      0x480610b0       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_sf.o)
+ .eh_frame      0x48061490       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x480610cc       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_sf.o)
+ .eh_frame      0x480614ac       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x480610e8       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_df.o)
+ .eh_frame      0x480614c8       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_sf_to_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061104       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_sf.o)
+ .eh_frame      0x480614e4       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_sf.o)
                                  0x38 (size before relaxing)
- .eh_frame      0x4806112c       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_df.o)
+ .eh_frame      0x4806150c       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_addsub_df.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x48061164       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_df.o)
+ .eh_frame      0x48061544       0x38 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_mul_df.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x4806119c       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_df.o)
+ .eh_frame      0x4806157c       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_div_df.o)
                                  0x44 (size before relaxing)
- .eh_frame      0x480611d0       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_df.o)
+ .eh_frame      0x480615b0       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_compare_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x480611ec       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_df.o)
+ .eh_frame      0x480615cc       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_eq_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061208       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_df.o)
+ .eh_frame      0x480615e8       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ne_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061224       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_df.o)
+ .eh_frame      0x48061604       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_gt_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061240       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_df.o)
+ .eh_frame      0x48061620       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_ge_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x4806125c       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_df.o)
+ .eh_frame      0x4806163c       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_lt_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061278       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_df.o)
+ .eh_frame      0x48061658       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_le_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061294       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_df.o)
+ .eh_frame      0x48061674       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_unord_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x480612b0       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_df.o)
+ .eh_frame      0x48061690       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_si_to_df.o)
                                  0x30 (size before relaxing)
- .eh_frame      0x480612d0       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_si.o)
+ .eh_frame      0x480616b0       0x24 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_si.o)
                                  0x34 (size before relaxing)
- .eh_frame      0x480612f4       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_df.o)
+ .eh_frame      0x480616d4       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_negate_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061310       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_df.o)
+ .eh_frame      0x480616f0       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_make_df.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x4806132c       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_sf.o)
+ .eh_frame      0x4806170c       0x1c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_df_to_sf.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x48061348       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_df.o)
+ .eh_frame      0x48061728       0x2c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(_usi_to_df.o)
                                  0x3c (size before relaxing)
- .eh_frame      0x48061374       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavfpr.o)
- .eh_frame      0x4806139c       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresfpr.o)
+ .eh_frame      0x48061754       0x28 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavfpr.o)
+ .eh_frame      0x4806177c       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresfpr.o)
                                  0x28 (size before relaxing)
- .eh_frame      0x480613b0       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavgpr.o)
+ .eh_frame      0x48061790       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtsavgpr.o)
                                  0x28 (size before relaxing)
- .eh_frame      0x480613c4       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresgpr.o)
+ .eh_frame      0x480617a4       0x14 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresgpr.o)
                                  0x28 (size before relaxing)
- .eh_frame      0x480613d8       0x7c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxfpr.o)
- .eh_frame      0x48061454       0x7c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxgpr.o)
- .eh_frame      0x480614d0      0x44c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2.o)
+ .eh_frame      0x480617b8       0x7c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxfpr.o)
+ .eh_frame      0x48061834       0x7c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(crtresxgpr.o)
+ .eh_frame      0x480618b0      0x44c c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2.o)
                                 0x45c (size before relaxing)
- .eh_frame      0x4806191c      0x1a8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2-fde.o)
+ .eh_frame      0x48061cfc      0x1a8 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-dw2-fde.o)
                                 0x1b8 (size before relaxing)
- .eh_frame      0x48061ac4       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-c.o)
+ .eh_frame      0x48061ea4       0x34 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(unwind-c.o)
                                  0x44 (size before relaxing)
- .eh_frame      0x48061af8       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(emutls.o)
+ .eh_frame      0x48061ed8       0x20 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3\libgcc.a(emutls.o)
                                  0x30 (size before relaxing)
- .eh_frame      0x48061b18        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtend.o
+ .eh_frame      0x48061ef8        0x4 c:/program files/dspace rcphil 2016-a/compiler/qnx650_463/host/win32/x86/usr/bin/../lib/gcc/powerpc-unknown-nto-qnx6.5.0/4.6.3/crtend.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
-                0x48061b1c                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x48061efc                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
                 0x48062000                . = DATA_SEGMENT_ALIGN (0x1000, 0x1000)
 
 .eh_frame
